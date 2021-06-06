@@ -1,0 +1,17 @@
+Yes, Python evaluates boolean conditions lazily.
+
+The expression x and y first evaluates x; if x is false, its value is returned; 
+otherwise, y is evaluated and the resulting value is returned.
+
+The expression x or y first evaluates x; if x is true, its value is returned; 
+otherwise, y is evaluated and the resulting value is returned.
+
+A lot of times, exploring the data can throw patterns that might
+push us into believing on certain conclusions, however, that can be because
+of noise as well. Therefore, it is customary to use statistics to validate
+our exploration leading us into insights.
+
+Coorelation does not imply causation. Always look for third factors.
+Factors that might be affecting the correlated variables.
+
+To find out if correlation causes causation, run A/B tests.
