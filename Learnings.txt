@@ -15,3 +15,24 @@ Coorelation does not imply causation. Always look for third factors.
 Factors that might be affecting the correlated variables.
 
 To find out if correlation causes causation, run A/B tests.
+
+Python data analysis and visualization library stack:
+----------------------------------------------------
+Numpy
+Pandas
+Matplotlib
+Seaborn
+
+Gapminder is a great website to explore for new, interesting datasets to 
+gain insight into fact based data analysis.
+
+Numpy arrays are much faster than typical python lists.
+a = np.array([python list of same data type])
+a.argmax() -- returns index of highest value in the array
+
+** is used for exponentiation in Python
+
+Vectorized operations in a series are based on matching values at 
+same indices, not based on position
+
+Series operations where indices don't match always produce NaN - not a number
