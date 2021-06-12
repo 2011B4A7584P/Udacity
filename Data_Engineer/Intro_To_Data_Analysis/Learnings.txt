@@ -1,3 +1,58 @@
+Data Analysis Process
+---------------------
+
+Step 1 : Question of Interest - well defined problem statement
+
+Step 2 : Wrangle 
+	Step 2a : Data acquisition (how to extract data from a variety of sources)
+	          Examples : Downloading files, Accessing APIs, Webscraping, 
+			  Combining data from different formats
+	Step 2b : Data cleaning 
+
+Note : Step 1 and 2 happen interchangeably at times because of the probability
+       of wrangling the data. Often, the intent of discovery might be thwarted
+	   by impossibility of data. So, we go back to modify the question and try
+	   to wrangle the possible data.
+
+Step 3 : Explore
+	Step3a : Getting familiar with data
+	Step3b : Building intuition
+	Step3c : Finding patterns
+
+Step 4 : Drawing conclusions
+    Step4a : Making predictions using machine learning/statistics
+
+Step 5 : Communicating
+    Step5a : Data visualization
+
+
+Data Science and Related Terms 
+------------------------------
+
+Data Science :
+* Similar to data analysis
+* example : Netflix's movie recommendation system
+* primarily focussed on building systems/some sort of a system like 
+  recommendation sysem or a ranking algorithm
+* A blog post or a paper is more likely to be a data analysis pursuit
+* Advice to data scientist applied to a data analyst as well
+* Typically requires more experience than a data analyst
+
+Data Engineering :
+* More focussed on data wrangling step of the data analysis process
+* Primary focus is on making data pipelines and ensuring that data collection
+  is fault tolerant and scales well
+* This inherently involves storing and processing data and in most cases
+  excludes drawing conclusions based on data using any statistics/ML
+  
+Big Data : 
+* is a fuzzy term
+* is relative to the context
+* Data Analysts, Data Engineers and Data Scientists all work with
+  big and not so big data depending on use case
+
+Lazy Evaluation in Python
+-------------------------
 Yes, Python evaluates boolean conditions lazily.
 
 The expression x and y first evaluates x; if x is false, its value is returned; 
@@ -6,6 +61,8 @@ otherwise, y is evaluated and the resulting value is returned.
 The expression x or y first evaluates x; if x is true, its value is returned; 
 otherwise, y is evaluated and the resulting value is returned.
 
+Noise vs Fair Observations
+--------------------------
 A lot of times, exploring the data can throw patterns that might
 push us into believing on certain conclusions, however, that can be because
 of noise as well. Therefore, it is customary to use statistics to validate
@@ -16,15 +73,140 @@ Factors that might be affecting the correlated variables.
 
 To find out if correlation causes causation, run A/B tests.
 
-Python data analysis and visualization library stack:
+Python data analysis and visualization library stack
 ----------------------------------------------------
 Numpy
 Pandas
 Matplotlib
 Seaborn
 
-Gapminder is a great website to explore for new, interesting datasets to 
-gain insight into fact based data analysis.
+Numpy and Pandas for 1D data
+----------------------------
+Numpy and Pandas support vectorized operations for all 1D, 2D, 3D, ND formats
+
+Pandas is built on top of Numpy
+
+Data Structure in Numpy : numpy array (much simpler)
+Data Structure in Pandas : series (has more features)
+
+Numpy Arrays and Python Lists 
+-----------------------------
+
+Similarities :
+* Accessing elements by position, a[0]= 'AL' works
+* Access a range of elements a[1:3] = ['AL','AM','AQ']
+* Use loops, for x in a:
+
+Differences : 
+* Python lists can contain elements of different data types like int, string, etc
+* But each element of a numpy array should have same type
+* Numpy arrays have several convenient functions like mean(), std(), etc
+* Numpy arrays can be multidimensional  where as in python, we have to make
+  list of lists to achieve the same 
+* Python lists don't support vectorized operations in general
+* For example : adding two numpy arrays adds up the two arrays element	
+			    by element where as such an operation on two corresponding 
+				lists will produce a concatenated result
+* Likewise a scalar multiplication in a numpy array multiplies each element
+  of the numpy array where as scaler multiplication in a python list replicates
+  the list by the scaler number
+
+* When you take a slice of a numpy array, it does not create a new array
+  Instead, the slice refers to what's a view of the original array
+
+* If we modify the slice, we modify the original array as well
+* This is the reason, why, numpy array modifications/manipulations must
+  be performed cautiously
+
+In-place operations vs Not in-place operations
+----------------------------------------------
+
+
+* In-place operations store all the new values in the same places where the original
+  values were stored  where Not-in-place operations store new values in new places
+
+* Example of In-place operation : +=
+* Example of Not-in-place operation : +
+
+* Operations that are Not-in-place are much easier to think about
+* During in-place operations, variables can be modified even when it 
+  does not look like they will change
+  
+Example : 
+In-place operation
+import numpy as np
+a = np.array([1,2,3,4])  
+slice = a[:3]
+slice[0] = 100
+print(a)
+
+Output = [100,2,3,4]
+
+Example : General python list
+a = [1,2,3,4]
+slice = a[:3]
+slice[0] = 100
+print(a)
+print(slice)
+
+Output a : [1,2,3,4]
+Output slice : [100,2,3]
+
+Pandas Series:
+* A series is similar to a numpy array but with extra functionality
+  for example s.describe() prints out summary statistics
+  However, this library is not available for Numpy arrays
+
+Similarities between Numpy and Pandas:
+* All operations that work on a numpy array also work on a pandas series
+* Accessing elements s[0], s[3:7] are allowed
+* Looping - for x in s:
+* Convenient functons : s.mean(), s.max()
+* Vectorized operations : s1 + s2
+* Implemented in C (fast!)
+
+Numpy and Pandas in 2D :
+
+Data structure in Python : List of Lists
+Data structure in Numpy : 2D numpy array
+Data structure in Pandas : Dataframe
+
+Python List of Lists vs Numpy 2D array  :
+* Each element of the 2D numpy should have the same type
+* Numpy arrays are much more memory efficient (remember in-place operations)
+* Numpy 2D arrays are not array of arrays unlike Python list of lists
+* Accessing element in numpy array = a[1,3]
+* Accessing element in python list = a[1][3]
+* mean(), std() etc operate on entire array where as same cannot be done on python lists
+
+* mean(), std() operate on entire array but to perform the same by row
+  or by column, we can use axis argument
+  axis = 0  arguments means the function will be computed for each column
+  axis = 1  arguments means the function will be computed for each row
+
+* We can calculate operations on row and column level in 2D Numpy arrays
+  using axis argument 
+  ridership.mean(axis = 0) - column level - computes mean for each station column
+  ridership.mean(axis = 1) - row level - computes mean of all stations for a day
+
+* Since each element of the 2D numpy should have the same type,
+  so this data structure ( a 2D numpy array ) cannot be used
+  to read in csv/data files with different types of attributes
+  - this calls for Pandas dataframe
+  
+* x.std(ddof = 0) gives uncorrected standard deviation (without Bessel Correction)
+* Pandas axis names : 
+  Instead of axis = 0/axis = 1  as in numpy arrays,
+  we use axis = 'columns' (works across columns)
+		 axis = 'index' (works across rows)
+
+Pandas Dataframe operations : 
+
+* Similar to vectorized operations for 2D numpy arrays
+* Match up elements by index and column rather than by position (****Imp)
+
+Gapminder is a great website to explore for new, interesting 
+datasets to gain insight into fact based data analysis.
 
 Numpy arrays are much faster than typical python lists.
 a = np.array([python list of same data type])
@@ -37,3 +219,106 @@ same indices, not based on position
 
 Series operations where indices don't match always produce NaN - not a number
 
+Pearson's correlation measures the strength of a linear relationship between
+two variables.
+
+Scatter plots are best to visualize the relationship between variables
+before going for the formal calculation.
+
+Link_1 correlation : https://onlinestatbook.com/2/describing_bivariate_data/pearson.html
+Link_2 correlation : https://rpsychologist.com/correlation/
+
+Dataframe apply vs applymap
+---------------------------
+apply - applying a function to each column of the dataframe one by one in one shot
+
+applymap - directly apply a given function to each element of dataframe, i.e.
+		   entire dataframe in one shot
+
+Note: In order to get the proper computations, we should actually be setting the 
+value of the "ddof" parameter to 0 in the .std() function.
+
+Note that the type of standard deviation calculated by default is different between 
+numpy's .std() and pandas' .std() functions. By default, numpy calculates a 
+population standard deviation, with "ddof = 0". On the other hand, pandas calculates
+a sample standard deviation, with "ddof = 1". If we know all of the scores, 
+then we have a population - so to standardize using pandas, we need to set 
+"ddof = 0".
+
+Adding a dataframe to a series adds each value of a series to one column of 
+the dataframe. And it matches up the series to the dataframe using the index
+of the series with the column names of the dataframe.
+
+Sample Blog : https://rpsychologist.com/posts
+
+Pandas searching
+
+Usage 1:
+.loc[index] - to access an element of series or row of dataframe by index
+.iloc[position] - to access element of series or row of dataframe by position
+
+Usage 2:
+We can also use loc and iloc to access single element of dataframe
+.loc[index,column]
+.iloc[row_position, column_position]
+
+Usage 3:
+Accesing a column in dataframe - df[column_name]
+
+Usage 4 : 
+df.values to get a 2D numpy array of values from the dataframe
+
+
+Pearson's r in NumPy
+--------------------
+NumPy's corrcoef() function can be used to calculate 
+Pearson's r, also known as the correlation coefficient.
+
+Pandas - to calculate difference with previous rows 
+shift() - shifts index by desired number of periods , after this we subtract from
+          the main dataframe
+diff() - function to calculate difference with last row/s DIRECTLY
+
+Pandas - applymap() is used to apply a function to each element of the dataframe
+	   - apply() is used to apply function to each column of a dataframe
+	   - apply() also takes in axis argument to specify operation along row/col
+	   
+	   
+Note that the type of standard deviation calculated by default is different 
+between numpy's .std() and pandas' .std() functions. By default, numpy calculates 
+a population standard deviation, with "ddof = 0". On the other hand, pandas 
+calculates a sample standard deviation, with "ddof = 1". If we know all of 
+the scores, then we have a population - so to standardize using pandas, 
+we need to set "ddof = 0".	   
+
+qcut() - Quantile-based discretization function.
+		 Discretize variable into equal-sized buckets
+		 based on rank or based on sample quantiles.
+		 
+pandas.qcut(x, q, labels=None, retbins=False, precision=3, duplicates='raise')
+
+df.groupby(key) to perform a grouping on data by a specific column as key
+https://pandas.pydata.org/pandas-docs/stable/user_guide/groupby.html
+
+*combining dataframes with merge()
+-left_df.merge(right_df, on = "key", how = "inner")
+-remove duplicates before merging depending on use case
+- if left_df and right_df have different names for key column/s, then use
+  left_on = , right_on = 
+  
+3D data in NumPy
+
+NumPy arrays can have arbitrarily many dimensions. Just like you can create a 1D 
+array from a list, and a 2D array from a list of lists, you can create a 3D array 
+from a list of lists of lists, and so on. For example, the following code would 
+create a 3D array:
+
+a = np.array([
+    [['A1a', 'A1b', 'A1c'], ['A2a', 'A2b', 'A2c']],
+    [['B1a', 'B1b', 'B1c'], ['B2a', 'B2b', 'B2c']]
+])
+3D data in Pandas
+Pandas has a data structure called a Panel, 
+which is similar to a DataFrame or a Series, but for 3D data.
+
+https://pandas.pydata.org/pandas-docs/stable/user_guide/dsintro.html
