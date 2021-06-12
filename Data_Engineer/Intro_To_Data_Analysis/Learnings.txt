@@ -36,3 +36,4 @@ Vectorized operations in a series are based on matching values at
 same indices, not based on position
 
 Series operations where indices don't match always produce NaN - not a number
+
