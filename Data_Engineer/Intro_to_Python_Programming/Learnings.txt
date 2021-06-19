@@ -1,0 +1,126 @@
+* Python is case-sensitive
+* Spacing matters in python
+* Use error messages to help you learn
+
+Data Types and Operators
+------------------------
+
+Data Types: Integers, Floats, Booleans, Strings
+
+
+Operators: Arithmetic, Assignment, Comparison, Logical
+
+Arithmetic operators
+
++ Addition
+- Subtraction
+* Multiplication
+/ Division
+% Mod (the remainder after dividing)
+** Exponentiation (note that ^ does not do this operation, as you might have 
+   seen in other languages)
+// Integer division : Divides and rounds down to the nearest integer
+
+Bitwise operators are special operators in Python
+Link to Bitwise operators : https://wiki.python.org/moin/BitwiseOperators
+
+
+Besides writing variable names that are descriptive, there are a few things to 
+watch out for when naming variables in Python.
+
+1. Only use ordinary letters, numbers and underscores in your variable names. 
+They can’t have spaces, and need to start with a letter or underscore.
+
+2. You can’t use Python's reserved words, or "keywords," as variable names.
+There are reserved words in every programming language that have important purposes.
+Creating names that are descriptive of the values often will help you 
+avoid using any of these keywords.
+
+Keywords
+The following identifiers are used as reserved words, or 
+keywords of the language, and cannot be used as ordinary identifiers. 
+They must be spelled exactly as written here:
+
+False      await      else       import     pass
+None       break      except     in         raise
+True       class      finally    is         return
+and        continue   for        lambda     try
+as         def        from       nonlocal   while
+assert     del        global     not        with
+async      elif       if         or         yield
+
+
+3. The pythonic way to name variables is to use all lowercase letters and 
+underscores to separate words.
+
+
+YES
+my_height = 58
+my_lat = 40
+my_long = 105
+
+NO
+my height = 58
+MYLONG = 40
+MyLat = 105
+
+Though the last two of these would work in python, they are not pythonic ways 
+to name variables. The way we name variables is called snake case, because we
+tend to connect the words with underscores.
+
+Assignment Operators:
+
+SYMBOL			EXAMPLE			EQUIVALENT
+=				 x = 2			    x = 2
++=				 x += 2				x = x + 2
+-=				 x -= 2             x = x - 2
+*=				 x *= 2				x = x * 2
+/=				 x /= 2				x = x / 2
+**=				 x **= 2			x = x ** 2 (exponentiation)
+//=				 x //= 2			x = x // 2 (floor division to nearest integer left on number line)
+%=				 x %= 2				x = x % 2 (remainder)
+
+4.445e8 is equal to 4.445 * 10 ** 8 which is equal to 444500000.0
+
+You can check the type by using the type function
+
+type(x)
+
+Because the float, or approximation, for 0.1 is actually slightly more than 0.1,
+when we add several of them together we can see the difference between the 
+mathematically correct answer and the one that Python creates.
+>>> print(.1 + .1 + .1 == .3)
+False
+
+In general, there are two types of errors to look out for
+
+Exceptions
+Syntax
+
+An Exception is a problem that occurs when the code is running, but a 'Syntax Error'
+is a problem detected when Python checks the code before it runs it.
+
+Strings : + operator concatenates the strings whereas * repeats the string
+Unlike the other data types you have seen so far, you can also index into strings.
+>>> first_word = 'Hello'
+>>> first_word[0]
+H
+
+The len() function
+len() is a built-in Python function that returns the length of an object, 
+like a string. The length of a string is the number of characters in the
+string. This will always be an integer.
+
+What does the len function return when we give 
+it the integer 835 instead of a string? An Error
+
+Nice! The error message generated reads: TypeError: object of type 'int' has no 
+len(), which alludes to the fact that len only works on a "sequence (such as a 
+string, bytes, tuple, list, or range) or a collection (such as a dictionary, set,
+or frozen set)," as per the Python documentation.
+
+
+
+Built-In Functions, Type Conversion
+
+Whitespace and Style Guidelines
