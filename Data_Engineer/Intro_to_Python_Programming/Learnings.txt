@@ -119,8 +119,107 @@ len(), which alludes to the fact that len only works on a "sequence (such as a
 string, bytes, tuple, list, or range) or a collection (such as a dictionary, set,
 or frozen set)," as per the Python documentation.
 
+Methods are functions that belong to an object of specific type.
+
+Methods are like some of the functions you have already seen:
+
+len("this")
+type(12)
+print("Hello world")
+These three above are functions - notice they use parentheses, and accept one or 
+more arguments. 
+
+A method in Python behaves similarly to a function. Methods actually are 
+functions that are called using dot notation. For example, lower() is a 
+string method that can be used like this, on a string called "sample string": 
+sample_string.lower()
+
+Methods are specific to the data type for a particular variable. So there are 
+some built-in methods that are available for all strings, different methods 
+that are available for all integers, etc.
+
+One important string method: format()
+Example 1:
+print("Mohammed has {} balloons".format(27))
+Mohammed has 27 balloons
+
+Example 2:
+animal = "dog"
+action = "bite"
+print("Does your {} {}?".format(animal, action))
+Does your dog bite?
+
+Example 3:
+maria_string = "Maria loves {} and {}"
+print(maria_string.format("math", "statistics"))
+Maria loves math and statistics
+
+Example 4:
+name = "Ashish"
+print(f"My name is {name}")
+My name is Ashish
+
+Another important string method: split()
+A helpful string method when working with strings is the .split method. This 
+function or method returns a data container called a list that contains the 
+words from the input string. 
+
+The split method has two additional arguments (sep and maxsplit). The sep argument 
+stands for "separator". It can be used to identify how the string should be split 
+up (e.g., whitespace characters like space, tab, return, newline; specific 
+punctuation (e.g., comma, dashes)). If the sep argument is not provided, 
+the default separator is whitespace.
+
+True to its name, the maxsplit argument provides the maximum number of splits. 
+The argument gives maxsplit + 1 number of elements in the new list, with the 
+remaining string being returned as the last element in the list.
+
+Understanding Common Error Messages
+There are many different error messages that you can receive in Python, and 
+learning how to interpret what they're telling you can be very helpful. 
+Here are some common ones for starters:
+
+"ZeroDivisionError: division by zero."
+
+"SyntaxError: unexpected EOF while parsing" 
+Executing these lines produces this syntax error message - do you see why?
+greeting = "hello"
+print(greeting.upper
+This message is often produced when you have accidentally left out something, 
+like a parenthesis. The message is saying it has unexpectedly reached the end of 
+file ("EOF") and it still didn't find that right parenthesis. This can easily 
+happen with code syntax involving pairs, like beginning and ending quotes also.
+
+"TypeError: len() takes exactly one argument (0 given)" This kind of message 
+could be given for many functions, like len in this case, if I accidentally do 
+not include the required number of arguments when I'm calling a function, as below.
+This message tells me how many arguments the function requires (one in this case),
+compared with how many I gave it (0). I meant to use len(chars) to count the 
+number of characters in this long word, but I forgot the argument.
+chars = "supercalifragilisticexpialidocious"
+len()
 
 
-Built-In Functions, Type Conversion
+Search for Your Error Message
+Software developers like to share their problems and solutions with each other 
+on the web, so using Google search, or searching in StackOverflow, 
 
-Whitespace and Style Guidelines
+Use Print Statements to Help Debugging
+Adding print statements temporarily into your code can help you see which code 
+lines have been executed before the error occurs, and see the values of any 
+variables that might be important. This approach to debugging can also be 
+helpful even if you're not receiving an error message, but things just 
+aren't working the way you want.
+
+DATA STRUCTURES:
+---------------
+* Types of Data Structures: Lists, Tuples, Sets, Dictionaries, 
+							Compound Data Structures
+* Operators: Membership, Identity
+* Built-In Functions or Methods
+
+List : 
++ A data structure in python that is mutable ordered sequence of elements
++ Lists are ordered i.e. we can look up for specific element by their index
+
+
