@@ -222,7 +222,8 @@ DATA STRUCTURES:
 + ORDER : WHETHER THE ORDER OF ELEMENTS IN AN OBJECT MATTERS (AND WHETHER THIS CAN
 		  BE USED TO ACCESS ELEMENTS)
 
-List : 
+LIST: 
+----
 + A data structure in python that is mutable ordered sequence of elements
 + Lists are ordered i.e. we can look up for specific element by their index
 + We can pull more than one value from a list at a time by using slicing. 
@@ -237,3 +238,235 @@ List :
 + Both strings and lists are ordered which is why indexing works for both
   
 
+Useful Functions for Lists: I
+
++ len() returns how many elements are in a list.
+
++ max() returns the greatest element of the list. How the greatest element is 
+determined depends on what type objects are in the list. The maximum element
+in a list of numbers is the largest number. The maximum elements in a list of
+strings is element that would occur last if the list were sorted alphabetically.
+This works because the the max function is defined in terms of the greater 
+than comparison operator. The max function is undefined for lists that contain 
+elements from different, incomparable types.
+
++ min() returns the smallest element in a list. min is the opposite of max, which 
+returns the largest element in a list. sorted() returns a copy of a list in order 
+from smallest to largest, leaving the list unchanged.
+
++ join method
+Join is a string method that takes a list of strings as an argument, and returns
+a string consisting of the list elements joined by a separator string.
+
+new_str = "\n".join(["fore", "aft", "starboard", "port"])
+print(new_str)
+fore
+aft
+starboard
+port
+
+It is important to remember to separate each of the items in the list you are 
+joining with a comma (,). Forgetting to do so will not trigger an error, but 
+will also give you unexpected results.
+
++ append method
+A helpful method called append adds an element to the end of a list.
+
+NOTE : All data structures are data types but not vice-versa
+
+TUPLE:
+-----
++ A data type for immutable ordered sequences of elements
++ Tuples are used to store related pieces of information
++ Tuples are immutable - we cannot add, remove or sort items in a tuple
++ Elements of a tuple can be accessed by their indices just like in a list
++ Tuples are mostly used when we have to keep closely related information together
+  For example : location has (latitude, longitude) parameters
++ Tuples can be used to assign value to multiple variables in a compact way
++ () are optional while forming tuples, so 1,2,3 is same as (1,2,3)
++ Tuple unpacking is used to perform multiple assignment in a single line
++ Tuples are similar to lists in that they store an ordered collection of objects 
+  which can be accessed by their indices. Unlike lists, however, tuples are 
+  immutable - you can't add and remove items from tuples, or sort them in place
++ The parentheses are optional when defining tuples
+
+SET:
+---
++ A data type for mutable unordered collections of unique elements
++ One application of a set is to quickly remove duplicates from a list.
+
+numbers = [1, 2, 6, 3, 1, 1, 6]
+unique_nums = set(numbers)
+print(unique_nums)
+This would output:
+
+{1, 2, 3, 6}
+
++ Sets support the IN, NOT IN operators as lists do
++ We can add elements to sets using the add() method
++ Remove elements using the pop() method, but pop() here does not take arguments
+  pop() in lists takes an argument of the index position but not in sets as sets 
+  are unordered
++ When we pop an element from a set, a random element is removed
++ Remember that sets, unlike lists, are unordered so there is no "last element"
++ Other operations you can perform with sets include those of mathematical sets
++ Methods like union, intersection, and difference are easy to perform with sets, 
+  and are much faster than such operators with other containers
+  
+DICTIONARY:
+----------
++ A dictionary is a mutable, unordered data structure that contains mappings of keys 
+  to values. Because these keys are used to index values, they must be unique and 
+  immutable. For example, a string or tuple can be used as the key of a dictionary, 
+  but if you try to use a list as a key of a dictionary, you will get an error.
++ A data type for mutable objects that store mappings of unique keys to values
++ Dictionary stores pairs of elements : keys and values
++ The keys in a dictionary can be of any immutable type
++ It is not necessary for every key to be of same type
++ We can look up values or insert new values in the dictionary 
+  using [] that enclose the key
++ Dictionaries are not sortable as they are not ordered  
+  
+  print(elements["helium"])  # print the value mapped to "helium"
+  elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
+ 
++ We can check whether a value is in a dictionary the same way we check whether a 
+  value is in a list or set with the IN keyword 
++ Dicts have a related method that's also useful, get() 
+  get() looks up values in a dictionary, but unlike square brackets, 
+  get() returns None (or a default value of your choice) if the key isn't found  
+  
+  print("carbon" in elements)
+  print(elements.get("dilithium"))
+  
+  True # Carbon is in the dictionary, so True is printed 
+  None # Dilithium isn’t in our dictionary so None is returned by get() and printed
+  
++ If you expect lookups to sometimes fail, get might be a better tool than normal 
+  square bracket lookups because errors can crash your program
+  
+* IDENTITY OPERATORS  VS COMPARISON OPERATORS:
+  ------------------------------------------- 
+IDENTITY OPERATORS
+Keyword			Operator
+
+is				evaluates if both sides have the same identity
+is not			evaluates if both sides have different identities  
+
+You can check if a key returned None with the IS operator
+You can check for the opposite using IS NOT
+
+n = elements.get("dilithium")
+print(n is None)
+print(n is not None)
+This would output:
+
+True
+False  
+  
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a == b) True
+print(a is b) True
+print(a == c) True
+print(a is c) False
+
+List a and list b are equal and identical. 
+List c is equal to a (and b for that matter) since they have the same contents. 
+But a and c (and b for that matter, again) point to two different objects, 
+i.e., they aren't identical objects. That is the difference between checking 
+for equality vs. identity.
+
+A set is defined with curly braces, {}, but it isn't the only data structure 
+that does; dictionaries do as well! However, the difference is that a set is 
+defined as a sequence of elements separated by commas:
+
+set_example = {element1, element2, element3}
+
+while a dictionary is defined as a sequence of key, value pairs marked with 
+colons, separated by commas:
+dict_example = {key1: value1, key2: value2, key3: value3}.
+
+Note: if you define a variable with an empty set of curly braces like this: 
+a = {}, Python will assign an empty dictionary to that variable. 
+You can always use set() and dict() to define empty sets and dictionaries as well.
+
+# invalid dictionary - this should break
+room_numbers = {
+    ['Freddie', 'Jen']: 403,
+    ['Ned', 'Keith']: 391,
+    ['Kristin', 'Jazzmyne']: 411,
+    ['Eugene', 'Zach']: 395
+}
+
+
+The error you saw was TypeError: unhashable type: 'list'. In Python, any immutable 
+object (such as an integer, boolean, string, tuple) is hashable, meaning its value 
+does not change during its lifetime. This allows Python to create a unique hash 
+value to identify it, which can be used by dictionaries to track unique keys 
+and sets to track unique values. This is why Python requires us to use immutable 
+datatypes for the keys in a dictionary.
+
+The lists used in the code above are NOT immutable, and thus cannot be hashed 
+and used as dictionary keys. Can you try modifying the datatype of the keys in 
+the dictionary above to make the code run without errors? Hint: What other data 
+structure can you use to store a sequence of values and is immutable?
+
+# Correction for above code
+# Must use () in defining tuple as keys for the dict in here 
+room_numbers = {
+    ('Freddie', 'Jen'): 403,
+    ('Ned', 'Keith'): 391,
+    ('Kristin', 'Jazzmyne'): 411,
+    ('Eugene', 'Zach'): 395
+}
+
+COMPOUND DATA STRUCTURES:
+------------------------
+We can include containers in other containers to create compound data structures. 
+For example, this dictionary maps keys to values that are also dictionaries!
+
+elements = {"hydrogen": {"number": 1,
+                         "weight": 1.00794,
+                         "symbol": "H"},
+              "helium": {"number": 2,
+                         "weight": 4.002602,
+                         "symbol": "He"}}
+						 
+We can access elements in this nested dictionary like this.
+
+helium = elements["helium"]  # get the helium dictionary
+hydrogen_weight = elements["hydrogen"]["weight"]  # get hydrogen's weight						 
+
+You can also add a new key to the element dictionary.
+
+oxygen = {"number":8,"weight":15.999,"symbol":"O"}  # create a new oxygen dictionary 
+elements["oxygen"] = oxygen  # assign 'oxygen' as a key to the elements dictionary
+print('elements = ', elements)
+
+Output is:
+
+elements =  {"hydrogen": {"number": 1,
+                          "weight": 1.00794,
+                          "symbol": 'H'},
+               "helium": {"number": 2,
+                          "weight": 4.002602,
+                          "symbol": "He"}, 
+               "oxygen": {"number": 8, 
+                          "weight": 15.999, 
+                          "symbol": "O"}}
+						  
+Data Structure	Ordered		Mutable		Constructor			Example
+List			Yes			Yes			[ ] or list()		[5.7, 4, 'yes', 5.7]
+Tuple			Yes			No			( ) or tuple()		(5.7, 4, 'yes', 5.7)
+Set				No			Yes			{}* or set()		{5.7, 4, 'yes'}
+Dictionary		No			No**		{ } or dict()		{'Jun': 75, 'Jul': 89}
+
+* You can use curly braces to define a set like this: {1, 2, 3}. 
+  However, if you leave the curly braces empty like this: {} Python will instead 
+  create an empty dictionary. So to create an empty set, use set().
+
+** A dictionary itself is mutable, but each of its individual keys must be 
+  immutable.
