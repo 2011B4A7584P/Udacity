@@ -470,3 +470,138 @@ Dictionary		No			No**		{ } or dict()		{'Jun': 75, 'Jul': 89}
 
 ** A dictionary itself is mutable, but each of its individual keys must be 
   immutable.
+  
+CONTROL FLOW: Control flow is the sequence in which code is run
+------------  
++ Conditional Statements - if, elif, else
++ Boolean Expressions
++ For and While Loops  
++ Break and Continue - to break out of or continue loop execution
++ Zip and Enumerate - built in functions
++ List Comprehensions
+
++ If Statement
+An if statement is a conditional statement that runs or skips 
+code based on whether a condition is true or false.
+
+if phone_balance < 5:
+    phone_balance += 10
+    bank_balance -= 10
+
++ If, Elif, Else
+
+In addition to the if clause, there are two other optional clauses 
+often used with an if statement.
+
+if season == 'spring':
+    print('plant the garden!')
+elif season == 'summer':
+    print('water the garden!')
+elif season == 'fall':
+    print('harvest the garden!')
+elif season == 'winter':
+    print('stay indoors!')
+else:
+    print('unrecognized season')
+
+Pointers to keep in mind while writing boolean expressions for if statements:
+
+1. Don't use True or False as conditions
+# Bad example
+if True:
+    print("This indented code will always get run.")
+	
+2. Be careful writing expressions that use logical operators
+Logical operators and, or and not have specific meanings that aren't quite the 
+same as their meanings in plain English. Make sure your boolean expressions are 
+being evaluated the way you expect them to.
+
+# Bad example
+if weather == "snow" or "rain":
+    print("Wear boots!")
+This code is valid in Python, but it is not a boolean expression, although it 
+reads like one. The reason is that the expression to the right of the or operator,
+ "rain", is not a boolean expression 
+ 
+3. Don't compare a boolean variable with == True or == False
+This comparison isn’t necessary, since the boolean variable itself is a 
+boolean expression.
+
+# Bad example
+if is_cold == True:
+    print("The weather is cold!")
+
+This is a valid condition, but we can make the code more readable by using 
+the variable itself as the condition instead, as below.
+
+# Good example
+if is_cold:
+    print("The weather is cold!")	
+	
+4. If you want to check whether a boolean is False, you can use the NOT operator	
+
+Truth Value Testing
+If we use a non-boolean object as a condition in an if statement in place of 
+the boolean expression, Python will check for its truth value and use that to 
+decide whether or not to run the indented code. By default, the truth value of 
+an object in Python is considered True unless specified as False in the 
+documentation.
+
+5. Constants that are defined to be false:
+
+   None and False
+   Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)
+   Empty sequences and collections : '"", {},(),[], set(0), range(0)
+
+Loops: FOR, WHILE
+-----------------	  
++ A FOR loop is used to "iterate", or do something repeatedly, over an iterable
+  
+  Example : 
+  
+  cities = ['new york city', 'mountain view', 'chicago', 'los angeles']
+  for city in cities:
+      print(city)
+  print("Done!")
+  
++ An ITERABLE is an object that can return one of its elements at a time. 
+  This can include sequence types, such as strings, lists, and tuples, as 
+  well as non-sequence types, such as dictionaries and files
+
++ Using the range() Function with for Loops
+  
+  range() is a built-in function used to create an iterable sequence of numbers.
+  
+  You will frequently use range() with a for loop to repeat an action a certain 
+  number of times. Any variable can be used to iterate through the numbers, but 
+  Python programmers conventionally use i  
+  
+  range(start=0, stop, step=1)
+  
+  The range() function takes three integer arguments, the first and third of which 
+  are optional:
+
+  The 'start' argument is the first number of the sequence. If unspecified, 
+  'start' defaults to 0.
+  The 'stop' argument is 1 more than the last number of the sequence. 
+  This argument must be specified. range(4) returns 0, 1, 2, 3
+  The 'step' argument is the difference between each number in the sequence. 
+  If unspecified, 'step' defaults to 1.
+
++ Notes on using range():
+
+  If you specify one integer inside the parentheses with range(), it's used as 
+  the value for 'stop,' and the defaults are used for the other two.
+  e.g. - range(4) returns 0, 1, 2, 3
+  
+  If you specify two integers inside the parentheses with range(), they're used 
+  for 'start' and 'stop' and the default is used for 'step'
+  e.g. - range(2, 6) returns 2, 3, 4, 5
+  
+  Or we can specify all three integers for 'start', 'stop', and 'step'
+  e.g. - range(1, 10, 2) returns 1, 3, 5, 7, 9  
+  
+  
+    
+  
+  
