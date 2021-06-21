@@ -600,8 +600,42 @@ Loops: FOR, WHILE
   
   Or we can specify all three integers for 'start', 'stop', and 'step'
   e.g. - range(1, 10, 2) returns 1, 3, 5, 7, 9  
-  
-  
-    
-  
-  
+
++ For loop 
+names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+
+for name in names:
+    name = name.lower().replace(" ", "_")
+
+print(names)
+
+'''
+The printed output for the names list will look exactly like it did in the first 
+line. During each iteration, the name variable is set to a string taken from the 
+list. Then the assignment statement creates a new string (name.lower().replace(" ", "_")) 
+and changes the name variable to that string. It doesn't modify the contents of the 
+names list at all. To modify the list you must operate on the list itself, using 
+range, as you saw earlier.
+'''
+
++ Iterating Through Dictionaries with For Loops
+
+When you iterate through a dictionary using a for loop, doing it the normal 
+way (for n in some_dict) will only give you access to the keys in the dictionary
+
+If you wish to iterate through both keys and values, 
+you can use the built-in method items() like this:
+
+cast = {
+           "Jerry Seinfeld": "Jerry Seinfeld",
+           "Julia Louis-Dreyfus": "Elaine Benes",
+           "Jason Alexander": "George Costanza",
+           "Michael Richards": "Cosmo Kramer"
+       }
+
+for key, value in cast.items():
+    print("Actor: {}    Role: {}".format(key, value))
+
+	
+	
+	
