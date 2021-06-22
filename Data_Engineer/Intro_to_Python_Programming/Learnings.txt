@@ -305,7 +305,8 @@ This would output:
 + Sets support the IN, NOT IN operators as lists do
 + We can add elements to sets using the add() method
 + Remove elements using the pop() method, but pop() here does not take arguments
-  pop() in lists takes an argument of the index position but not in sets as sets 
+  pop() in lists takes an OPTIONAL argument of the index position but returns
+  the last element in the list by default but not in sets as sets 
   are unordered
 + When we pop an element from a set, a random element is removed
 + Remember that sets, unlike lists, are unordered so there is no "last element"
@@ -618,7 +619,7 @@ names list at all. To modify the list you must operate on the list itself, using
 range, as you saw earlier.
 '''
 
-+ Iterating Through Dictionaries with For Loops
++ Iterating Through Dictionaries with FOR Loops
 
 When you iterate through a dictionary using a for loop, doing it the normal 
 way (for n in some_dict) will only give you access to the keys in the dictionary
@@ -636,6 +637,63 @@ cast = {
 for key, value in cast.items():
     print("Actor: {}    Role: {}".format(key, value))
 
-	
-	
-	
++ WHILE Loop:
+  FOR loops are an example of "definite iteration" meaning that the loop's body is 
+  run a predefined number of times. This differs from "indefinite iteration" which 
+  is when a loop repeats an unknown number of times and ends when some condition is 
+  met, which is what happens in a while loop.
+  
+  EXAMPLE:
+  
+  card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
+  hand = []
+
+  # adds the last element of the card_deck list to the hand list
+  # until the values in hand add up to 17 or more
+	while sum(hand)  < 17:
+		hand.append(card_deck.pop())	
++ sum() returns the sum of the elements in a list, and pop() is a list method that 
+  removes the last element from a list and returns it
+  
+FOR Loop Vs WHILE Loop:
+
++ FOR loops are ideal when the number of iterations is known or finite
+  
+  Examples:
+  
+  Case I
+  ------
+  When you have an iterable collection (list, string, set, tuple, dictionary)
+  
+  for name in names:
+  
+  Case II
+  -------
+  When you want to iterate through a loop for a definite number of times, using range()
+  
+  for i in range(5):
+
++ WHILE loops are ideal when the iterations need to continue until a condition is met
+  
+  Examples:
+  
+  Case I
+  ------
+  When you want to use comparison operators
+  
+  while count <= 100:
+  
+  Case II
+  -------
+  When you want to loop based on receiving specific user input
+  
+  while user_input == 'y':  
+
+BREAK VS CONTINUE:
+-----------------
++ A loop will terminate immediately if it encounters a BREAK statement
++ Sometimes, rather than breaking out of the loop, there are times,
+  simply when we want to skip only one iteration of the loop
++ CONTINUE statement terminates ONE ITERATION of a loop
+  
+  
