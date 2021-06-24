@@ -998,8 +998,200 @@ SCRIPTING
 + If the user inputs 2 * 3, this outputs 6
 
 
++ Errors and Exceptions 
+  
+  SYNTAX ERRORS occur when Python can’t interpret our code, since we 
+  didn’t follow the correct syntax for Python. These are errors you’re 
+  likely to get when you make a typo, or you’re first starting to learn 
+  Python.
+  
+  Example : 
+  
+  msg = 'Welcome to this program!
+  print(msg)
+  
+  Output :
+  
+  SyntaxError: EOL while scanning string literal 
+    
+  EXCEPTIONS occur when unexpected things happen during execution of a 
+  program, even if the code is syntactically correct. There are 
+  different types of built-in exceptions in Python, and you can see 
+  which exception is thrown in the error message.
+  
+  Example : ValueError
+  
+  x = int(input("Enter a number: "))
+  x += 20
+  print(x)
+  
+  Program Run:
+  
+  Enter a number: ten
+  ValueError: invalid literal for int() with base 10: 'ten'
+  
+  Note: Although our code is syntactically correct, but we ran 
+        into an exception because a string spelling out
+		ten is not a valid argument for the int function.
+
+  Example : NameError 		
+  
+  print(non_existent_variable)
+  
+  Program Run:
+  
+  NameError: name 'non_existent_variable' is not defined
+  
++ Common Exceptions and their Descriptions:
+
+  Built-In exception                   Description
+  
+  ValueError						   An object of the correct
+									   type but inappropriate value
+									   is passed as an input
+									   to a built-in operation
+									   or function.
+									   
+  AssertionError					   An asset statement fails.
+
+  IndexError						   A sequence substring is 
+                                       out of range.
+									   
+  KeyError							   A key cannot be found 
+                                       in dictionary.
+									   
+  TypeError							   An object of an unsupported 
+									   type is passed as input to an
+									   operation or function.
+									   
+									   
 + Handling Exceptions
+  
+  TRY-EXCEPT-FINALLY blocks to handle exceptions
+  
+  Try Statement
+  
+  * We can use try statements to handle exceptions 
+    
+	There are four clauses you can use:
+
+    try: This is the only mandatory clause in a try statement. 
+	     The code in this block is the first thing that Python 
+		 runs in a try statement.
+    
+	except: If Python runs into an exception while running the 
+	        try block, it will jump to the except block that 
+			handles that exception.
+    
+	Specifying Exceptions
+    
+	We can actually specify which error we want to handle in an 
+	except block like this:
+	
+	try:
+		# some code
+	except ValueError:
+		# some code
+
+	Now, it catches the ValueError exception, but not other exceptions. 
+	If we want this handler to address more than one type of exception, 
+	we can include a parenthesized tuple after the except with the 
+	exceptions.
+	
+	try:
+		# some code
+	except (ValueError, KeyboardInterrupt):
+		# some code
+		
+    Or, if we want to execute different blocks of code depending on 
+	the exception, we can have multiple except blocks
+	
+	try:
+		# some code
+	except ValueError:
+		# some code
+	except KeyboardInterrupt:
+		# some code
+		
+    		
+
+	
+	else: If Python runs into no exceptions while running the 
+	      try block, it will run the code in this block after 
+		  running the try block.
+    
+	finally: Before Python leaves this try statement, it will 
+	         run the code in this finally block under any 
+			 conditions, even if it's ending the program. 
+			 E.g., if Python ran into an error while running code 
+			 in the except or else block, this finally block will 
+			 still be executed before stopping the program.
+			 
+			 finally block is useful for cleaning up actions
+			 in our code.
+			 
+			 Use case: Use this finally block to close the file
+			           after attempting opening it and performing 
+					   operations/tasks on the opened file in try block
+					   
+	try:
+		run_code1()
+	except TypeError:
+		run_code2()
+		return None # The finally block is run before the method returns
+	finally:
+		other_code()
+	
+	Compare to this:
+	
+	try:
+		run_code1()
+	except TypeError:
+		run_code2()
+		return None   
+	
+	other_code()  # This doesn't get run if there's an exception.
+	Other situations that can cause differences:
+	
+	If an exception is thrown inside the except block.
+	If an exception is thrown in run_code1() but it's not a TypeError.
+	Other control flow statements such as continue and break statements.		 
+	
+	
+	https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python
+			 
++ Accessing Error Messages
+  ------------------------
+  When we handle an exception, we can still access its error 
+  message like this:
+  
+  try:
+	# some code
+  except ZeroDivisionError as e:
+	# some code
+	print("ZeroDivisionError occurred: {}".format(e))
+	# This would print something like this:
+
+  ZeroDivisionError occurred: integer division or modulo by zero
+  So we can still access error messages, even if we handle them 
+  to keep our program from crashing!
+  
+  If we don't know a specific error we're handling, we can still 
+  access the message like this:
+  
+  try:
+    # some code
+  except Exception as e:
+	# some code
+    print("Exception occurred: {}".format(e))
+  
+  Exception is just the base class for all built-in exceptions. 
+  
+  We can learn more about Python's exceptions at the below link:
+  https://docs.python.org/3/library/exceptions.html#bltin-exceptions
+
++ 
+  
 + Reading and Writing Files
 + Importing Local, Standard, and Third-Party Modules
 + Experimenting with an Interpreter
-
