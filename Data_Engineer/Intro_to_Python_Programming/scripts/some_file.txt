@@ -1,0 +1,8 @@
+Hello!
+
+You have read the contents of this file.
+
+Thank You!
+
+
+We are exploring the file append mode.
