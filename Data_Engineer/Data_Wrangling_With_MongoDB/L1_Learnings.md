@@ -21,12 +21,18 @@ This section is about review of the **fundamentals of tabular**
 
 * The last part will focus on how to store data in MongoDB and use it to support analysis
 
-* MongoDB is increasingly important as it is powerful and scalable
+* MongoDB is increasingly important for data scientists as it is powerful and scalable
+
+* Generally, we should not trust any data that we get. Check for authenticity, reliability and business contextual relevance of the data.
 
 * The first step in data wrangling is to assess the source of data on below parameters in order to assess the assumptions about the data :
 	* data values present in entire data
 	* data types for those data values present in entire data
 	* shape of entire data
 	* identify errors or outliers in entire data - there are in fact severals ways to check for errors and also for checking whether data is within or outside range of expected values
+	* find missing values in the data
+	* finally, we need to ensure that the data will support the kind of queries that we need to make - the idea here is to eliminate surprises here to avoid leading to bad analysis later
+
+	
 	
 
