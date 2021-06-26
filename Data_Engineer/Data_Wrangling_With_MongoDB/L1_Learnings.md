@@ -32,6 +32,12 @@ This section is about review of the **fundamentals of tabular**
 	* identify errors or outliers in entire data - there are in fact severals ways to check for errors and also for checking whether data is within or outside range of expected values
 	* find missing values in the data
 	* finally, we need to ensure that the data will support the kind of queries that we need to make - the idea here is to eliminate surprises here to avoid leading to bad analysis later
+	
+* TABULAR DATA: Source - MS OFFICE, Excel, Calc from Apache OpenOffice, Google Spreadsheets
+	* Each row here represents a data item - call it observation, record etc
+	* Each column represent a field - call it an attribute for an observation
+	* Each value is the data entry in the cell corresponding to the value of the field for a given observation
+	
 
 	
 	
