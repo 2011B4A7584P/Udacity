@@ -37,6 +37,17 @@ This section is about review of the **fundamentals of tabular**
 	* Each row here represents a data item - call it observation, record etc
 	* Each column represent a field - call it an attribute for an observation
 	* Each value is the data entry in the cell corresponding to the value of the field for a given observation
+
+* Reasons for choice of CSV:
+	* Lightweight
+	* Each line of text is a single row
+	* Fields are separated by a delimiter, usually a comma
+	* TSV - an alternative of CSV, where the delimiter is tab character
+	* CSV files store just the data itself or better said - just the data and the delimiters
+	* The benefit of above is that files are as small as they reasonably can be
+	* They don't need special purpose software for interaction or usage
+	* Above is true as we can see csv files not only using MS Excel but also through command line, any text editor
+	* Though we don't need an app for csv files, most spreadsheet apps like MS Excel can read and write in csv files
 	
 
 	
