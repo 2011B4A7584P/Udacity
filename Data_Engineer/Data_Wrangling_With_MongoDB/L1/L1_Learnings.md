@@ -81,6 +81,8 @@ Output :
 * JSON came out of need for representing data that outgrew beyond limitations of tabular data
 * JSON - JavaScript Object Notation is a lightweight data-interchange format
 	* It is easy for humans to read and write 
+	* JSON is a text format for storing and transporting data
+	* JSON is **self-describing** and easy to understand
 	* It is easy for machines to parse and generate
 	* It is a text format that is completely language independent
 	* It uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others
@@ -96,6 +98,15 @@ Output :
 	* JSON objects are in fact mostly dictionaries (JSON objects are dictionaries in python and in many other langugages)
 	* There is a data type in most programming languages that is analogous to JSON object
 	* Many other languages have dictionaries or map like data types that are very similar to JSON objects
+* Data Modeling in JSON :
+	* Items may have different fields
+	* May have nested objects that is fields may have values that are themselves JSON objects
+	* May have nested arrays - a field may have a value of an array and that array may have as it's elements other JSON objects, individual values or other arrays
+* JSON reference 
+	* [JSON Tutorial W3 Schools](http://www.w3schools.com/js/js_json_intro.asp)
+	* [JSON Docs](https://www.json.org/json-en.html)
+	* [Python json module](https://docs.python.org/2/library/json.html)
+* Note that JSON arrays are interpreted as lists and JSON objects as dictionaries, so we can use the standard Python approaches to inspect JSON data
 		
 
 
