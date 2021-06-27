@@ -50,11 +50,13 @@ This section is about review of the **fundamentals of tabular**
 	* Though we don't need an app for csv files, most spreadsheet apps like MS Excel can read and write in csv files
 	
 
-'''
+
 * Python string method **strip()** will come in handy to get rid of the extra whitespace (that includes newline character at the end of line)
 * strip() : Removes spaces at the beginning and at the end of the string:
 
+'''
 Example : 
+
          txt = "     banana     "
         
          x = txt.strip()
