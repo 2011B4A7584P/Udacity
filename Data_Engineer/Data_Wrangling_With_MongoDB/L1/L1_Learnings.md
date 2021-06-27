@@ -72,6 +72,9 @@ Output :
 	
 * The [pprint](https://docs.python.org/3/library/pprint.html) module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals.	
 
-	
-	
+* Working with Excel documents with [xlrd](https://pypi.org/project/xlrd/)
+
+* **xlrd** module is compatible with both .xls and .xlsx formats
+
+* xlwt module is used for creating excel files if we need to	
 
