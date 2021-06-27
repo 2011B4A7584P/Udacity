@@ -76,5 +76,5 @@ Output :
 
 * **xlrd** module is compatible with both .xls and .xlsx formats
 
-* xlwt module is used for creating excel files if we need to	
+* [xlwt](https://pypi.org/project/xlwt/) module is used for create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+
 
