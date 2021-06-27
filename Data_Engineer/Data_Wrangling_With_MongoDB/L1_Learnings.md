@@ -51,7 +51,7 @@ This section is about review of the **fundamentals of tabular**
 	
 
 * csv module [documentation](https://docs.python.org/2/library/csv.html)
-* Python string method **strip()** will come in handy to get rid of the extra whitespace (that includes newline character at the end of line)
+* Python string method [strip()](https://python-reference.readthedocs.io/en/latest/docs/str/strip.html) will come in handy to get rid of the extra whitespace (that includes newline character at the end of line)
 * strip() : Removes spaces at the beginning and at the end of the string:
 
 
