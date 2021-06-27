@@ -54,18 +54,19 @@ This section is about review of the **fundamentals of tabular**
 * Python string method **strip()** will come in handy to get rid of the extra whitespace (that includes newline character at the end of line)
 * strip() : Removes spaces at the beginning and at the end of the string:
 
-'''
-Example : 
 
+Example : 
+		 '''
          txt = "     banana     "
         
          x = txt.strip()
             
          print("of all fruits", x, "is my favorite")
-
+		 '''
 Output :
-         of all fruits banana is my favorite
-'''
+         '''
+		 of all fruits banana is my favorite
+		 '''
 	
 	
 
