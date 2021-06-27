@@ -70,11 +70,32 @@ Output :
 		of all fruits banana is my favorite
 		 
 	
-* The [pprint](https://docs.python.org/3/library/pprint.html) module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals.	
+* The [pprint](https://docs.python.org/3/library/pprint.html) module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals
 
 * Working with Excel documents with [xlrd](https://pypi.org/project/xlrd/)
 
 * **xlrd** module is compatible with both .xls and .xlsx formats
 
 * [xlwt](https://pypi.org/project/xlwt/) module is used for create spreadsheet files compatible with MS Excel 97/2000/XP/2003 XLS files, on any platform, with Python 2.6, 2.7, 3.3+
+
+* JSON came out of need for representing data that outgrew beyond limitations of tabular data
+* JSON - JavaScript Object Notation is a lightweight data-interchange format
+	* It is easy for humans to read and write 
+	* It is easy for machines to parse and generate
+	* It is a text format that is completely language independent
+	* It uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others
+	* These properties make JSON an ideal data-interchange language
+	* JSON standard has emerged for modeling data and as a means of transmitting data between systems
+	* JSON is built on two structures:
+	
+		* A collection of name/value pairs - in various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or an associative array
+		* An ordered list of values - in most languages, this is realized as an array, vector, list, or sequence
+		* These are universal data structures - virtually all modern programming languages support them in one form or another
+		* It makes sense that a data format that is interchangeable with programming languages also be based on these structures
+	* We implement observations as JSON objects (synonymous to python dictionaries)	
+	* JSON objects are in fact mostly dictionaries (JSON objects are dictionaries in python and in many other langugages)
+	* There is a data type in most programming languages that is analogous to JSON object
+	* Many other languages have dictionaries or map like data types that are very similar to JSON objects
+		
+
 
