@@ -56,17 +56,19 @@ This section is about review of the **fundamentals of tabular**
 
 
 Example : 
-		 '''
+		 
+		 
          txt = "     banana     "
         
          x = txt.strip()
             
          print("of all fruits", x, "is my favorite")
-		 '''
+		 
+		 
 Output :
-         '''
+         
 		 of all fruits banana is my favorite
-		 '''
+		 
 	
 	
 
