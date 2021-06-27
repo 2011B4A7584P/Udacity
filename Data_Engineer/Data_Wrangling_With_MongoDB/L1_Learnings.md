@@ -38,7 +38,7 @@ This section is about review of the **fundamentals of tabular**
 	* Each column represent a field - call it an attribute for an observation
 	* Each value is the data entry in the cell corresponding to the value of the field for a given observation
 
-* Reasons for choice of CSV:
+* Reasons for choice of CSV data format:
 	* Lightweight
 	* Each line of text is a single row
 	* Fields are separated by a delimiter, usually a comma
@@ -50,7 +50,7 @@ This section is about review of the **fundamentals of tabular**
 	* Though we don't need an app for csv files, most spreadsheet apps like MS Excel can read and write in csv files
 	
 
-
+* csv module [documentation](https://docs.python.org/2/library/csv.html)
 * Python string method **strip()** will come in handy to get rid of the extra whitespace (that includes newline character at the end of line)
 * strip() : Removes spaces at the beginning and at the end of the string:
 
@@ -70,7 +70,7 @@ Output :
 		of all fruits banana is my favorite
 		 
 	
-* The **pprint** module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals.	
+* The [pprint](https://docs.python.org/3/library/pprint.html) module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals.	
 
 	
 	
