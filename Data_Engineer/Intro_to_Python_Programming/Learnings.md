@@ -9,7 +9,7 @@
 
 *	Operators: Arithmetic, Assignment, Comparison, Logical
 
-*	Arithmetic operators
+	*	Arithmetic operators
 
 		*	`+` Addition
 		*	`-` Subtraction
