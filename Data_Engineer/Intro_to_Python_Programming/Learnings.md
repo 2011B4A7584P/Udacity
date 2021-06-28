@@ -1,6 +1,6 @@
 *	Python is case-sensitive
 *	Spacing matters in python, hence, be mindful of indentation
-*	Use error messages to help you learn
+*	Use error messages to help yourself learn
 
 **Data Types and Operators**
 
@@ -30,7 +30,7 @@
 
 	1. Only use ordinary letters, numbers and underscores in your variable names. They can’t have spaces, and need to start with a letter or underscore.
 
-	2. We can’t use Python's reserved words, or "keywords," as variable names. There are reserved words in every programming language that have important purposes.
+	2. We can’t use Python's reserved words, or **keywords** as variable names. There are reserved words in every programming language that have important purposes.
 	
 	3. Creating names that are descriptive of the values often will help us avoid using any of these keywords.
 
@@ -75,17 +75,24 @@
 	//=				 x //= 2			x = x // 2 (floor division to nearest integer left on number line)
 	%=				 x %= 2				x = x % 2 (remainder)
 	```
-4.445e8 is equal to 4.445 * 10 ** 8 which is equal to 444500000.0
 
-You can check the type by using the type function
+*	4.445e8 is equal to 4.445 `*` 10 `**` 8 which is equal to 444500000.0
 
-type(x)
+* You can check the type of a variable by using the *type()* function
+	```
+	type(x)
+	```
 
-Because the float, or approximation, for 0.1 is actually slightly more than 0.1,
-when we add several of them together we can see the difference between the 
-mathematically correct answer and the one that Python creates.
->>> print(.1 + .1 + .1 == .3)
-False
+*	*Note* : Because the float, or approximation, for 0.1 is actually slightly more than 0.1, when we add several of them together we can see the difference between the mathematically correct answer and the one that Python creates.
+*	Example:	
+		```
+		print(.1 + .1 + .1 == .3)
+		```
+*	Output:
+		```
+		False
+		```
+		
 
 In general, there are two types of errors to look out for
 
