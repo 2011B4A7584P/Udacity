@@ -105,14 +105,14 @@
 	*	`+` operator concatenates the strings whereas `*` repeats the string
 	*	Unlike the other data types you have seen so far, you can also index into strings
 	*	Example:
-			```
+		```
 			first_word = 'Hello'
 			first_word[0]
-			```
+		```
 	*   Output:
-			```
+		```
 			H
-			```
+		```
 
 	* **len()** function
 		* len() is a built-in Python function that returns the length of an object, like a string. The length of a string is the number of characters in the string. This will always be an integer.
