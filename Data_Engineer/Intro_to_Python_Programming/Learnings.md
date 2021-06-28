@@ -145,7 +145,7 @@
 *	Output 1:
 
 	```
-	Mohammed has 27 balloons
+		Mohammed has 27 balloons
 	```
 
 *	Example 2:
@@ -159,7 +159,7 @@
 *	Output 2:
 
 	```
-	Does your dog bite?
+		Does your dog bite?
 	```	
 	
 *	Example 3:
@@ -172,7 +172,7 @@
 *	Output 3:
 
 	```
-	Maria loves math and statistics
+		Maria loves math and statistics
 	```		
 
 *	Example 4:
