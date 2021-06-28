@@ -58,12 +58,12 @@ This section is about review of the **fundamentals of tabular**
 * Example : 
 		 
 		
-```python		
-txt = "     banana     "
-				
-x = txt.strip()
+	```python		
+	txt = "     banana     "
 					
-print("of all fruits", x, "is my favorite")
+	x = txt.strip()
+						
+	print("of all fruits", x, "is my favorite")
 ```
 		 
 * Output :
