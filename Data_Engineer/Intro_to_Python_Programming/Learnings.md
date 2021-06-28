@@ -16,39 +16,36 @@
 		* `*` Multiplication
 		* `/` Division
 		* `%` Mod (the remainder after dividing)
+		* `//` Integer Division (floor division to nearest integer left on number line)
+		* `**` Exponentiation
 
-** Exponentiation (note that ^ does not do this operation, as you might have 
-   seen in other languages)
-// Integer division : Divides and rounds down to the nearest integer
+*	Exponentiation (note that *^* does not do this operation, as you might have seen in other languages)
+*	`//` Integer division : Divides and rounds down to the nearest integer
 
-Bitwise operators are special operators in Python
-Link to Bitwise operators : https://wiki.python.org/moin/BitwiseOperators
+*	Bitwise operators are special operators in Python
+*	[Link to Bitwise operators](https://wiki.python.org/moin/BitwiseOperators)
 
 
-Besides writing variable names that are descriptive, there are a few things to 
-watch out for when naming variables in Python.
+*	Besides writing variable names that are descriptive, there are a few things to watch out for when naming variables in Python
 
-1. Only use ordinary letters, numbers and underscores in your variable names. 
-They can’t have spaces, and need to start with a letter or underscore.
+	1. Only use ordinary letters, numbers and underscores in your variable names. They can’t have spaces, and need to start with a letter or underscore
 
-2. You can’t use Python's reserved words, or "keywords," as variable names.
-There are reserved words in every programming language that have important purposes.
-Creating names that are descriptive of the values often will help you 
-avoid using any of these keywords.
+	2. We can’t use Python's reserved words, or "keywords," as variable names. There are reserved words in every programming language that have important purposes
+	
+	3. Creating names that are descriptive of the values often will help us avoid using any of these keywords
 
-Keywords
-The following identifiers are used as reserved words, or 
-keywords of the language, and cannot be used as ordinary identifiers. 
-They must be spelled exactly as written here:
-
-False      await      else       import     pass
-None       break      except     in         raise
-True       class      finally    is         return
-and        continue   for        lambda     try
-as         def        from       nonlocal   while
-assert     del        global     not        with
-async      elif       if         or         yield
-
+* Keywords:
+	* The following identifiers are used as reserved words, or keywords of the language, and cannot be used as ordinary identifiers. 
+	* They must be spelled exactly as written here:
+	```
+	False      await      else       import     pass
+	None       break      except     in         raise
+	True       class      finally    is         return
+	and        continue   for        lambda     try
+	as         def        from       nonlocal   while
+	assert     del        global     not        with
+	async      elif       if         or         yield
+	```
 
 3. The pythonic way to name variables is to use all lowercase letters and 
 underscores to separate words.
