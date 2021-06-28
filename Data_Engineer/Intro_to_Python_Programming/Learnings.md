@@ -9,15 +9,15 @@
 
 *	Operators: Arithmetic, Assignment, Comparison, Logical
 
-	*	Arithmetic operators
+*	Arithmetic operators
 
-		* `+` Addition
-		* `-` Subtraction
-		* `*` Multiplication
-		* `/` Division
-		* `%` Mod (the remainder after dividing)
-		* `//` Integer Division (floor division to nearest integer left on number line)
-		* `**` Exponentiation
+	* `+` Addition
+	* `-` Subtraction
+	* `*` Multiplication
+	* `/` Division
+	* `%` Mod (the remainder after dividing)
+	* `//` Integer Division (floor division to nearest integer left on number line)
+	* `**` Exponentiation
 
 *	Exponentiation (note that *^* does not do this operation, as you might have seen in other languages)
 *	`//` Integer division : Divides and rounds down to the nearest integer
@@ -60,22 +60,21 @@
 		MYLONG = 40
 		MyLat = 105
 		```
-Though the last two of these would work in python, they are not pythonic ways 
-to name variables. The way we name variables is called snake case, because we
-tend to connect the words with underscores.
+*	Though the last two of these would work in python, they are not pythonic ways to name variables. The way we name variables is called snake case, because we tend to connect the words with underscores.
 
-Assignment Operators:
 
-SYMBOL			EXAMPLE			EQUIVALENT
-=				 x = 2			    x = 2
-+=				 x += 2				x = x + 2
--=				 x -= 2             x = x - 2
-*=				 x *= 2				x = x * 2
-/=				 x /= 2				x = x / 2
-**=				 x **= 2			x = x ** 2 (exponentiation)
-//=				 x //= 2			x = x // 2 (floor division to nearest integer left on number line)
-%=				 x %= 2				x = x % 2 (remainder)
-
+*	Assignment Operators:
+	```
+	SYMBOL			EXAMPLE			EQUIVALENT
+	=				 x = 2			    x = 2
+	+=				 x += 2				x = x + 2
+	-=				 x -= 2             x = x - 2
+	*=				 x *= 2				x = x * 2
+	/=				 x /= 2				x = x / 2
+	**=				 x **= 2			x = x ** 2 (exponentiation)
+	//=				 x //= 2			x = x // 2 (floor division to nearest integer left on number line)
+	%=				 x %= 2				x = x % 2 (remainder)
+	```
 4.445e8 is equal to 4.445 * 10 ** 8 which is equal to 444500000.0
 
 You can check the type by using the type function
