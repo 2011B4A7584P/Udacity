@@ -11,11 +11,11 @@
 
 	*	Arithmetic operators
 
-		+ Addition
-		- Subtraction
-		* Multiplication
-		/ Division
-		% Mod (the remainder after dividing)
+		* + Addition
+		* - Subtraction
+		* * Multiplication
+		* / Division
+		* % Mod (the remainder after dividing)
 
 ** Exponentiation (note that ^ does not do this operation, as you might have 
    seen in other languages)
