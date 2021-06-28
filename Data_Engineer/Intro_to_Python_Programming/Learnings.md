@@ -2,21 +2,21 @@
 * Spacing matters in python, hence, be mindful of indentation
 * Use error messages to help you learn
 
-Data Types and Operators
-------------------------
-
-Data Types: Integers, Floats, Booleans, Strings
+**Data Types and Operators**
 
 
-Operators: Arithmetic, Assignment, Comparison, Logical
+* Data Types: Integers, Floats, Booleans, Strings
 
-Arithmetic operators
+* Operators: Arithmetic, Assignment, Comparison, Logical
 
+*Arithmetic operators
+'''
 + Addition
 - Subtraction
 * Multiplication
 / Division
 % Mod (the remainder after dividing)
+'''
 ** Exponentiation (note that ^ does not do this operation, as you might have 
    seen in other languages)
 // Integer division : Divides and rounds down to the nearest integer
