@@ -1,15 +1,15 @@
-* Python is case-sensitive
-* Spacing matters in python, hence, be mindful of indentation
-* Use error messages to help you learn
+*	Python is case-sensitive
+*	Spacing matters in python, hence, be mindful of indentation
+*	Use error messages to help you learn
 
 **Data Types and Operators**
 
 
-* Data Types: Integers, Floats, Booleans, Strings
+*	Data Types: Integers, Floats, Booleans, Strings
 
-* Operators: Arithmetic, Assignment, Comparison, Logical
+*	Operators: Arithmetic, Assignment, Comparison, Logical
 
-	* Arithmetic operators
+	*	Arithmetic operators
 
 		+ Addition
 		- Subtraction
