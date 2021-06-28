@@ -79,19 +79,19 @@
 *	4.445e8 is equal to 4.445 `*` 10 `**` 8 which is equal to 444500000.0
 
 *	You can check the type of a variable by using the *type()* function
-		```
+	```
 		type(x)
-		```
+	```
 
 *	*Note* : Because the float, or approximation, for 0.1 is actually slightly more than 0.1, when we add several of them together we can see the difference between the mathematically correct answer and the one that Python creates.
 *	Example:	
-		```
+	```
 		print(.1 + .1 + .1 == .3)
-		```
+	```
 *	Output:
-		```
+	```
 		False
-		```
+	```
 		
 
 *	In general, there are two types of errors to look out for
