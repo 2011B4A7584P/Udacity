@@ -11,13 +11,13 @@
 
 *	Arithmetic operators
 
-	* `+` Addition
-	* `-` Subtraction
-	* `*` Multiplication
-	* `/` Division
-	* `%` Mod (the remainder after dividing)
-	* `//` Integer Division (floor division to nearest integer left on number line)
-	* `**` Exponentiation
+	*	`+` Addition
+	*	`-` Subtraction
+	*	`*` Multiplication
+	*	`/` Division
+	*	`%` Mod (the remainder after dividing)
+	*	`//` Integer Division (floor division to nearest integer left on number line)
+	*	`**` Exponentiation
 
 *	Exponentiation (note that *^* does not do this operation, as you might have seen in other languages)
 *	`//` Integer division : Divides and rounds down to the nearest integer
