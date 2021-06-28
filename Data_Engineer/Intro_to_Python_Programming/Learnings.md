@@ -117,20 +117,18 @@
 	* **len()** function
 		* len() is a built-in Python function that returns the length of an object, like a string. The length of a string is the number of characters in the string. This will always be an integer.
 		* What does the len function return when we give it the integer 835 instead of a string? An Error!
-		* Nice! The error message generated reads: TypeError: object of type 'int' has no 
-len(), which alludes to the fact that len only works on a "sequence (such as a 
-string, bytes, tuple, list, or range) or a collection (such as a dictionary, set,
-or frozen set)," as per the Python documentation.
+		* Nice! The error message generated reads: TypeError: object of type 'int' has no len(), which alludes to the fact that len() only works on a *sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set)* as per the Python documentation.
+		
 
-Methods are functions that belong to an object of specific type.
+* Methods are functions that belong to an object of specific type
 
-Methods are like some of the functions you have already seen:
-
-len("this")
-type(12)
-print("Hello world")
-These three above are functions - notice they use parentheses, and accept one or 
-more arguments. 
+* Methods are like some of the functions you have already seen:
+	```
+		len("this")
+		type(12)
+		print("Hello world")
+	```	
+* These three above are functions - notice they use parentheses, and accept one or more arguments. 
 
 A method in Python behaves similarly to a function. Methods actually are 
 functions that are called using dot notation. For example, lower() is a 
