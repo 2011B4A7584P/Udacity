@@ -57,7 +57,7 @@ This section is about review of the **fundamentals of tabular**
 
 Example : 
 		 
-		```python
+		```
 		
 		txt = "     banana     "
 				
