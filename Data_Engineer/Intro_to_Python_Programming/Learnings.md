@@ -120,45 +120,73 @@
 		* Nice! The error message generated reads: TypeError: object of type 'int' has no len(), which alludes to the fact that len() only works on a *sequence (such as a string, bytes, tuple, list, or range) or a collection (such as a dictionary, set, or frozen set)* as per the Python documentation.
 		
 
-* Methods are functions that belong to an object of specific type
+* 	Methods are functions that belong to an object of specific type
+	
+* 	Methods are like some of the functions you have already seen:
+		```
+			len("this")
+			type(12)
+			print("Hello world")
+		```	
+* 	These three above are functions - notice they use parentheses, and accept one or more arguments. 
+	
+* 	A method in Python behaves similarly to a function. Methods actually are functions that are called using dot notation. For example, lower() is a string method that can be used like this, on a string called "sample string": sample_string.lower()
 
-* Methods are like some of the functions you have already seen:
+*	Methods are specific to the data type for a particular variable. 
+*   So there are some built-in methods that are available for all strings, different methods that are available for all integers, etc. 
+*   One important string method: format()
+
+*	Example 1:
+
 	```
-		len("this")
-		type(12)
-		print("Hello world")
+		print("Mohammed has {} balloons".format(27))
 	```	
-* These three above are functions - notice they use parentheses, and accept one or more arguments. 
 
-A method in Python behaves similarly to a function. Methods actually are 
-functions that are called using dot notation. For example, lower() is a 
-string method that can be used like this, on a string called "sample string": 
-sample_string.lower()
+*	Output 1:
 
-Methods are specific to the data type for a particular variable. So there are 
-some built-in methods that are available for all strings, different methods 
-that are available for all integers, etc.
+	```
+	Mohammed has 27 balloons
+	```
 
-One important string method: format()
-Example 1:
-print("Mohammed has {} balloons".format(27))
-Mohammed has 27 balloons
+*	Example 2:
 
-Example 2:
-animal = "dog"
-action = "bite"
-print("Does your {} {}?".format(animal, action))
-Does your dog bite?
+	```
+		animal = "dog"
+		action = "bite"
+		print("Does your {} {}?".format(animal, action))
+	```
 
-Example 3:
-maria_string = "Maria loves {} and {}"
-print(maria_string.format("math", "statistics"))
-Maria loves math and statistics
+*	Output 2:
 
-Example 4:
-name = "Ashish"
-print(f"My name is {name}")
-My name is Ashish
+	```
+	Does your dog bite?
+	```	
+	
+*	Example 3:
+
+	```
+		maria_string = "Maria loves {} and {}"
+		print(maria_string.format("math", "statistics"))
+	```
+
+*	Output 3:
+
+	```
+	Maria loves math and statistics
+	```		
+
+*	Example 4:
+	
+	```
+		name = "Ashish"
+		print(f"My name is {name}")
+	```
+
+*	Outcome 4:
+	
+	```
+		My name is Ashish
+	```
 
 Another important string method: split()
 A helpful string method when working with strings is the .split method. This 
