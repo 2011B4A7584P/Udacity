@@ -28,13 +28,14 @@
 
 *	Besides writing variable names that are descriptive, there are a few things to watch out for when naming variables in Python
 
-	1. Only use ordinary letters, numbers and underscores in your variable names. They can’t have spaces, and need to start with a letter or underscore
+	1. Only use ordinary letters, numbers and underscores in your variable names. They can’t have spaces, and need to start with a letter or underscore.
 
-	2. We can’t use Python's reserved words, or "keywords," as variable names. There are reserved words in every programming language that have important purposes
+	2. We can’t use Python's reserved words, or "keywords," as variable names. There are reserved words in every programming language that have important purposes.
 	
-	3. Creating names that are descriptive of the values often will help us avoid using any of these keywords
+	3. Creating names that are descriptive of the values often will help us avoid using any of these keywords.
 
 * Keywords:
+
 	* The following identifiers are used as reserved words, or keywords of the language, and cannot be used as ordinary identifiers. 
 	* They must be spelled exactly as written here:
 	```
@@ -47,20 +48,18 @@
 	async      elif       if         or         yield
 	```
 
-3. The pythonic way to name variables is to use all lowercase letters and 
-underscores to separate words.
-
-
-YES
-my_height = 58
-my_lat = 40
-my_long = 105
-
-NO
-my height = 58
-MYLONG = 40
-MyLat = 105
-
+	* The pythonic way to name variables is to use all lowercase letters and use underscores to separate words.
+		```
+		YES
+		my_height = 58
+		my_lat = 40
+		my_long = 105
+		
+		NO
+		my height = 58
+		MYLONG = 40
+		MyLat = 105
+		```
 Though the last two of these would work in python, they are not pythonic ways 
 to name variables. The way we name variables is called snake case, because we
 tend to connect the words with underscores.
