@@ -64,11 +64,11 @@ This section is about review of the **fundamentals of tabular**
 	x = txt.strip()
 						
 	print("of all fruits", x, "is my favorite")
-```
+	```
 		 
 * Output :
          
-```of all fruits banana is my favorite```
+	```of all fruits banana is my favorite```
 		 
 	
 * The [pprint](https://docs.python.org/3/library/pprint.html) module provides a capability to *pretty-print* arbitrary Python data structures in a form which can be used as input to the interpreter. If the formatted structures include objects which are not fundamental Python types, the representation may not be loadable. This may be the case if objects such as files, sockets or classes are included, as well as many other objects which are not representable as Python literals
