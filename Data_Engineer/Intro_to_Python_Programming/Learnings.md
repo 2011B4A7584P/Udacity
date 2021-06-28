@@ -78,10 +78,10 @@
 
 *	4.445e8 is equal to 4.445 `*` 10 `**` 8 which is equal to 444500000.0
 
-* You can check the type of a variable by using the *type()* function
-	```
-	type(x)
-	```
+*	You can check the type of a variable by using the *type()* function
+		```
+		type(x)
+		```
 
 *	*Note* : Because the float, or approximation, for 0.1 is actually slightly more than 0.1, when we add several of them together we can see the difference between the mathematically correct answer and the one that Python creates.
 *	Example:	
@@ -94,29 +94,30 @@
 		```
 		
 
-In general, there are two types of errors to look out for
+*	In general, there are two types of errors to look out for
 
-Exceptions
-Syntax
+	*	Exceptions
+	*	Syntax
 
-An Exception is a problem that occurs when the code is running, but a 'Syntax Error'
-is a problem detected when Python checks the code before it runs it.
+*	An **Exception** is a problem that occurs when the code is running, but a **Syntax Error** is a problem detected when Python checks the code before it runs it.
 
-Strings : + operator concatenates the strings whereas * repeats the string
-Unlike the other data types you have seen so far, you can also index into strings.
->>> first_word = 'Hello'
->>> first_word[0]
-H
+*	Strings : 
+	*	`+` operator concatenates the strings whereas `*` repeats the string
+	*	Unlike the other data types you have seen so far, you can also index into strings
+	*	Example:
+			```
+			first_word = 'Hello'
+			first_word[0]
+			```
+	*   Output:
+			```
+			H
+			```
 
-The len() function
-len() is a built-in Python function that returns the length of an object, 
-like a string. The length of a string is the number of characters in the
-string. This will always be an integer.
-
-What does the len function return when we give 
-it the integer 835 instead of a string? An Error
-
-Nice! The error message generated reads: TypeError: object of type 'int' has no 
+	* **len()** function
+		* len() is a built-in Python function that returns the length of an object, like a string. The length of a string is the number of characters in the string. This will always be an integer.
+		* What does the len function return when we give it the integer 835 instead of a string? An Error!
+		* Nice! The error message generated reads: TypeError: object of type 'int' has no 
 len(), which alludes to the fact that len only works on a "sequence (such as a 
 string, bytes, tuple, list, or range) or a collection (such as a dictionary, set,
 or frozen set)," as per the Python documentation.
