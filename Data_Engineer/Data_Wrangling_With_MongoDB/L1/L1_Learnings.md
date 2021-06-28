@@ -110,6 +110,3 @@ This section is about review of the **fundamentals of tabular**
 	* [JSON Docs](https://www.json.org/json-en.html)
 	* [Python json module](https://docs.python.org/2/library/json.html)
 * Note that JSON arrays are interpreted as lists and JSON objects as dictionaries, so we can use the standard Python approaches to inspect JSON data
-		
-
-
