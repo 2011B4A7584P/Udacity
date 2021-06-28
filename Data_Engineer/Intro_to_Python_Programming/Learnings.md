@@ -1,5 +1,5 @@
 * Python is case-sensitive
-* Spacing matters in python
+* Spacing matters in python, hence, be mindful of indentation
 * Use error messages to help you learn
 
 Data Types and Operators
