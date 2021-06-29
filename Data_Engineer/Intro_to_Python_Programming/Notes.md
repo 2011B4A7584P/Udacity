@@ -510,16 +510,16 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 	*	**Can you try modifying the datatype of the keys in the dictionary above to make the code run without errors ? 
 		Hint: What other data structure can you use to store a sequence of values and is immutable?**
 
-	*	Correction for above code
-		*	**Note:Must use () in defining tuple as keys for the dictionary in here**
-			```
-				room_numbers = {
-				    ('Freddie', 'Jen'): 403,
-					('Ned', 'Keith'): 391,
-					('Kristin', 'Jazzmyne'): 411,
-					('Eugene', 'Zach'): 395
-					}
-			```
+*	Correction for above code
+	*	**Note:Must use () in defining tuple as keys for the dictionary in here**
+		```
+			room_numbers = {
+			    ('Freddie', 'Jen'): 403,
+				('Ned', 'Keith'): 391,
+				('Kristin', 'Jazzmyne'): 411,
+				('Eugene', 'Zach'): 395
+				}
+		```
 
 COMPOUND DATA STRUCTURES:
 ------------------------
