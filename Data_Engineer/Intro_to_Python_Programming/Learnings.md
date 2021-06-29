@@ -303,7 +303,7 @@ Useful Functions for Lists: I
 	```
 
 +	**It is important to remember to separate each of the items in the list you are joining with a comma , 
-	Forgetting to do so will not trigger an error, but will also give you unexpected results.**
+	forgetting to do so will not trigger an error, but will also give you unexpected results.**
 
 +	Example :
 	
