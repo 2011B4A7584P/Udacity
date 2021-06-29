@@ -103,7 +103,7 @@
 
 *	Strings : 
 	*	`+` operator concatenates the strings whereas `*` repeats the string
-	*	Unlike the other data types you have seen so far, you can also index into strings
+	*	**Unlike the other data types you have seen so far, you can also index into strings**
 	*	Example:
 		```
 			first_word = 'Hello'
