@@ -708,24 +708,20 @@ LOOPS: FOR, WHILE
 	well as non-sequence types, such as dictionaries and files.
 
 + 	Using the range() function with `for` loops
+	+	range() is a built-in function used to create an iterable sequence of numbers
+	+	You will frequently use range() with a for loop to repeat an action a certain 
+		number of times. Any variable can be used to iterate through the numbers, but 
+		Python programmers conventionally use i.  
+	+	**range(start=0, stop, step=1)**
   
-  range() is a built-in function used to create an iterable sequence of numbers.
-  
-  You will frequently use range() with a for loop to repeat an action a certain 
-  number of times. Any variable can be used to iterate through the numbers, but 
-  Python programmers conventionally use i  
-  
-  range(start=0, stop, step=1)
-  
-  The range() function takes three integer arguments, the first and third of which 
-  are optional:
-
-  The 'start' argument is the first number of the sequence. If unspecified, 
-  'start' defaults to 0.
-  The 'stop' argument is 1 more than the last number of the sequence. 
-  This argument must be specified. range(4) returns 0, 1, 2, 3
-  The 'step' argument is the difference between each number in the sequence. 
-  If unspecified, 'step' defaults to 1.
+	+	**The range() function takes three integer arguments, the first and third of which 
+		are optional:
+		+	The 'start' argument is the first number of the sequence. If unspecified, 
+			'start' defaults to 0.
+		+	The 'stop' argument is 1 more than the last number of the sequence. 
+			This argument must be specified. range(4) returns 0, 1, 2, 3.
+		+	The 'step' argument is the difference between each number in the sequence. 
+			If unspecified, 'step' defaults to 1.**
 
 + Notes on using range():
 
