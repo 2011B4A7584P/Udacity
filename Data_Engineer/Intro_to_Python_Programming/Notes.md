@@ -246,7 +246,7 @@ DATA STRUCTURES:
 
 *	Operators: 
 	*	**Membership - IN, NOT IN**
-	*	**Identity - IS**
+	*	**Identity - IS, IS NOT**
 	
 *	Built-In Functions or Methods
 
@@ -409,55 +409,74 @@ DICTIONARY:
 			None # Dilithium isn’t in our dictionary so None is returned by get() and printed
 		```	
     +	**If you expect lookups to sometimes fail, get() might be a better tool than normal 
-		square bracket lookups because errors(Keyerror in case of key not found in a dictionary) can crash your program**
+		square bracket lookups because errors(KeyError in case of key not found in a dictionary) can crash your program**
   
-* IDENTITY OPERATORS  VS COMPARISON OPERATORS:
-  ------------------------------------------- 
-IDENTITY OPERATORS
-Keyword			Operator
+IDENTITY OPERATORS  VS COMPARISON OPERATORS:
+------------------------------------------- 
 
-is				evaluates if both sides have the same identity
-is not			evaluates if both sides have different identities  
+*	IDENTITY OPERATORS
+	
+	Keyword				Operator
 
-You can check if a key returned None with the IS operator
-You can check for the opposite using IS NOT
+	`is`				**evaluates if both sides have the same identity**
+	`is not`			**evaluates if both sides have different identities**  
 
-n = elements.get("dilithium")
-print(n is None)
-print(n is not None)
-This would output:
+*	You can check if a key returned None with the IS operator
+*	You can check for the opposite using IS NOT
+*	Example:
+	```
+		elements = {'Helium':2, 'Oxygen':2, 'Neon':1, "Carbon":4}
+		n = elements.get("Dilithium")
+		print(n is None)
+		print(n is not None)
+	```
+*	Output:
+	```
+		True
+		False  
+	```
 
-True
-False  
-  
-a = [1, 2, 3]
-b = a
-c = [1, 2, 3]
+*	Example:
+	```
+		a = [1, 2, 3]
+		b = a
+		c = [1, 2, 3]
+		print(a == b) 
+		print(a is b) 
+		print(a == c) 
+		print(a is c) 
+	```
+*	Output:
+	```	
+		True
+		True
+		True
+		False
+	```
+*	Interpretations:
+	*	List a and list b are equal and identical
+	*	List c is equal(but not identical as identity also means same reference location in the memory) to a (and b for that matter) since they have the same contents 
+	*	But a and c (and b for that matter, again) point to two different objects
+	*   (a,c) doesn't contain identical objects in the tuple. Likewise for (b,c)
+	*	That is the difference between checking for equality vs. identity
 
-print(a == b) True
-print(a is b) True
-print(a == c) True
-print(a is c) False
-
-List a and list b are equal and identical. 
-List c is equal to a (and b for that matter) since they have the same contents. 
-But a and c (and b for that matter, again) point to two different objects, 
-i.e., they aren't identical objects. That is the difference between checking 
-for equality vs. identity.
-
-A set is defined with curly braces, {}, but it isn't the only data structure 
-that does; dictionaries do as well! However, the difference is that a set is 
-defined as a sequence of elements separated by commas:
-
-set_example = {element1, element2, element3}
-
-while a dictionary is defined as a sequence of key, value pairs marked with 
-colons, separated by commas:
-dict_example = {key1: value1, key2: value2, key3: value3}.
-
-Note: if you define a variable with an empty set of curly braces like this: 
-a = {}, Python will assign an empty dictionary to that variable. 
-You can always use set() and dict() to define empty sets and dictionaries as well.
+*	**Note_1:	A set is defined with curly braces, {}, but it isn't the only data structure 
+			that does; dictionaries do as well! However, the difference is that a set is 
+			defined as a sequence of elements separated by commas:**
+		```
+			set_example = {element1, element2, element3}
+		```
+		**  while a dictionary is defined as a sequence of key, value pairs marked with 
+			colons, separated by commas:**
+		```
+			dict_example = {key1: value1, key2: value2, key3: value3}.
+		```
++	**Note_2: if you define a variable with an empty set of curly braces like this: **
+			```
+				a = {} 
+			```	
+			**Python will assign an empty dictionary to that variable**
++	**It's better to use set() and dict() to define empty sets and dictionaries as well**
 
 # invalid dictionary - this should break
 room_numbers = {
