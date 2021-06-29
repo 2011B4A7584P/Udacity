@@ -567,24 +567,28 @@ COMPOUND DATA STRUCTURES:
 
 *	Output:
 	```
-		elements =  {
-						"hydrogen": {
-										"number": 1,
-										"weight": 1.00794,
-										"symbol": 'H'
-									},
-						"helium": {
-									"number": 2,
-									"weight": 4.002602,
-									"symbol": "He"
-								  }, 
-						"oxygen": {
-									"number": 8, 
-									"weight": 15.999, 
-									"symbol": "O"
-								}
-					}
-						  
+		elements = {
+					"hydrogen":
+						{
+						 "number": 1,
+						 "weight": 1.00794,
+						 "symbol": "H"
+						},
+					"helium": 
+						{
+						 "number": 2,
+						 "weight": 4.002602,
+						 "symbol": "He"
+						}
+					"oxygen": 
+						{
+						 "number": 8, 
+						 "weight": 15.999, 
+						 "symbol": "O"
+						}
+			}
+	```	
+										}				  
 Data Structure	Ordered		Mutable		Constructor			Example
 List			Yes			Yes			[ ] or list()		[5.7, 4, 'yes', 5.7]
 Tuple			Yes			No			( ) or tuple()		(5.7, 4, 'yes', 5.7)
