@@ -458,7 +458,7 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 	*	List a and list b are equal and identical
 	*	List c is equal(but not identical as identity also means same reference location in the memory) to a (and b for that matter) since they have the same contents 
 	*	But a and c (and b for that matter, again) point to two different objects
-	*   (a,c) doesn't contain identical objects in the tuple. Likewise for (b,c)
+	*   (a,c) doesn't contain identical objects, likewise for (b,c)
 	*	That is the difference between checking for equality vs. identity
 
 *	**Note:	A set is defined with curly braces, {}, but it isn't the only data structure 
@@ -498,16 +498,13 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 	```	
 *	Outcome:
 	```
-	TypeError: unhashable type: 'list'
+		TypeError: unhashable type: 'list'
 	```
-
-
-The error you saw was TypeError: unhashable type: 'list'. In Python, any immutable 
-object (such as an integer, boolean, string, tuple) is hashable, meaning its value 
-does not change during its lifetime. This allows Python to create a unique hash 
-value to identify it, which can be used by dictionaries to track unique keys 
-and sets to track unique values. This is why Python requires us to use immutable 
-datatypes for the keys in a dictionary.
+	*	**In Python, any immutable object (such as an integer, boolean, string, tuple) is hashable, 
+		meaning its value does not change during its lifetime. This allows Python to create a unique hash 
+		value to identify it, which can be used by dictionaries to track unique keys 
+		and sets to track unique values. This is why Python requires us to use immutable 
+		datatypes for the keys in a dictionary.**
 
 The lists used in the code above are NOT immutable, and thus cannot be hashed 
 and used as dictionary keys. Can you try modifying the datatype of the keys in 
