@@ -602,76 +602,84 @@ DATA STRUCTURES RECAP:
 
 *	**A dictionary itself is mutable, but each of its individual keys must be immutable**
   
-CONTROL FLOW: Control flow is the sequence in which code is run
-------------  
-+ Conditional Statements - if, elif, else
-+ Boolean Expressions
-+ For and While Loops  
-+ Break and Continue - to break out of or continue loop execution
-+ Zip and Enumerate - built in functions
-+ List Comprehensions
+CONTROL FLOW: 
+------------ 
++ 	Control flow is the sequence in which code is run 
++ 	Conditional Statements - if, elif, else
++ 	Boolean Expressions
++ 	For and While Loops  
++ 	Break and Continue - to break out of loop execution or continue loop execution
++ 	Zip and Enumerate - built in functions
++ 	List Comprehensions
 
-+ If Statement
-An if statement is a conditional statement that runs or skips 
-code based on whether a condition is true or false.
++	If Statement
+	+	An if statement is a conditional statement that runs or skips 
+		code based on whether a condition is true or false
+	+	Example:
+		```
+			if phone_balance < 5:
+				phone_balance += 10
+				bank_balance -= 10
+		```
++	If, Elif, Else
 
-if phone_balance < 5:
-    phone_balance += 10
-    bank_balance -= 10
+	+	In addition to the if clause, there are two other optional clauses 
+		often used with an if statement
+	+	Example:
+		```
+			if season == 'spring':
+				print('plant the garden!')
+			elif season == 'summer':
+				print('water the garden!')
+			elif season == 'fall':
+				print('harvest the garden!')
+			elif season == 'winter':
+				print('stay indoors!')
+			else:
+				print('unrecognized season')
+		```
+	+	Pointers to keep in mind while writing boolean expressions for if statements:
+		
+		1.	Don't use True or False as conditions
+			+	Example:
+				```
+					if True:
+						print("This indented code will always get run")
+				```	
+		2.	Be careful writing expressions that use logical operators
+			Logical operators and, or and not have specific meanings that aren't quite the 
+			same as their meanings in plain English. Make sure your boolean expressions are 
+			being evaluated the way you expect them to.
 
-+ If, Elif, Else
-
-In addition to the if clause, there are two other optional clauses 
-often used with an if statement.
-
-if season == 'spring':
-    print('plant the garden!')
-elif season == 'summer':
-    print('water the garden!')
-elif season == 'fall':
-    print('harvest the garden!')
-elif season == 'winter':
-    print('stay indoors!')
-else:
-    print('unrecognized season')
-
-Pointers to keep in mind while writing boolean expressions for if statements:
-
-1. Don't use True or False as conditions
-# Bad example
-if True:
-    print("This indented code will always get run.")
-	
-2. Be careful writing expressions that use logical operators
-Logical operators and, or and not have specific meanings that aren't quite the 
-same as their meanings in plain English. Make sure your boolean expressions are 
-being evaluated the way you expect them to.
-
-# Bad example
-if weather == "snow" or "rain":
-    print("Wear boots!")
-This code is valid in Python, but it is not a boolean expression, although it 
-reads like one. The reason is that the expression to the right of the or operator,
- "rain", is not a boolean expression 
+			+	Example:
+				```
+					if weather == "snow" or "rain":
+						print("Wear boots!")
+				```		
+			+	This code is valid in Python, but it is not a boolean expression, although it 
+				reads like one. The reason is that the expression to the right of the or operator,
+				"rain", is not a boolean expression 
  
-3. Don't compare a boolean variable with == True or == False
-This comparison isn’t necessary, since the boolean variable itself is a 
-boolean expression.
+		3.	Don't compare a boolean variable with == True or == False
+			This comparison isn’t necessary, since the boolean variable itself is a 
+			boolean expression.
 
-# Bad example
-if is_cold == True:
-    print("The weather is cold!")
+			+	Example:
+				```	
+					if is_cold == True:
+							print("The weather is cold!")
+				```
+			+	This is a valid condition, but we can make the code more readable by using 
+				the variable itself as the condition instead, as below:
 
-This is a valid condition, but we can make the code more readable by using 
-the variable itself as the condition instead, as below.
+			+	Example:
+				```
+					if is_cold:
+						print("The weather is cold!")	
+				```
+		4.	**If you want to check whether a boolean is False, you can use the NOT operator**
 
-# Good example
-if is_cold:
-    print("The weather is cold!")	
-	
-4. If you want to check whether a boolean is False, you can use the NOT operator	
-
-Truth Value Testing
++	Truth Value Testing
 If we use a non-boolean object as a condition in an if statement in place of 
 the boolean expression, Python will check for its truth value and use that to 
 decide whether or not to run the indented code. By default, the truth value of 
