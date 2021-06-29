@@ -65,8 +65,7 @@
 
 *	Assignment Operators:
 ```
-	
-	SYMBOL		EXAMPLE		      EQUIVALENT
+	SYMBOL		 EXAMPLE		  EQUIVALENT
 	=			x   =  2		  x =      2
 	+=			x  +=  2		  x = x +  2
 	-=			x  -=  2          x = x -  2
@@ -75,7 +74,6 @@
 	**=			x **=  2		  x = x ** 2 (exponentiation)
 	//=			x //=  2		  x = x // 2 (floor division to nearest integer left on number line)
 	%=			x  %=  2		  x = x  % 2 (remainder)
-	
 ```
 
 *	4.445e8 is equal to 4.445 `*` 10 `**` 8 which is equal to 444500000.0
