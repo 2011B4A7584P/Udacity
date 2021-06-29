@@ -418,7 +418,7 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 	```
 	Keyword				Operator
 
-	is not				evaluates if both sides have different identities
+	is  				evaluates if both sides have different identities
 	is not				evaluates if both sides have different identities
 	
 	```
