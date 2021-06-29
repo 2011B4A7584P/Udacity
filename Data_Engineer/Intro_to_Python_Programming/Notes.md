@@ -646,8 +646,8 @@ CONTROL FLOW:
 					if True:
 						print("This indented code will always get run")
 				```	
-		2.	Be careful while writing expressions that use logical operators
-			Logical operators and, or and not have specific meanings that aren't quite the 
+		2.	Be careful while writing expressions that use logical operators.
+			Logical operators `and`, `or` and `not` have specific meanings that aren't quite the 
 			same as their meanings in plain English. Make sure your boolean expressions are 
 			being evaluated the way you expect them to.
 
