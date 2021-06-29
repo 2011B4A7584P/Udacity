@@ -465,18 +465,16 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 			that does; dictionaries do as well! However, the difference is that a set is 
 			defined as a sequence of elements separated by commas:**
 	*	Example:
-	
-			```
-				set_example = {element1, element2, element3}
-			```
+		```
+			set_example = {element1, element2, element3}
+		```
 
 	*	**while a dictionary is defined as a sequence of key, value pairs marked with 
 			colons, separated by commas:**
 	* 	Example:
-	
-			```
-				dict_example = {key1: value1, key2: value2, key3: value3}.
-			```
+		```
+			dict_example = {key1: value1, key2: value2, key3: value3}.
+		```
 
 +	**Note: If you define a variable with an empty set of curly braces like the below**
 
