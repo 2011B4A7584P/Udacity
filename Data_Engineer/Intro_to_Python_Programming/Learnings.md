@@ -363,17 +363,17 @@ SET:
   
 DICTIONARY:
 ----------
-+ A dictionary is a mutable, unordered data structure that contains mappings of keys 
++ **A dictionary is a mutable, unordered data structure that contains mappings of keys 
   to values. Because these keys are used to index values, they must be unique and 
   immutable. For example, a string or tuple can be used as the key of a dictionary, 
-  but if you try to use a list as a key of a dictionary, you will get an error.
-+ A data type for mutable objects that store mappings of unique keys to values
+  but if you try to use a list as a key of a dictionary, you will get an error.**
++ **A data type for mutable objects thats store mappings of unique keys to values**
 + Dictionary stores pairs of elements : keys and values
-+ The keys in a dictionary can be of any immutable type
-+ It is not necessary for every key to be of same type
-+ We can look up values or insert new values in the dictionary 
-  using [] that enclose the key
-+ Dictionaries are not sortable as they are not ordered  
++ **The keys in a dictionary can be of any immutable type**
++ **It is not necessary for every key to be of same type**
++ **We can look up values or insert new values in the dictionary 
+  using [] that enclose the key**
++ **Dictionaries are not sortable as they are not ordered**
   
   print(elements["helium"])  # print the value mapped to "helium"
   elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
