@@ -244,7 +244,9 @@ DATA STRUCTURES:
 	*   **Dictionaries - Mutable and UnOrdered - Keys are immutable but the dictionary is mutable** 
 	*   **Compound Data Structures - subjected to case under consideration**
 
-* Operators: Membership, Identity
+* Operators: 
+	*	Membership - IN, NOT IN  
+	*	Identity - IS
 * Built-In Functions or Methods
 
 + **MUTABILITY : WHETHER AN OBJECT CAN CHANGE ITS VALUES AFTER IT HAS BEEN CREATED**
@@ -254,11 +256,9 @@ LIST:
 ----
 + A data structure in python that is mutable ordered sequence of elements
 + Lists are ordered i.e. we can look up for specific element by their index
-+ We can pull more than one value from a list at a time by using slicing. 
-  When using slicing, it is important to remember that the lower index is 
-  inclusive and the upper index is exclusive
-+ We can use IN and NOT IN to return a bool of whether an element exists within 
-  our list,  or if one string is a substring of another  
++ We can pull more than one value from a list at a time by using slicing
++ When using slicing, it is important to remember that the lower index is inclusive and the upper index is exclusive
++ We can use IN and NOT IN to return a bool of whether an element exists within our list, or if one string is a substring of another  
 + Strings are sequences of letters where as lists can be sequence of any types of
   object (string, int, float, etc)
 + Lists can be modified but strings cannot (look below)
