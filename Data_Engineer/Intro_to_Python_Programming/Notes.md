@@ -411,7 +411,7 @@ DICTIONARY:
     +	**If you expect lookups to sometimes fail, get() might be a better tool than normal 
 		square bracket lookups because errors(KeyError in case of key not found in a dictionary) can crash your program**
   
-IDENTITY OPERATORS  VS COMPARISON OPERATORS:
+IDENTITY OPERATORS VS COMPARISON OPERATORS:
 ------------------------------------------- 
 
 *	IDENTITY OPERATORS
@@ -525,38 +525,65 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 
 COMPOUND DATA STRUCTURES:
 ------------------------
-We can include containers in other containers to create compound data structures. 
-For example, this dictionary maps keys to values that are also dictionaries!
 
-elements = {"hydrogen": {"number": 1,
-                         "weight": 1.00794,
-                         "symbol": "H"},
-              "helium": {"number": 2,
-                         "weight": 4.002602,
-                         "symbol": "He"}}
-						 
-We can access elements in this nested dictionary like this.
+*	We can include containers in other containers to create compound data structures. 
+*	For example, this dictionary maps keys to values that are also dictionaries!
+*	Example:
 
-helium = elements["helium"]  # get the helium dictionary
-hydrogen_weight = elements["hydrogen"]["weight"]  # get hydrogen's weight						 
+	```
+		elements = 
+					{
+						"hydrogen": {
+										"number": 1,
+										"weight": 1.00794,
+										"symbol": "H"
+									},
+						
+						"helium": 	{
+										"number": 2,
+										"weight": 4.002602,
+										"symbol": "He"
+									}
+					}
+	```							
 
-You can also add a new key to the element dictionary.
+*	We can access elements in this nested dictionary like this:
 
-oxygen = {"number":8,"weight":15.999,"symbol":"O"}  # create a new oxygen dictionary 
-elements["oxygen"] = oxygen  # assign 'oxygen' as a key to the elements dictionary
-print('elements = ', elements)
+	```
+		helium = elements["helium"]  # get the helium dictionary
+		helium = elements.get("helium")
+		hydrogen_weight = elements["hydrogen"]["weight"]  # get hydrogen's weight						 
+		hydrogen_weight = elements.get("hydrogen").get("weight")
+	```	
 
-Output is:
 
-elements =  {"hydrogen": {"number": 1,
-                          "weight": 1.00794,
-                          "symbol": 'H'},
-               "helium": {"number": 2,
-                          "weight": 4.002602,
-                          "symbol": "He"}, 
-               "oxygen": {"number": 8, 
-                          "weight": 15.999, 
-                          "symbol": "O"}}
+*	You can also add a new key to the element dictionary.
+*	Example:
+	```
+		oxygen = {"number":8,"weight":15.999,"symbol":"O"}  # create a new oxygen dictionary 
+		elements["oxygen"] = oxygen  # assign 'oxygen' as a key to the elements dictionary
+		print('elements = ', elements)
+	```	
+
+*	Output:
+	```
+		elements =  {
+						"hydrogen": {
+										"number": 1,
+										"weight": 1.00794,
+										"symbol": 'H'
+									},
+						"helium": {
+									"number": 2,
+									"weight": 4.002602,
+									"symbol": "He"
+								  }, 
+						"oxygen": {
+									"number": 8, 
+									"weight": 15.999, 
+									"symbol": "O"
+								}
+					}
 						  
 Data Structure	Ordered		Mutable		Constructor			Example
 List			Yes			Yes			[ ] or list()		[5.7, 4, 'yes', 5.7]
