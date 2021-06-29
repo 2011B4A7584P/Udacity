@@ -333,12 +333,12 @@ TUPLE:
 + 	**Tuples are similar to lists in that they store an ordered collection of objects 
 	which can be accessed by their indices. Unlike lists, however, tuples are 
 	immutable - you can't add and remove items from tuples, or sort them in place**
-+ 	The parentheses are optional when defining tuples
++ 	The parentheses are optional when defining tuples but it's a good practice to include them for readability
 
 SET:
 ---
-+	**A data type for mutable unordered collections of unique elements
-+	One application of a set is to quickly remove duplicates from a list**
++	**A data type for mutable unordered collections of unique elements**
++	**One application of a set is to quickly remove duplicates from a list**
 
 numbers = [1, 2, 6, 3, 1, 1, 6]
 unique_nums = set(numbers)
