@@ -478,9 +478,9 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 
 +	**Note: If you define a variable with an empty set of curly braces like the below**
 
-			```
-				a = {} 
-			```	
+		```
+			a = {} 
+		```	
 
 	**Python will assign an empty dictionary to that variable**
 +	**It's better to use set() and dict() to define empty sets and dictionaries as well**
