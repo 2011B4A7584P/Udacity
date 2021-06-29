@@ -544,7 +544,7 @@ COMPOUND DATA STRUCTURES:
 						 "weight": 4.002602,
 						 "symbol": "He"
 						}
-				   }
+				}
 	```							
 
 *	We can access elements in this nested dictionary like this:
