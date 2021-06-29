@@ -226,19 +226,13 @@
 	* Output :
 		```
 			TypeError: len() takes exactly one argument (0 given)
-		```	
-			
-
-Search for Your Error Message
-Software developers like to share their problems and solutions with each other 
-on the web, so using Google search, or searching in StackOverflow, 
-
-Use Print Statements to Help Debugging
-Adding print statements temporarily into your code can help you see which code 
-lines have been executed before the error occurs, and see the values of any 
-variables that might be important. This approach to debugging can also be 
-helpful even if you're not receiving an error message, but things just 
-aren't working the way you want.
+		```
+	* Search for Your Error Message
+	
+		* Software developers like to share their problems and solutions with each other on the web, so using Google search, or searching in StackOverflow
+		* Use Print Statements to Help Debugging
+		* Adding print statements temporarily into your code can help you see which code lines have been executed before the error occurs, and see the values of any variables that might be important 
+		* This approach to debugging can also be helpful even if you're not receiving an error message, but things just aren't working the way you want
 
 DATA STRUCTURES:
 ---------------
