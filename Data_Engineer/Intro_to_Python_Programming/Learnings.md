@@ -245,8 +245,9 @@ DATA STRUCTURES:
 	*   **Compound Data Structures - subjected to case under consideration**
 
 * Operators: 
-	*	Membership - IN, NOT IN  
-	*	Identity - IS
+	*	**Membership - IN, NOT IN**
+	*	**Identity - IS**
+	
 * Built-In Functions or Methods
 
 + **MUTABILITY : WHETHER AN OBJECT CAN CHANGE ITS VALUES AFTER IT HAS BEEN CREATED**
@@ -261,9 +262,9 @@ LIST:
 + We can use IN and NOT IN to return a bool of whether an element exists within our list, or if one string is a substring of another  
 + Strings are sequences of letters where as lists can be sequence of any types of
   object (string, int, float, etc)
-+ Lists can be modified but strings cannot (look below)
-+ Strings are immutable where lists are mutable
-+ Both strings and lists are ordered which is why indexing works for both
++ **Lists can be modified but strings cannot**
++ **Strings are immutable where lists are mutable**
++ **Both strings and lists are ordered which is why indexing works for both**
   
 
 Useful Functions for Lists: I
