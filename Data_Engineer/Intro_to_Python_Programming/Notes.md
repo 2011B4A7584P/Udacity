@@ -526,13 +526,12 @@ IDENTITY OPERATORS VS COMPARISON OPERATORS:
 COMPOUND DATA STRUCTURES:
 ------------------------
 
-*	We can include containers in other containers to create compound data structures. 
+*	We can include containers in other containers to create compound data structures.
 *	For example, this dictionary maps keys to values that are also dictionaries!
 *	Example:
 
 	```
-		elements = 
-					{
+		elements =	{
 						"hydrogen": {
 										"number": 1,
 										"weight": 1.00794,
