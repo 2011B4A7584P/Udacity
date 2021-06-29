@@ -337,8 +337,8 @@ TUPLE:
 
 SET:
 ---
-+ A data type for mutable unordered collections of unique elements
-+ One application of a set is to quickly remove duplicates from a list.
++	**A data type for mutable unordered collections of unique elements
++	One application of a set is to quickly remove duplicates from a list**
 
 numbers = [1, 2, 6, 3, 1, 1, 6]
 unique_nums = set(numbers)
