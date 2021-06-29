@@ -503,13 +503,12 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 	*	**In Python, any immutable object (such as an integer, boolean, string, tuple) is hashable, 
 		meaning its value does not change during its lifetime. This allows Python to create a unique hash 
 		value to identify it, which can be used by dictionaries to track unique keys 
-		and sets to track unique values. This is why Python requires us to use immutable 
+		and sets to track unique values as placeholders of keys. This is why Python requires us to use immutable 
 		datatypes for the keys in a dictionary.**
-
-The lists used in the code above are NOT immutable, and thus cannot be hashed 
-and used as dictionary keys. Can you try modifying the datatype of the keys in 
-the dictionary above to make the code run without errors? Hint: What other data 
-structure can you use to store a sequence of values and is immutable?
+	*	**The lists used in the code above are NOT immutable, and thus cannot be hashed 
+		and used as dictionary keys.**
+	*	**Can you try modifying the datatype of the keys in the dictionary above to make the code run without errors ? 
+		Hint: What other data structure can you use to store a sequence of values and is immutable?**
 
 # Correction for above code
 # Must use () in defining tuple as keys for the dict in here 
