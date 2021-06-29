@@ -396,6 +396,7 @@ DICTIONARY:
 +	**Dicts have a related method that's also useful - get()**
 	+	**get() looks up for a key in a dictionary, but unlike square brackets**
 	+	**get() returns None (or a default value of your choice) if the key isn't found**
+	+	**get() performs only single key look up**
 	+	Example:
 		```
 			elements = {'Helium':2, 'Oxygen':2, 'Neon':1, "Carbon":4}
@@ -407,8 +408,8 @@ DICTIONARY:
 			True # Carbon is in the dictionary, so True is printed 
 			None # Dilithium isn’t in our dictionary so None is returned by get() and printed
 		```	
-    +	**If you expect lookups to sometimes fail, get might be a better tool than normal 
-		square bracket lookups because errors can crash your program**
+    +	**If you expect lookups to sometimes fail, get() might be a better tool than normal 
+		square bracket lookups because errors(Keyerror in case of key not found in a dictionary) can crash your program**
   
 * IDENTITY OPERATORS  VS COMPARISON OPERATORS:
   ------------------------------------------- 
