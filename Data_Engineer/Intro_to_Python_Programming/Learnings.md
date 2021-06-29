@@ -339,25 +339,27 @@ SET:
 ---
 +	**A data type for mutable unordered collections of unique elements**
 +	**One application of a set is to quickly remove duplicates from a list**
++	Example:
+	```
+		numbers = [1, 2, 6, 3, 1, 1, 6]
+		unique_nums = set(numbers)
+		print(unique_nums)
+	```	
++	Output:
+	```
+		{1, 2, 3, 6}
+	```
 
-numbers = [1, 2, 6, 3, 1, 1, 6]
-unique_nums = set(numbers)
-print(unique_nums)
-This would output:
-
-{1, 2, 3, 6}
-
-+ Sets support the IN, NOT IN operators as lists do
-+ We can add elements to sets using the add() method
-+ Remove elements using the pop() method, but pop() here does not take arguments
-  pop() in lists takes an OPTIONAL argument of the index position but returns
-  the last element in the list by default but not in sets as sets 
-  are unordered
-+ When we pop an element from a set, a random element is removed
-+ Remember that sets, unlike lists, are unordered so there is no "last element"
-+ Other operations you can perform with sets include those of mathematical sets
-+ Methods like union, intersection, and difference are easy to perform with sets, 
-  and are much faster than such operators with other containers
++	Sets support the IN, NOT IN operators as lists, tuples do
++	**We can add elements to sets using the add() method**
++	Remove elements using the pop() method, but pop() here does not take arguments
++   **Note:The same pop() method on a list object takes an OPTIONAL argument of the index position 
+	but returns the last element in the list by default but not in sets as sets are unordered**
++	When we pop an element from a set, a random element is removed
++	**Remember that sets, unlike lists, are unordered so there is no last element**
++	Other operations you can perform with sets include those of mathematical sets
++	Methods like union, intersection, and difference are easy to perform with sets, 
+	and are much faster than such operators with other containers
   
 DICTIONARY:
 ----------
