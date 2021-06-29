@@ -700,8 +700,8 @@ LOOPS: FOR, WHILE
 		```
 			cities = ['new york city', 'mountain view', 'chicago', 'los angeles']
 			for city in cities:
-				print(city)
-				print("Done!")
+			   print(city)
+			   print("Done!")
 		```
 +	An ITERABLE is an object that can return one of its elements at a time.
 	This can include sequence types, such as strings, lists, and tuples, as 
