@@ -260,8 +260,8 @@ LIST:
 + We can pull more than one value from a list at a time by using slicing
 + When using slicing, it is important to remember that the lower index is inclusive and the upper index is exclusive
 + We can use IN and NOT IN to return a bool of whether an element exists within our list, or if one string is a substring of another  
-+ Strings are sequences of letters where as lists can be sequence of any types of
-  object (string, int, float, etc)
++ **Strings are sequences of letters where as lists can be sequence of any types of
+  object (string, int, float, etc)**
 + **Lists can be modified but strings cannot**
 + **Strings are immutable where lists are mutable**
 + **Both strings and lists are ordered which is why indexing works for both**
