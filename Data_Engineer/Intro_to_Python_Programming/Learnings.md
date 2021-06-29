@@ -66,15 +66,15 @@
 *	Assignment Operators:
 	```
 	
-		SYMBOL			EXAMPLE		EQUIVALENT
-			=			x = 2			  x = 2
-			+=			x += 2			  x = x + 2
-			-=			x -= 2           x = x - 2
-			*=			x *= 2			  x = x * 2
-			/=			x /= 2			  x = x / 2
-			**=			x **= 2		  x = x ** 2 (exponentiation)
-			//=			x //= 2		  x = x // 2 (floor division to nearest integer left on number line)
-			%=			x %= 2			  x = x % 2 (remainder)
+		SYMBOL			EXAMPLE		 EQUIVALENT
+		  =				x = 2		  x = 2
+		  +=			x += 2		  x = x + 2
+		  -=			x -= 2        x = x - 2
+		  *=			x *= 2		  x = x * 2
+		  /=			x /= 2		  x = x / 2
+		  **=			x **= 2		  x = x ** 2 (exponentiation)
+		  //=			x //= 2		  x = x // 2 (floor division to nearest integer left on number line)
+		  %=			x %= 2		  x = x % 2 (remainder)
 	
 	```
 
