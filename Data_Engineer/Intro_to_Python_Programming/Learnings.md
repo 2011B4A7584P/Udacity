@@ -190,46 +190,44 @@
 		My name is Ashish
 	```
 
-Another important string method: split()
-A helpful string method when working with strings is the .split method. This 
-function or method returns a data container called a list that contains the 
-words from the input string. 
+*	Another important string method: split()
+*	split() returns a data container called a list that contains the words from the input string
+*   The split method has two additional arguments (sep and maxsplit)
+*   The sep argument stands for "separator"
+*	It can be used to identify how the string should be split up (e.g., whitespace characters like space, tab, return, newline; specific punctuation (e.g., comma, dashes))
+*	If the sep argument is not provided, the default separator is whitespace
+*	True to its name, the maxsplit argument provides the maximum number of splits
+*	The argument gives maxsplit + 1 number of elements in the new list, with the remaining string being returned as the last element in the list
 
-The split method has two additional arguments (sep and maxsplit). The sep argument 
-stands for "separator". It can be used to identify how the string should be split 
-up (e.g., whitespace characters like space, tab, return, newline; specific 
-punctuation (e.g., comma, dashes)). If the sep argument is not provided, 
-the default separator is whitespace.
+* Understanding Common Error Messages
 
-True to its name, the maxsplit argument provides the maximum number of splits. 
-The argument gives maxsplit + 1 number of elements in the new list, with the 
-remaining string being returned as the last element in the list.
-
-Understanding Common Error Messages
-There are many different error messages that you can receive in Python, and 
-learning how to interpret what they're telling you can be very helpful. 
-Here are some common ones for starters:
-
-"ZeroDivisionError: division by zero."
-
-"SyntaxError: unexpected EOF while parsing" 
-Executing these lines produces this syntax error message - do you see why?
-greeting = "hello"
-print(greeting.upper
-This message is often produced when you have accidentally left out something, 
-like a parenthesis. The message is saying it has unexpectedly reached the end of 
-file ("EOF") and it still didn't find that right parenthesis. This can easily 
-happen with code syntax involving pairs, like beginning and ending quotes also.
-
-"TypeError: len() takes exactly one argument (0 given)" This kind of message 
-could be given for many functions, like len in this case, if I accidentally do 
-not include the required number of arguments when I'm calling a function, as below.
-This message tells me how many arguments the function requires (one in this case),
-compared with how many I gave it (0). I meant to use len(chars) to count the 
-number of characters in this long word, but I forgot the argument.
-chars = "supercalifragilisticexpialidocious"
-len()
-
+	* ZeroDivisionError: division by zero
+	* SyntaxError: unexpected EOF while parsing
+	* Example:
+		```
+			greeting = "hello"
+			print(greeting.upper
+		```
+	* Output:
+		```
+			SyntaxError: unexpected EOF while parsing
+		```
+	* This message is often produced when you have accidentally left out something, like a parenthesis. 
+	* The message is saying it has unexpectedly reached the end of file ("EOF") and it still didn't find that right parenthesis. 
+	* This can easily happen with code syntax involving pairs, like beginning and ending quotes also
+	* TypeError: len() takes exactly one argument (0 given)
+	* This kind of message could be given for many functions, like len in this case, if I accidentally do not include the required number of arguments when I'm calling a function, as below
+	* This message tells me how many arguments the function requires (one in this case), compared with how many I gave it (0). I meant to use len(chars) to count the number of characters in this long word, but I forgot the argument.
+	* Example :
+		```
+			chars = "supercalifragilisticexpialidocious"
+			len()
+		```	
+	* Output :
+		```
+			TypeError: len() takes exactly one argument (0 given)
+		```	
+			
 
 Search for Your Error Message
 Software developers like to share their problems and solutions with each other 
