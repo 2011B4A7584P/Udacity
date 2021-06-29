@@ -334,6 +334,8 @@ TUPLE:
 	which can be accessed by their indices. Unlike lists, however, tuples are 
 	immutable - you can't add and remove items from tuples, or sort them in place**
 + 	The parentheses are optional when defining tuples but it's a good practice to include them for readability
++	The above optional feature of defining tuples is not useful when trying to use value of tuple in many other places like if a tuple is in a dictionary
++	In such a case, we would need to use () for accessing dictionary values corresponding to the tuple key
 
 SET:
 ---
@@ -378,8 +380,8 @@ DICTIONARY:
 	```
 		elements = {'Helium':2, 'Oxygen':2, 'Neon':1}
 		print(elements)
-		print(elements["Helium"])  # print the value mapped to "helium"
-		elements["Lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
+		print(elements["Helium"])  # print the value mapped to "Helium"
+		elements["Lithium"] = 3  # insert "Lithium" with a value of 3 into the dictionary
 		print(elements)
 	```	
 +	Output:
