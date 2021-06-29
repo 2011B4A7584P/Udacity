@@ -689,9 +689,9 @@ CONTROL FLOW:
 
 		+	Constants that are defined to be false:
 
-			**None and False**
-			**Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)**
-			**Empty sequences and collections : '"", {},(),[], set(0), range(0)**
+			*	**None and False**
+			*	**Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)**
+			*	**Empty sequences and collections : '"", {},(),[], set(0), range(0)**
 
 Loops: FOR, WHILE
 -----------------	  
