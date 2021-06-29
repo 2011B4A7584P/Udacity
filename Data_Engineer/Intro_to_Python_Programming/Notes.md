@@ -657,10 +657,10 @@ CONTROL FLOW:
 						print("Wear boots!")
 				```		
 			+	This code is valid in Python, but it is not a boolean expression, although it 
-				reads like one. The reason is that the expression to the right of the or operator,
+				reads like one. The reason is that the expression to the right of the `or` operator,
 				"rain", is not a boolean expression 
  
-		3.	Don't compare a boolean variable with == True or == False
+		3.	Don't compare a boolean variable with == True or == False.
 			This comparison isn’t necessary, since the boolean variable itself is a 
 			boolean expression.
 
