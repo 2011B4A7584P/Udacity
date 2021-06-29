@@ -680,7 +680,7 @@ CONTROL FLOW:
 		4.	**If you want to check whether a boolean is False, you can use the NOT operator**
 
 +	Truth Value Testing
-	+	If we use a non-boolean object as a condition in an if statement 
+	+	If we use a non-boolean object as a condition in an `if` statement 
 		in place of the boolean expression, Python will check for its 
 		truth value and use that to decide whether or not to run the 
 		indented code
