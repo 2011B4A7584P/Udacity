@@ -378,8 +378,8 @@ DICTIONARY:
 	```
 		elements = {'Helium':2, 'Oxygen':2, 'Neon':1}
 		print(elements)
-		print(elements["helium"])  # print the value mapped to "helium"
-		elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
+		print(elements["Helium"])  # print the value mapped to "helium"
+		elements["Lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
 		print(elements)
 	```	
 +	Output:
