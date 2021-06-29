@@ -472,20 +472,28 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 		```
 			dict_example = {key1: value1, key2: value2, key3: value3}.
 		```
-+	**Note_2: if you define a variable with an empty set of curly braces like this: **
++	**Note_2: if you define a variable with an empty set of curly braces like this:**
 			```
 				a = {} 
 			```	
-			**Python will assign an empty dictionary to that variable**
+	**Python will assign an empty dictionary to that variable**
 +	**It's better to use set() and dict() to define empty sets and dictionaries as well**
 
-# invalid dictionary - this should break
-room_numbers = {
-    ['Freddie', 'Jen']: 403,
-    ['Ned', 'Keith']: 391,
-    ['Kristin', 'Jazzmyne']: 411,
-    ['Eugene', 'Zach']: 395
-}
+*	**invalid dictionary - this should break**
+*	Example:
+	```
+		room_numbers = {
+		['Freddie', 'Jen']: 403,
+		['Ned', 'Keith']: 391,
+		['Kristin', 'Jazzmyne']: 411,
+		['Eugene', 'Zach']: 395
+		}
+		print(room_numbers)
+	```	
+*	Outcome:
+	```
+	TypeError: unhashable type: 'list'
+	```
 
 
 The error you saw was TypeError: unhashable type: 'list'. In Python, any immutable 
