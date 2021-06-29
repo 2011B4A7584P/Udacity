@@ -363,35 +363,50 @@ SET:
   
 DICTIONARY:
 ----------
-+ **A dictionary is a mutable, unordered data structure that contains mappings of keys 
-  to values. Because these keys are used to index values, they must be unique and 
-  immutable. For example, a string or tuple can be used as the key of a dictionary, 
-  but if you try to use a list as a key of a dictionary, you will get an error.**
-+ **A data type for mutable objects thats store mappings of unique keys to values**
-+ Dictionary stores pairs of elements : keys and values
-+ **The keys in a dictionary can be of any immutable type**
-+ **It is not necessary for every key to be of same type**
-+ **We can look up values or insert new values in the dictionary 
-  using [] that enclose the key**
-+ **Dictionaries are not sortable as they are not ordered**
-  
-  print(elements["helium"])  # print the value mapped to "helium"
-  elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
- 
-+ We can check whether a value is in a dictionary the same way we check whether a 
-  value is in a list or set with the IN keyword 
-+ Dicts have a related method that's also useful, get() 
-  get() looks up values in a dictionary, but unlike square brackets, 
-  get() returns None (or a default value of your choice) if the key isn't found  
-  
-  print("carbon" in elements)
-  print(elements.get("dilithium"))
-  
-  True # Carbon is in the dictionary, so True is printed 
-  None # Dilithium isn’t in our dictionary so None is returned by get() and printed
-  
-+ If you expect lookups to sometimes fail, get might be a better tool than normal 
-  square bracket lookups because errors can crash your program
++	**A dictionary is a mutable, unordered data structure that contains mappings of keys 
+	to values. Because these keys are used to index values, they must be unique and 
+	immutable. For example, a string or tuple can be used as the key of a dictionary, 
+	but if you try to use a list as a key of a dictionary, you will get an error.**
++	**A data type for mutable objects thats store mappings of unique keys to values**
++ 	Dictionary stores pairs of elements : keys and values
++ 	**The keys in a dictionary can be of any immutable type**
++ 	**It is not necessary for every key to be of same type**
++ 	**We can look up values or insert new values in the dictionary 
+	using [] that enclose the key**
++ 	**Dictionaries are not sortable as they are not ordered**
++   Example:
+	```
+		elements = {'Helium':2, 'Oxygen':2, 'Neon':1}
+		print(elements)
+		print(elements["helium"])  # print the value mapped to "helium"
+		elements["lithium"] = 3  # insert "lithium" with a value of 3 into the dictionary
+		print(elements)
+	```	
++	Output:
+	```
+		{'Helium': 2, 'Oxygen': 2, 'Neon': 1}
+		2
+		{'Helium': 2, 'Oxygen': 2, 'Neon': 1, 'Lithium': 3}
+	```	
++	We can check *whether a key is in a dictionary* the same way we check whether a 
+	value is in a list or set with the IN keyword 
++	**Note : We cannot check whether a value is in a dictionary. It will always return False.**
++	**Dicts have a related method that's also useful - get()**
+	+	**get() looks up for a key in a dictionary, but unlike square brackets**
+	+	**get() returns None (or a default value of your choice) if the key isn't found**
+	+	Example:
+		```
+			elements = {'Helium':2, 'Oxygen':2, 'Neon':1, "Carbon":4}
+			print("Carbon" in elements)
+			print(elements.get("Dilithium"))
+		```
+	+	Output:
+		```
+			True # Carbon is in the dictionary, so True is printed 
+			None # Dilithium isn’t in our dictionary so None is returned by get() and printed
+		```	
+    +	**If you expect lookups to sometimes fail, get might be a better tool than normal 
+		square bracket lookups because errors can crash your program**
   
 * IDENTITY OPERATORS  VS COMPARISON OPERATORS:
   ------------------------------------------- 
