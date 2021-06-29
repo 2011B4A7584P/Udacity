@@ -754,22 +754,24 @@ LOOPS: FOR, WHILE
 					1, 3, 5, 7, 9 
 				```
 
-+ For loop 
-names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
-
-for name in names:
-    name = name.lower().replace(" ", "_")
-
-print(names)
-
-'''
-The printed output for the names list will look exactly like it did in the first 
-line. During each iteration, the name variable is set to a string taken from the 
-list. Then the assignment statement creates a new string (name.lower().replace(" ", "_")) 
-and changes the name variable to that string. It doesn't modify the contents of the 
-names list at all. To modify the list you must operate on the list itself, using 
-range, as you saw earlier.
-'''
++	FOR LOOP 
+	+	Example:
+		```
+			names = ["Joey Tribbiani", "Monica Geller", "Chandler Bing", "Phoebe Buffay"]
+			for name in names:
+			   name = name.lower().replace(" ", "_")
+			print(names)
+		```
+	+	Output:
+		```
+			['Joey Tribbiani', 'Monica Geller', 'Chandler Bing', 'Phoebe Buffay']
+		```
+	+	The printed output for the names list will look exactly like it did in the first 
+		line. During each iteration, the name variable is set to a string taken from the 
+		list. Then the assignment statement creates a new string (name.lower().replace(" ", "_")) 
+		and changes the name variable to that string. 
+	+	**It doesn't modify the contents of the names list at all. To modify the list you must operate on the list itself, using 
+		range, as you saw earlier.**
 
 + Iterating Through Dictionaries with FOR Loops
 
@@ -1816,9 +1818,3 @@ GENERATOR EXPRESSIONS:
 
 	# this produces an iterator of squares
 	sq_iterator = (x**2 for x in range(10))  
-	
-	
-	
-    
-	
-	
