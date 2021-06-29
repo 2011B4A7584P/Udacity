@@ -315,10 +315,9 @@ Useful Functions for Lists: I
 	```
 		foreaftstarboardport
 	```
-+ append method
-A helpful method called append adds an element to the end of a list.
++ **append() method adds an element to the end of a list**
 
-NOTE : All data structures are data types but not vice-versa
+**NOTE : All data structures are data types but not vice-versa**
 
 TUPLE:
 -----
