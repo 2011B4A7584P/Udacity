@@ -488,12 +488,13 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 *	**invalid dictionary - this should break**
 *	Example:
 	```
-		room_numbers = {
-							['Freddie', 'Jen']: 403,
-							['Ned', 'Keith']: 391,
-							['Kristin', 'Jazzmyne']: 411,
-							['Eugene', 'Zach']: 395
-					   }
+		room_numbers = 
+					{
+						['Freddie', 'Jen']: 403,
+						['Ned', 'Keith']: 391,
+						['Kristin', 'Jazzmyne']: 411,
+						['Eugene', 'Zach']: 395
+					}
 		print(room_numbers)
 	```	
 *	Outcome:
@@ -513,12 +514,13 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 *	Correction for above code
 	*	**Note:Must use () in defining tuple as keys for the dictionary in here**
 		```
-			room_numbers = {
-								('Freddie', 'Jen'): 403,
-								('Ned', 'Keith'): 391,
-								('Kristin', 'Jazzmyne'): 411,
-								('Eugene', 'Zach'): 395
-						   }
+			room_numbers = 
+						{
+							('Freddie', 'Jen'): 403,
+							('Ned', 'Keith'): 391,
+							('Kristin', 'Jazzmyne'): 411,
+							('Eugene', 'Zach'): 395
+						}
 		```
 
 COMPOUND DATA STRUCTURES:
