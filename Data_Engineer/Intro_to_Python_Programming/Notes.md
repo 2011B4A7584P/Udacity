@@ -477,7 +477,7 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 		```
 
 +	**Note: If you define a variable with an empty set of curly braces like the below**
-
+	* 	Example:
 		```
 			a = {} 
 		```	
