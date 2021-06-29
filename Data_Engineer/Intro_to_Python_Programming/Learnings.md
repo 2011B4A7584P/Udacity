@@ -99,7 +99,7 @@
 	*	Exceptions
 	*	Syntax
 
-*	An **Exception** is a problem that occurs when the code is running, but a **Syntax Error** is a problem detected when Python checks the code before it runs it.
+*	**An Exception is a problem that occurs when the code is running, but a Syntax Error is a problem detected when Python checks the code before it runs it.**
 
 *	Strings : 
 	*	`+` operator concatenates the strings whereas `*` repeats the string
