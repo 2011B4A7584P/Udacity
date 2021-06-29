@@ -236,13 +236,19 @@
 
 DATA STRUCTURES:
 ---------------
-* Types of Data Structures: Lists, Tuples, Sets, Dictionaries, Compound Data Structures
+* Types of Data Structures: 
+
+	*	**Lists - Mutable and Ordered** 
+	*	**Tuples - Immutable and Ordered** 
+	*	**Sets - Mutable and UnOrdered - contains a unique unordered collection of elements** 
+	*   **Dictionaries - Mutable and UnOrdered - Keys are immutable but the dictionary is mutable** 
+	*   **Compound Data Structures - subjected to case under consideration**
+
 * Operators: Membership, Identity
 * Built-In Functions or Methods
 
-+ MUTABILITY : WHETHER AN OBJECT CAN CHANGE ITS VALUES AFTER IT HAS BEEN CREATED
-+ ORDER : WHETHER THE ORDER OF ELEMENTS IN AN OBJECT MATTERS (AND WHETHER THIS CAN
-		  BE USED TO ACCESS ELEMENTS)
++ **MUTABILITY : WHETHER AN OBJECT CAN CHANGE ITS VALUES AFTER IT HAS BEEN CREATED**
++ **ORDER : WHETHER THE ORDER OF ELEMENTS IN AN OBJECT MATTERS (AND WHETHER THIS CAN BE USED TO ACCESS ELEMENTS)**
 
 LIST: 
 ----
