@@ -646,7 +646,7 @@ CONTROL FLOW:
 					if True:
 						print("This indented code will always get run")
 				```	
-		2.	Be careful writing expressions that use logical operators
+		2.	Be careful while writing expressions that use logical operators
 			Logical operators and, or and not have specific meanings that aren't quite the 
 			same as their meanings in plain English. Make sure your boolean expressions are 
 			being evaluated the way you expect them to.
@@ -680,17 +680,18 @@ CONTROL FLOW:
 		4.	**If you want to check whether a boolean is False, you can use the NOT operator**
 
 +	Truth Value Testing
-If we use a non-boolean object as a condition in an if statement in place of 
-the boolean expression, Python will check for its truth value and use that to 
-decide whether or not to run the indented code. By default, the truth value of 
-an object in Python is considered True unless specified as False in the 
-documentation.
+	+	If we use a non-boolean object as a condition in an if statement 
+		in place of the boolean expression, Python will check for its 
+		truth value and use that to decide whether or not to run the 
+		indented code
+	+	By default, the truth value of an object in Python is considered 
+		True unless specified as False in the documentation
 
-5. Constants that are defined to be false:
+		+	Constants that are defined to be false:
 
-   None and False
-   Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)
-   Empty sequences and collections : '"", {},(),[], set(0), range(0)
+			**None and False**
+			**Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)**
+			**Empty sequences and collections : '"", {},(),[], set(0), range(0)**
 
 Loops: FOR, WHILE
 -----------------	  
