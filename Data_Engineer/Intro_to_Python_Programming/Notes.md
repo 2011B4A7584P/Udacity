@@ -693,22 +693,21 @@ CONTROL FLOW:
 			*	**Zero of any numeric type : 0, 0.0, 0j, decimal(0), fraction(0,1)**
 			*	**Empty sequences and collections : '"", {},(),[], set(0), range(0)**
 
-Loops: FOR, WHILE
+LOOPS: FOR, WHILE
 -----------------	  
-+ A FOR loop is used to "iterate", or do something repeatedly, over an iterable
-  
-  Example : 
-  
-  cities = ['new york city', 'mountain view', 'chicago', 'los angeles']
-  for city in cities:
-      print(city)
-  print("Done!")
-  
-+ An ITERABLE is an object that can return one of its elements at a time. 
-  This can include sequence types, such as strings, lists, and tuples, as 
-  well as non-sequence types, such as dictionaries and files
++	A FOR loop is used to "iterate", or do something repeatedly, over an iterable
+	+	Example: 
+		```
+			cities = ['new york city', 'mountain view', 'chicago', 'los angeles']
+			for city in cities:
+				print(city)
+				print("Done!")
+		```
++	An ITERABLE is an object that can return one of its elements at a time.
+	This can include sequence types, such as strings, lists, and tuples, as 
+	well as non-sequence types, such as dictionaries and files.
 
-+ Using the range() Function with for Loops
++ 	Using the range() function with `for` loops
   
   range() is a built-in function used to create an iterable sequence of numbers.
   
