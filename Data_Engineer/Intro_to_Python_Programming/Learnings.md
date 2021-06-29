@@ -255,10 +255,10 @@ DATA STRUCTURES:
 
 LIST: 
 ----
-+	A data structure in python that is mutable ordered sequence of elements
++	**A data structure in python that is mutable ordered sequence of elements**
 +	Lists are ordered i.e. we can look up for specific element by their index
 +	We can pull more than one value from a list at a time by using slicing
-+	When using slicing, it is important to remember that the lower index is inclusive and the upper index is exclusive
++	When using slicing, it is important to remember that the **lower index is inclusive and the upper index is exclusive**
 +	We can use IN and NOT IN to return a bool of whether an element exists within our list, or if one string is a substring of another  
 +	**Strings are sequences of letters where as lists can be sequence of any types of
 	object (string, int, float, etc)**
@@ -315,25 +315,25 @@ Useful Functions for Lists: I
 	```
 		foreaftstarboardport
 	```
-+ **append() method adds an element to the end of a list**
++	**append() method adds an element to the end of a list**
 
-**NOTE : All data structures are data types but not vice-versa**
++	**NOTE : All data structures are data types but not vice-versa**
 
 TUPLE:
 -----
-+ A data type for immutable ordered sequences of elements
-+ Tuples are used to store related pieces of information
-+ Tuples are immutable - we cannot add, remove or sort items in a tuple
-+ Elements of a tuple can be accessed by their indices just like in a list
-+ Tuples are mostly used when we have to keep closely related information together
-  For example : location has (latitude, longitude) parameters
-+ Tuples can be used to assign value to multiple variables in a compact way
-+ () are optional while forming tuples, so 1,2,3 is same as (1,2,3)
-+ Tuple unpacking is used to perform multiple assignment in a single line
-+ Tuples are similar to lists in that they store an ordered collection of objects 
-  which can be accessed by their indices. Unlike lists, however, tuples are 
-  immutable - you can't add and remove items from tuples, or sort them in place
-+ The parentheses are optional when defining tuples
++	**A data type for immutable ordered sequences of elements**
++ 	**Tuples are used to store related pieces of information**
++ 	Tuples are immutable - we cannot add, remove or sort items in a tuple**
++ 	Elements of a tuple can be accessed by their indices just like in a list
++ 	**Tuples are mostly used when we have to keep closely related information together
+	For example : location has (latitude, longitude) parameters**
++ 	**Tuples can be used to assign value to multiple variables in a compact way**
++ 	() are optional while forming tuples, so 1,2,3 is same as (1,2,3)
++ 	**Tuple unpacking is used to perform multiple assignment in a single line**
++ 	**Tuples are similar to lists in that they store an ordered collection of objects 
+	which can be accessed by their indices. Unlike lists, however, tuples are 
+	immutable - you can't add and remove items from tuples, or sort them in place**
++ 	The parentheses are optional when defining tuples
 
 SET:
 ---
