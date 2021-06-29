@@ -65,15 +65,15 @@
 
 *	Assignment Operators:
 	```
-	SYMBOL			EXAMPLE			EQUIVALENT
-	=				 x = 2			    x = 2
-	+=				 x += 2				x = x + 2
-	-=				 x -= 2             x = x - 2
-	*=				 x *= 2				x = x * 2
-	/=				 x /= 2				x = x / 2
-	**=				 x **= 2			x = x ** 2 (exponentiation)
-	//=				 x //= 2			x = x // 2 (floor division to nearest integer left on number line)
-	%=				 x %= 2				x = x % 2 (remainder)
+	SYMBOL			 	EXAMPLE			EQUIVALENT
+	  =				 	 x = 2			  x = 2
+	  +=				 x += 2			  x = x + 2
+	  -=				 x -= 2           x = x - 2
+	  *=				 x *= 2			  x = x * 2
+	  /=				 x /= 2			  x = x / 2
+	  **=				 x **= 2		  x = x ** 2 (exponentiation)
+	  //=				 x //= 2		  x = x // 2 (floor division to nearest integer left on number line)
+	  %=				 x %= 2			  x = x % 2 (remainder)
 	```
 
 *	4.445e8 is equal to 4.445 `*` 10 `**` 8 which is equal to 444500000.0
@@ -128,7 +128,7 @@
 			type(12)
 			print("Hello world")
 		```	
-* 	These three above are functions - notice they use parentheses, and accept one or more arguments. 
+* 	**These three above are functions - notice they use parentheses, and accept one or more arguments**
 	
 * 	A method in Python behaves similarly to a function. Methods actually are functions that are called using dot notation. For example, lower() is a string method that can be used like this, on a string called "sample string": sample_string.lower()
 
