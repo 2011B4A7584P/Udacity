@@ -531,19 +531,17 @@ COMPOUND DATA STRUCTURES:
 *	Example:
 
 	```
-		elements = {
-					"hydrogen": {
+		elements = {"hydrogen":{
 								 "number": 1,
 								 "weight": 1.00794,
 								 "symbol": "H"
-							},
-						
+					},
 					"helium": {
 								"number": 2,
 								"weight": 4.002602,
 								"symbol": "He"
-							}
-				}
+					}
+		}
 	```							
 
 *	We can access elements in this nested dictionary like this:
