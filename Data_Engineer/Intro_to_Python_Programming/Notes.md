@@ -464,7 +464,7 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 *	**Note:	A set is defined with curly braces, {}, but it isn't the only data structure 
 			that does; dictionaries do as well! However, the difference is that a set is 
 			defined as a sequence of elements separated by commas:**
-		
+	*	Example:	
 			```
 				set_example = {element1, element2, element3}
 			```
