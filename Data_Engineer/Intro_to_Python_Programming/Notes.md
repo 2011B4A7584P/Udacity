@@ -506,18 +506,20 @@ IDENTITY OPERATORS  VS COMPARISON OPERATORS:
 		and sets to track unique values as placeholders of keys. This is why Python requires us to use immutable 
 		datatypes for the keys in a dictionary.**
 	*	**The lists used in the code above are NOT immutable, and thus cannot be hashed 
-		and used as dictionary keys.**
+		and used as dictionary keys**
 	*	**Can you try modifying the datatype of the keys in the dictionary above to make the code run without errors ? 
 		Hint: What other data structure can you use to store a sequence of values and is immutable?**
 
-# Correction for above code
-# Must use () in defining tuple as keys for the dict in here 
-room_numbers = {
-    ('Freddie', 'Jen'): 403,
-    ('Ned', 'Keith'): 391,
-    ('Kristin', 'Jazzmyne'): 411,
-    ('Eugene', 'Zach'): 395
-}
+	*	Correction for above code
+		*	**Note:Must use () in defining tuple as keys for the dictionary in here**
+			```
+				room_numbers = {
+				    ('Freddie', 'Jen'): 403,
+					('Ned', 'Keith'): 391,
+					('Kristin', 'Jazzmyne'): 411,
+					('Eugene', 'Zach'): 395
+					}
+			```
 
 COMPOUND DATA STRUCTURES:
 ------------------------
