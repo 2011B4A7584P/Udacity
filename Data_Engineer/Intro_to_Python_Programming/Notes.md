@@ -1078,91 +1078,85 @@ BREAK VS CONTINUE:
   
 FUNCTIONS:
 ---------
-+ Functions are useful chunks of code that help us encapulate a task
-+ Encapsulation is a way to carry out a whole series of steps with one
-  simple command
-+ In programming, functions encapsulate all the steps of a process
-  into one command
-+ Functions are also used to organize and optimize the code
-+ Functions provide code reusability
-+ None is the default return of a function in case it doesn't 
-  explicitly return anything else
-+ Print provides output to the console whereas return provides
-  a value that can be stored and worked with and coded later 
-+ Not every function must return, it can still be a valid function
-+ We can add default arguments in a function to have default values 
-  for parameters that are unspecified in a function call.
-  Example:
-  -------
-  def cylinder_volume(height, radius=5):
-    pi = 3.14159
-    return height * pi * radius ** 2  
-
-+ Passing values to arguments by position vs by name
-  
-  cylinder_volume(10,7) # pass by position
-  cylinder_volume(height = 10, radius = 7) # pass by name
-  cylinder_volume(radius = 7,height = 10) # pass by name
++ 	Functions are useful chunks of code that help us encapulate a task
++ 	Encapsulation is a way to carry out a whole series of steps with one simple command
++ 	In programming, functions encapsulate all the steps of a process into one command
++ 	Functions are also used to organize and optimize the code
++ 	Functions provide code reusability
++ 	**None is the default return of a function in case it doesn't explicitly return anything else**
++ 	**Print provides output to the console whereas return provides a value that can be stored and worked with later**
++ 	Not every function must return, it can still be a valid function
++ 	**We can add default arguments in a function to have default values 
+	for parameters that are unspecified in a function call**
+	+	Example:
+		```
+			def cylinder_volume(height, radius=5):
+				pi = 3.14159
+				return height * pi * radius ** 2  
+		```
+	+	Passing values to arguments by position vs by name
+	+	Example:
+		```
+			cylinder_volume(10)# pass by position, radius =5 as per default
+			cylinder_volume(10,7) # pass by position
+			cylinder_volume(height = 10, radius = 7) # pass by name
+			cylinder_volume(radius = 7, height = 10) # pass by name
+		```	
 
 VARIABLE SCOPE:
 --------------
 
-+ Scope refers to which parts of a program a variable 
-  can be referenced or used from
++	Scope refers to which parts of a program a variable can be referenced or used from
 
-+ If a variable is created inside a function, then it can only
-  be used within that function - case of LOCAL scope
++ 	If a variable is created inside a function, then it can only be used within that function - case of LOCAL scope
 
-+ Scope is essential to understanding how information is passed
-  throughout programs
++ 	Scope is essential to understanding how information is passed throughout programs
 
-+ Variables defined outside functions in a program has GLOBAL scope  
++ 	Variables defined outside functions in a program have GLOBAL scope  
 
-+ Generally speaking, the value of a global variable can not or rather 
-  must not be modified inside the function. If we want to modify that 
-  variable's value inside this function, it should be passed in as an 
-  argument.
++ 	**Generally speaking, the value of a global variable can not or rather 
+	must not be modified inside the function. If we want to modify that 
+	variable's value inside this function, it should be passed in as an 
+	argument.**
   
-+ GOOD PRACTICE: It is best to define variables in the smallest scope 
-  they will be needed in. While functions can refer to variables defined 
-  in a larger scope, this is very rarely a good idea since you may not 
-  know what variables you have defined if your program has a lot of 
-  variables.  
++ 	**GOOD PRACTICE: It is best to define variables in the smallest scope 
+	they will be needed in. While functions can refer to variables defined 
+	in a larger scope, this is very rarely a good idea since you may not 
+	know what variables you have defined if your program has a lot of 
+	variables.**
 
-+ Scoping example: 
-  
-  egg_count = 0
-  def buy_eggs():
-      egg_count += 12 # purchase a dozen eggs
++	Scoping example: 
+	```
+		egg_count = 0
+		def buy_eggs():
+			egg_count += 12 # purchase a dozen eggs
 	  
-  buy_eggs()
+		buy_eggs()
+	```
++	**This code causes an UnboundLocalError, because the variable egg_count in the first line has global scope. 
+	Note that it is not passed as an argument into the function, so the function assumes the egg_count being referred 
+	to is the global variable.**
 
-'''
-This code causes an UnboundLocalError, because the variable egg_count in the first line has global scope. 
-Note that it is not passed as an argument into the function, so the function assumes the egg_count being referred 
-to is the global variable.
++	**Within a function, we can print a global variable's value successfully without an error. 
+	This works because we are simply accessing the value of the variable. If we try to change or reassign this global variable, 
+	however, as we do in this code, we get an error. Python doesn't allow functions to modify variables that aren't in the 
+	function's scope.**
 
-Within a function, we can print a global variable's value successfully without an error. 
-This works because we are simply accessing the value of the variable. If we try to change or reassign this global variable, 
-however, as we do in this code, we get an error. Python doesn't allow functions to modify variables that aren't in the 
-function's scope.
-'''	
 
 DOCSTRINGS or Documentation Strings:
 -----------------------------------
-+ Docstring is a type of comment used to explain the purpose of 
-  a function and how it should be used
++	Docstring is a type of comment used to explain the purpose of a function and how it should be used
 
-+ Docstrings are surrounded by:
-  """
-  Text
-  """
++	Docstrings are surrounded by:
+	"""
+	Text
+	"""
 
-  '''
-  Text
-  '''
+	'''
+	Text
+	'''
 
-+ Docstrings are part of good coding practice
++	Docstrings are part of good coding practice
 
 LAMBDA EXPRESSIONS:
 ------------------
