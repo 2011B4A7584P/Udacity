@@ -1449,7 +1449,7 @@ HANDLING EXCEPTIONS:
 			running the try block
     
 	+	**finally**: 
-		+	**Before Python leaves this try statement, it will run the code in this finally block under any 
+		+	**Before Python leaves the entire exception flow(try-except-else-finally), it will run the code in this finally block under any 
 			conditions, even if it's ending the program**
 		+	For example if Python ran into an error while running code in the except or else block, this finally block will 
 			still be executed before stopping the program
