@@ -1392,24 +1392,24 @@ ERRORS AND EXCEPTIONS:
 	```
 	Built-In exception                   Description
   
-		ValueError						 An object of the correct
-										 type but inappropriate value
-										 is passed as an input
-										 to a built-in operation
-										 or function.
+		ValueError                       An object of the correct
+				                         type but inappropriate value
+				                         is passed as an input
+	                                     to a built-in operation
+                                         or function.
 											
-		AssertionError					 An asset statement fails.
+		AssertionError                   An asset statement fails.
 		
-		IndexError						 A sequence substring is 
-										 out of range.
+		IndexError                       A sequence substring is 
+				                         out of range.
 											
-		KeyError						 A key cannot be found 
-										 in dictionary.
+		KeyError                         A key cannot be found 
+				                         in dictionary.
 											
-		TypeError						 An object of an unsupported 
-										 type is passed as input to an
-										 operation or function.
-		```								   
+		TypeError                        An object of an unsupported 
+				                         type is passed as input to an
+		                                 operation or function.
+	```								   
 + Handling Exceptions
   
   TRY-EXCEPT-FINALLY blocks to handle exceptions
