@@ -773,213 +773,308 @@ LOOPS: FOR, WHILE
 	+	**It doesn't modify the contents of the names list at all. To modify the list you must operate on the list itself, using 
 		range, as you saw earlier.**
 
-+ Iterating Through Dictionaries with FOR Loops
++	Iterating Through Dictionaries with FOR Loops
 
-When you iterate through a dictionary using a for loop, doing it the normal 
-way (for n in some_dict) will only give you access to the keys in the dictionary
+	*	When you iterate through a dictionary using a for loop, 
+		doing it the normal way (for n in some_dict) will only give 
+		you access to the keys in the dictionary
 
-If you wish to iterate through both keys and values, 
-you can use the built-in method items() like this:
+	*	**If you wish to iterate through both keys and values, 
+		you can use the built-in method items() like this:**
+	
+	+	Example:
+		```
+			cast = {
+					"Jerry Seinfeld": "Jerry Seinfeld",
+					"Julia Louis-Dreyfus": "Elaine Benes",
+					"Jason Alexander": "George Costanza",
+					"Michael Richards": "Cosmo Kramer"
+				}
+			for key, value in cast.items():
+				print("Actor: {}    Role: {}".format(key, value))
+	
+		```		
 
-cast = {
-           "Jerry Seinfeld": "Jerry Seinfeld",
-           "Julia Louis-Dreyfus": "Elaine Benes",
-           "Jason Alexander": "George Costanza",
-           "Michael Richards": "Cosmo Kramer"
-       }
 
-for key, value in cast.items():
-    print("Actor: {}    Role: {}".format(key, value))
++	WHILE Loop:
+	+	FOR loops are an example of "definite iteration" meaning that the loop's body is 
+		run a predefined number of times. This differs from "indefinite iteration" which 
+		is when a loop repeats an unknown number of times and ends when some condition is 
+		met, which is what happens in a while loop.
+	+	Example:
+		```
+		card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
+		hand = []
+		# adds the last element of the card_deck list to the hand list
+		# until the values in hand add up to 17 or more
+		while sum(hand)  < 17:
+			hand.append(card_deck.pop())	
+		```	
+	+	sum() returns the sum of the elements in a list
+	+	pop() is a list method that removes the last element from a list(by default, other index at element) 
+		and returns it
+  
++	FOR Loop Vs WHILE Loop:
 
-+ WHILE Loop:
-  FOR loops are an example of "definite iteration" meaning that the loop's body is 
-  run a predefined number of times. This differs from "indefinite iteration" which 
-  is when a loop repeats an unknown number of times and ends when some condition is 
-  met, which is what happens in a while loop.
+	+	FOR loops are ideal when the number of iterations is known or finite
+	+	Examples:
+		```
+		# Case I
+		  ------
+		# When you have an iterable collection (list, string, set, tuple, dictionary)
   
-  EXAMPLE:
+			for name in names:
   
-  card_deck = [4, 11, 8, 5, 13, 2, 8, 10]
-  hand = []
-
-  # adds the last element of the card_deck list to the hand list
-  # until the values in hand add up to 17 or more
-	while sum(hand)  < 17:
-		hand.append(card_deck.pop())	
-+ sum() returns the sum of the elements in a list, and pop() is a list method that 
-  removes the last element from a list and returns it
+		# Case II
+		  -------
+		# When you want to iterate through a loop for a definite number of times, using range()
   
-FOR Loop Vs WHILE Loop:
-
-+ FOR loops are ideal when the number of iterations is known or finite
+			for i in range(5):
+		```
+	+	WHILE loops are ideal when the iterations need to continue until a condition is met
+	+	Example:
+		```
+		# Case I
+		  ------
+		# When you want to use comparison operators
   
-  Examples:
+			while count <= 100:
   
-  Case I
-  ------
-  When you have an iterable collection (list, string, set, tuple, dictionary)
+		# Case II
+		  -------
+		# When you want to loop based on receiving specific user input
   
-  for name in names:
-  
-  Case II
-  -------
-  When you want to iterate through a loop for a definite number of times, using range()
-  
-  for i in range(5):
-
-+ WHILE loops are ideal when the iterations need to continue until a condition is met
-  
-  Examples:
-  
-  Case I
-  ------
-  When you want to use comparison operators
-  
-  while count <= 100:
-  
-  Case II
-  -------
-  When you want to loop based on receiving specific user input
-  
-  while user_input == 'y':  
-
+			while user_input == 'y':  
+		```
 BREAK VS CONTINUE:
 -----------------
-+ A loop will terminate immediately if it encounters a BREAK statement
-+ Sometimes, rather than breaking out of the loop, there are times,
-  simply when we want to skip only one iteration of the loop
-+ CONTINUE statement terminates ONE ITERATION of a loop
++	A loop will terminate immediately if it encounters a BREAK statement
++	Sometimes, rather than breaking out of the loop, there are times,
+	simply when we want to skip only one or specific iteration(s) of the loop
++	CONTINUE statement skips ONE OR SPECIFIC ITERATION(s) of a loop
 
-ZIP and ENUMERATE:
+**ZIP and ENUMERATE**:
 -----------------
-+ Zip returns an iterator that combines multiple iterables
-  into one sequence of tuples. Each tuple contains the elements
-  in that position from all the iterables.
++	**zip() and enumerate() are useful built-in functions that can come in 
+	handy when dealing with loops**
++ 	**enumerate() is a built in function that returns an iterator of tuples 
+	containing indices and values of a list**
   
-  Example:
+	+	Usage: When we want the index along with each element of an iterable in a loop.
+	+	Example:
+		```
+			items = ['bananas','mattresses','dog kernels','machine','cheeses']
+			for index, item in enumerate(items):
+				print(f"{index} : {item}")    
+		```	
+	+	Output:
+		```
+			0 : bananas
+			1 : mattresses
+			2 : dog kernels
+			3 : machine
+			4 : cheeses
+		```
++	**zip() returns an iterator that combines multiple iterables
+	into one sequence (the corresponding sequential data type 
+	can be tuple, list, dictionary). Each tuple contains the elements
+	in that position from all the iterables.**
   
-  items = ['bananas','mattresses','dog kernels','machine','cheeses']
-  weights = [15, 34, 42, 120, 5]
+	+	Example:
+		```
+			items = ['bananas','mattresses','dog kernels','machine','cheeses']
+			weights = [15, 34, 42, 120, 5]
+		
+			print(tuple(zip(items, weights))) 
+			print(list(zip(items, weights)))
+			print(dict(zip(items, weights)))
+			manifest = list(zip(items, weights))
   
-  print(list(zip(items, weights)))
-  manifest = list(zip(items, weights))
-  
-  for item, weight in manifest:
-    print(f"{item} : {weight}")
+			for item, weight in manifest:
+				print(f"{item} : {weight}")
+		```
+	+	Output:
+		```
+			(('bananas', 15), ('mattresses', 34), ('dog kernels', 42), ('machine', 120), ('cheeses', 5))
+			[('bananas', 15), ('mattresses', 34), ('dog kernels', 42), ('machine', 120), ('cheeses', 5)]
+			{'bananas': 15, 'mattresses': 34, 'dog kernels': 42, 'machine': 120, 'cheeses': 5}
+			bananas : 15
+			mattresses : 34
+			dog kernels : 42
+			machine : 120
+			cheeses : 5
+		```
+			
+			
++	Example:
+	```
+		items = ['bananas','mattresses','dog kernels','machine','cheeses']
+		weights = [15, 34, 42, 120, 5]
+		
+		print("Zipped List")
+		print()
+		print(list(zip(items, weights)))
+		print("-----------------------")
+		print()
+		
+		manifest = list(zip(items, weights))
+		print("Manifest contents")
+		print()
+		for item, weight in manifest:
+			print(item, weight)
+		print("-----------------------")
+		print()
 	
-  items = ['bananas','mattresses','dog kernels','machine','cheeses']
-  weights = [15, 34, 42, 120, 5]
-
-#zip returns an iterator
-	print("Zipped List")
-	print()
-	print(list(zip(items, weights)))
-	print("-----------------------")
-	print()
-	manifest = list(zip(items, weights))
+		print("Unzipping zipped list")
+		print()
+		for cargo in zip(items, weights):
+			print(cargo[0], cargo[1])
+		print("-----------------------")
+		print()
 	
-	print("Manifest contents")
-	print()
-	for item, weight in manifest:
-		print(item, weight)
-	print("-----------------------")
-	print()
-	
-	print("Unzipping zipped list")
-	print()
-	for cargo in zip(items, weights):
-		print(cargo[0], cargo[1])
-	print("-----------------------")
-	print()
-	
-	print("Unzipping zipped list using an alternate method")
-	print()
-	for item, weight in zip(items, weights):
-		print(item, weight)
-	print("-----------------------")
-	print()
-	
-	print("Printing unzipped list")
-	print()
-	for index, item in enumerate(items):
-		print(f"{index} : {item}")    
-	print("-----------------------")
-	print() 	
-  
-+ zip and enumerate are useful built-in functions that can come in 
-  handy when dealing with loops
-  
-+ Zip
-  
-  zip returns an iterator that combines multiple iterables into one 
-  sequence of tuples. Each tuple contains the elements in that position 
-  from all the iterables. For example, printing
+		print("Unzipping zipped list using an alternate method")
+		print()
+		for item, weight in zip(items, weights):
+			print(item, weight)
+		print("-----------------------")
+		print()
+		
+		
+		for index, item in enumerate(items):
+			print(f"{index} : {item}")    
+		print("-----------------------")
+		print()    
+		
+		dict_manifest = dict(zip(items,weights))
+		for index, key in enumerate(dict_manifest):
+		print("{}-{}:{}".format(index, key, dict_manifest[key]))        
+	```	
++	Output:
+	```
+		Zipped List
 
-  list(zip(['a', 'b', 'c'], [1, 2, 3])) 
-  would output 
-  [('a', 1), ('b', 2), ('c', 3)]
+		[('bananas', 15), ('mattresses', 34), ('dog kernels', 42), ('machine', 120), ('cheeses', 5)]
+		-----------------------
+		
+		Manifest contents
+		
+		bananas 15
+		mattresses 34
+		dog kernels 42
+		machine 120
+		cheeses 5
+		-----------------------
+		
+		Unzipping zipped list
+		
+		bananas 15
+		mattresses 34
+		dog kernels 42
+		machine 120
+		cheeses 5
+		-----------------------
+		
+		Unzipping zipped list using an alternate method
+		
+		bananas 15
+		mattresses 34
+		dog kernels 42
+		machine 120
+		cheeses 5
+		-----------------------
+		
+		0 : bananas
+		1 : mattresses
+		2 : dog kernels
+		3 : machine
+		4 : cheeses
+		-----------------------
+		
+		0-bananas:15
+		1-mattresses:34
+		2-dog kernels:42
+		3-machine:120
+		4-cheeses:5
+	```
 
-+ In addition to zipping two lists together, you can also unzip a list 
-  into tuples using an asterisk.
++	In addition to zipping two lists together, you can also unzip a list 
+	into tuples using an asterisk.
 
-  Example:
-  
-  some_list = [('a', 1), ('b', 2), ('c', 3)]
-  letters, nums = zip(*some_list)   
+	+	Example:
+		```
+			some_list = [('a', 1), ('b', 2), ('c', 3)]
+			letters, nums = zip(*some_list) 
+			print(letters, nums)			
+		```
+	+	Output:
+		```
+			('a', 'b', 'c') (1, 2, 3)
+		```	
 
-+ ENUMERATE :
-  
-  enumerate is a built in function that returns an iterator of tuples 
-  containing indices and values of a list. 
-  
-  Usage : When we want the index along with each element 
-          of an iterable in a loop.
++	LIST COMPREHENSIONS
 
-+ LIST COMPREHENSIONS
+	+	In Python, you can create lists really quickly and concisely with list comprehensions
+	+	Example:
+		```
+			capitalized_cities = []
+			for city in cities:
+				capitalized_cities.append(city.title())
+		
+			# can be reduced to:
 
-  In Python, you can create lists really quickly and concisely with 
-  list comprehensions. 
+			capitalized_cities = [city.title() for city in cities]		  
+		```	
   
-  Example:
-  
-  capitalized_cities = []
-  for city in cities:
-      capitalized_cities.append(city.title())
+	+	List comprehensions allow us to create a list using a for loop in one step
 
-  can be reduced to:
+  
+	+	Conditionals in List Comprehensions
+  
+		+	You can also add conditionals to list comprehensions (listcomps). 
+			After the iterable, you can use the if keyword to check a condition 
+			in each iteration.
 
-  capitalized_cities = [city.title() for city in cities]		  
+		+	Example:
+			```
+				squares = [x**2 for x in range(9) if x % 2 == 0]
+				print(squares)
+			```
+		+	Output:
+			```
+				[0, 4, 16, 36, 64]
+			```
+		+	**If you want to add an else, you will get a syntax error doing this**
+		+	Example:
+			```
+				squares = [x**2 for x in range(9) if x % 2 == 0 else x + 3]
+			```
+		+	Output:
+			```
+				SyntaxError: invalid syntax
+			```
+		+	**If you would like to add else, you have to move the conditionals 
+			to the beginning of the listcomp, right after the expression, 
+			like this.**
+		+	Example:
+			```
+				squares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]
+				print(squares)
+			```
+		+	Output:
+			```
+				[0, 4, 4, 6, 16, 8, 36, 10, 64]
+			```
+		+	Example:
+			```
+				squares = [x**2 if x % 2 == 0 else x**3 if x%3 ==0 else x + 3 for x in range(9)]
+				print(squares)
+			```
+		+	Output:
+			```
+				[0, 4, 4, 27, 16, 8, 36, 10, 64]
+			```
   
-+ List comprehensions allow us to create a list using a for 
-  loop in one step.
-
-+ Create a list comprehension with brackets [], 
-  including an expression to evaluate for each element in an iterable. 
-  This list comprehension above calls city.title() for each element 
-  city in cities, to create each element in the new list, 
-  capitalized_cities.
-  
-+ Conditionals in List Comprehensions
-  
-  You can also add conditionals to list comprehensions (listcomps). 
-  After the iterable, you can use the if keyword to check a condition 
-  in each iteration.
-
-  squares = [x**2 for x in range(9) if x % 2 == 0]
-  
-  The code above sets squares equal to the list [0, 4, 16, 36, 64], 
-  as x to the power of 2 is only evaluated if x is even. If you want 
-  to add an else, you will get a syntax error doing this.
-  squares = [x**2 for x in range(9) if x % 2 == 0 else x + 3]
-  
-  If you would like to add else, you have to move the conditionals 
-  to the beginning of the listcomp, right after the expression, 
-  like this.
-
-  squares = [x**2 if x % 2 == 0 else x + 3 for x in range(9)]
-  
-  List comprehensions are not found in other languages, but are very 
-  common in Python.
+		+	List comprehensions are not found in other languages, but are very common in Python
   
 FUNCTIONS:
 ---------
