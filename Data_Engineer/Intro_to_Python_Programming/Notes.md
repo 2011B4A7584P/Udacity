@@ -1148,14 +1148,15 @@ DOCSTRINGS or Documentation Strings:
 +	Docstring is a type of comment used to explain the purpose of a function and how it should be used
 
 +	Docstrings are surrounded by:
-	"""
-	Text
-	"""
-
-	'''
-	Text
-	'''
-
+	```
+		"""
+		Text
+		"""
+	
+		'''
+		Text
+		'''
+	```
 +	Docstrings are part of good coding practice
 
 LAMBDA EXPRESSIONS:
