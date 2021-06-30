@@ -1456,7 +1456,7 @@ HANDLING EXCEPTIONS:
 		+	finally block is useful for cleaning up actions in our code
 		+	**Use case: Use this finally block to close the file after attempting opening it and performing operations/tasks on the opened file in try block**
 					   
-	+	**Please go through the exception cases and handling done in [exception_handling.py](https://github.com/ad72905/Udacity/blob/master/Data_Engineer/Intro_to_Python_Programming/scripts/exception_handling.py)
+	+	**Please go through the exception cases and handling done in [exception_handling.py](https://github.com/ad72905/Udacity/blob/master/Data_Engineer/Intro_to_Python_Programming/scripts/exception_handling.py)**
 	+ 	Must read links:
 		+	[Datacamp](https://www.datacamp.com/community/tutorials/exception-handling-python)
 		+	[StackOverflow](https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python)
