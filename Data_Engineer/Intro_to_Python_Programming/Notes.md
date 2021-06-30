@@ -1390,7 +1390,7 @@ ERRORS AND EXCEPTIONS:
 		```
 +	Common Exceptions and their Descriptions:
 	```
-	Built-In exception                   Description
+	Built-In exception                   	Description
   
 		ValueError                       An object of the correct type but inappropriate value is passed as an input to a built-in operation or function.
 											
