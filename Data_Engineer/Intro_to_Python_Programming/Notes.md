@@ -1402,74 +1402,59 @@ ERRORS AND EXCEPTIONS:
 											
 		TypeError                        An object of an unsupported type is passed as input to an operation or function.
 	```								   
-+ Handling Exceptions
-  
-  TRY-EXCEPT-FINALLY blocks to handle exceptions
-  
-  Try Statement
-  
-  * We can use try statements to handle exceptions 
-    
-	There are four clauses you can use:
 
-    try: This is the only mandatory clause in a try statement. 
-	     The code in this block is the first thing that Python 
-		 runs in a try statement.
+HANDLING EXCEPTIONS:
+-------------------
+  
++	**TRY-EXCEPT-ELSE-FINALLY blocks to handle exceptions**
+    +	**try**: 
+		+	This is the **only mandatory clause** in a try-except-else-finally block flow statement
+		+	The code in this block is the first thing that Python runs in a typical exception flow
+		+	This is the block where the exceptions occur which we catch and handle later in the except block
     
-	except: If Python runs into an exception while running the 
-	        try block, it will jump to the except block that 
-			handles that exception.
+	+	**except**: 
+		+	If Python runs into an exception while running the try block, it will jump to the except block that handles that exception
+		+	Specifying Exceptions:
+			+	We can actually specify which error we want to handle in an except block
+			+	Example:
+				```
+					try:
+						# some code
+					except ValueError:
+						# some code
+				```	
+			+	Now, it catches the ValueError exception, but not other exceptions
+			+	If we want this handler to address more than one type of exception, 
+				we can include a parenthesized tuple after the except with the exceptions
+			+	Example:
+				```
+					try:
+						# some code
+					except (ValueError, KeyboardInterrupt):
+						# some code
+				```
+			+	Or, if we want to execute different blocks of code depending on 
+				the exception, we can have multiple except blocks
+			+	Example:
+				```
+					try:
+						# some code
+					except ValueError:
+						# some code
+					except KeyboardInterrupt:
+						# some code
+				```
+    +	**else**: 
+		+	If Python runs into no exceptions while running the try block, it will run the code in this block after 
+			running the try block
     
-	Specifying Exceptions
-    
-	We can actually specify which error we want to handle in an 
-	except block like this:
-	
-	try:
-		# some code
-	except ValueError:
-		# some code
-
-	Now, it catches the ValueError exception, but not other exceptions. 
-	If we want this handler to address more than one type of exception, 
-	we can include a parenthesized tuple after the except with the 
-	exceptions.
-	
-	try:
-		# some code
-	except (ValueError, KeyboardInterrupt):
-		# some code
-		
-    Or, if we want to execute different blocks of code depending on 
-	the exception, we can have multiple except blocks
-	
-	try:
-		# some code
-	except ValueError:
-		# some code
-	except KeyboardInterrupt:
-		# some code
-		
-    		
-
-	
-	else: If Python runs into no exceptions while running the 
-	      try block, it will run the code in this block after 
-		  running the try block.
-    
-	finally: Before Python leaves this try statement, it will 
-	         run the code in this finally block under any 
-			 conditions, even if it's ending the program. 
-			 E.g., if Python ran into an error while running code 
-			 in the except or else block, this finally block will 
-			 still be executed before stopping the program.
-			 
-			 finally block is useful for cleaning up actions
-			 in our code.
-			 
-			 Use case: Use this finally block to close the file
-			           after attempting opening it and performing 
-					   operations/tasks on the opened file in try block
+	+	**finally**: 
+		+	**Before Python leaves this try statement, it will run the code in this finally block under any 
+			conditions, even if it's ending the program**
+		+	For example if Python ran into an error while running code in the except or else block, this finally block will 
+			still be executed before stopping the program
+		+	finally block is useful for cleaning up actions in our code
+		+	**Use case: Use this finally block to close the file after attempting opening it and performing operations/tasks on the opened file in try block**
 					   
 	try:
 		run_code1()
