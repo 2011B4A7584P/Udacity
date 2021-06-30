@@ -1145,6 +1145,7 @@ VARIABLE SCOPE:
 
 DOCSTRINGS or Documentation Strings:
 -----------------------------------
+
 +	Docstring is a type of comment used to explain the purpose of a function and how it should be used
 
 +	Docstrings are surrounded by:
@@ -1161,36 +1162,27 @@ DOCSTRINGS or Documentation Strings:
 
 LAMBDA EXPRESSIONS:
 ------------------
-+ We can use lamda expressions to create anonymous functions
-+ Anonymous functions are functions that don't have a name
-+ Really useful for creating quick functions that are not required
-  later or elsewhere in the code
-+ This can be especially useful for higher order functions, or functions 
-  that take in other functions as arguments
-
-+ With a lambda expression, this function:
-
-	def multiply(x, y):
-		return x * y
++	We can use lamda expressions to create anonymous functions
++	Anonymous functions are functions that don't have a name
++	Really useful for creating quick functions that are not required later or elsewhere in the code
++	This can be especially useful for higher order functions, or functions that take in other functions as arguments
++	With a lambda expression, this function:
++	Example:
+	```
+		def multiply(x, y):
+			return x * y
+		
+		# can be reduced to:
 	
-	can be reduced to:
-
-	multiply = lambda x, y: x * y  
-	
-+ Components of a Lambda Function
-  ------------------------------- 
-  
-* The lambda keyword is used to indicate that this is a lambda expression
-* Following lambda are one or more arguments for the anonymous function 
-  separated by commas, followed by a colon : 
-* Similar to functions, the way the arguments are named in a lambda 
-  expression is arbitrary
-* Last is an expression that is evaluated and returned in this function. 
-* This is a lot like an expression you might see as a return statement 
-  in a function 
-* With this structure, lambda expressions aren’t ideal 
-  for complex functions, but can be very useful for short, simple 
-  functions.	
+		multiply = lambda x, y: x * y  
+	```
++	Components of a Lambda Function
+	* 	The lambda keyword is used to indicate that this is a lambda expression
+	* 	Following lambda are one or more arguments for the anonymous function separated by commas, followed by a colon : 
+	* 	Similar to functions, the way the arguments are named in a lambda expression is arbitrary
+	* 	Last is an expression that is evaluated and returned in this function. 
+	* 	This is a lot like an expression you might see as a return statement in a function 
+	* 	**With this structure, lambda expressions aren’t ideal for complex functions, but can be very useful for short, simple functions**
 
 MAP() and FILTER()
 ----------------
