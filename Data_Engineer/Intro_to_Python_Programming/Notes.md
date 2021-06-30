@@ -1456,64 +1456,42 @@ HANDLING EXCEPTIONS:
 		+	finally block is useful for cleaning up actions in our code
 		+	**Use case: Use this finally block to close the file after attempting opening it and performing operations/tasks on the opened file in try block**
 					   
-	try:
-		run_code1()
-	except TypeError:
-		run_code2()
-		return None # The finally block is run before the method returns
-	finally:
-		other_code()
-	
-	Compare to this:
-	
-	try:
-		run_code1()
-	except TypeError:
-		run_code2()
-		return None   
-	
-	other_code()  # This doesn't get run if there's an exception.
-	Other situations that can cause differences:
-	
-	If an exception is thrown inside the except block.
-	If an exception is thrown in run_code1() but it's not a TypeError.
-	Other control flow statements such as continue and break statements.		 
-	
-	
-	https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python
-			 
-+ Accessing Error Messages
-  ------------------------
-  When we handle an exception, we can still access its error 
-  message like this:
+	+	**Please go through the exception cases and handling done in [exception_handling.py](https://github.com/ad72905/Udacity/blob/master/Data_Engineer/Intro_to_Python_Programming/scripts/exception_handling.py)
+	+ 	Must read links:
+		+	[Datacamp](https://www.datacamp.com/community/tutorials/exception-handling-python)
+		+	[StackOverflow](https://stackoverflow.com/questions/11551996/why-do-we-need-the-finally-clause-in-python)
+		+   [Python Docs](https://docs.python.org/3/library/exceptions.html#bltin-exceptions)
+	+	Accessing Error Messages
+		+	When we handle an exception, we can still access its error message like this:
+		+	Example:
+			```
+				try:
+					# some code
+				except ZeroDivisionError as e:
+						# some code
+						print("ZeroDivisionError occurred: {}".format(e))
+				# This would print something like this:
+			```	
+		+	Output:
+			```
+				ZeroDivisionError occurred: integer division or modulo by zero
+			```
+		+	So we can still access error messages, even if we handle them 
+			to keep our program from crashing!
+		+	If we don't know a specific error we're handling, we can still 
+			access the message like this:
+		+	Example:
+			```
+				try:
+					# some code
+				except Exception as e:
+					# some code
+					print("Exception occurred: {}".format(e))
+			```
+		+	**Exception is just the base class for all built-in exceptions**
   
-  try:
-	# some code
-  except ZeroDivisionError as e:
-	# some code
-	print("ZeroDivisionError occurred: {}".format(e))
-	# This would print something like this:
-
-  ZeroDivisionError occurred: integer division or modulo by zero
-  So we can still access error messages, even if we handle them 
-  to keep our program from crashing!
-  
-  If we don't know a specific error we're handling, we can still 
-  access the message like this:
-  
-  try:
-    # some code
-  except Exception as e:
-	# some code
-    print("Exception occurred: {}".format(e))
-  
-  Exception is just the base class for all built-in exceptions. 
-  
-  We can learn more about Python's exceptions at the below link:
-  https://docs.python.org/3/library/exceptions.html#bltin-exceptions
-  
-+ Reading and Writing Files
-  -------------------------
+Reading and Writing Files
+-------------------------
   
   Reading a File
 	
