@@ -1345,73 +1345,71 @@ SCRIPTING:
 	+	If the user inputs 2 * 3, this outputs 6
 
 
-+ Errors and Exceptions 
+ERRORS AND EXCEPTIONS: 
+---------------------
   
-  SYNTAX ERRORS occur when Python can’t interpret our code, since we 
-  didn’t follow the correct syntax for Python. These are errors you’re 
-  likely to get when you make a typo, or you’re first starting to learn 
-  Python.
++	SYNTAX ERRORS occur when Python can’t interpret our code, since we 
+	didn’t follow the correct syntax for Python. These are errors you’re 
+	likely to get when you make a typo, or you’re first starting to learn 
+	Python.
+	+	Example:
+		```
+			msg = 'Welcome to this program!
+			print(msg)
+		```
+	+	Output:
+		```
+			SyntaxError: EOL while scanning string literal
+		```
++	EXCEPTIONS occur when unexpected things happen during execution of a 
+	program, even if the code is syntactically correct. There are 
+	different types of built-in exceptions in Python, and you can see 
+	which exception is thrown in the error message.
   
-  Example : 
+	+	Example: 
+		```
+		#ValueError
+			x = int(input("Enter a number: "))
+			x += 20
+			print(x)
+		```	
+	+	Output:
+		```
+			Enter a number: ten
+			ValueError: invalid literal for int() with base 10: 'ten'
+		```
+	+	Note: Although our code is syntactically correct, but we ran into an exception because a string spelling out ten is not a valid argument for the int function.
+	+	Example: 
+		```
+		#NameError 		
+			print(non_existent_variable)
+		```
+	+	Output:
+		```
+		NameError: name 'non_existent_variable' is not defined
+		```
++	Common Exceptions and their Descriptions:
+	```
+	Built-In exception                   Description
   
-  msg = 'Welcome to this program!
-  print(msg)
-  
-  Output :
-  
-  SyntaxError: EOL while scanning string literal 
-    
-  EXCEPTIONS occur when unexpected things happen during execution of a 
-  program, even if the code is syntactically correct. There are 
-  different types of built-in exceptions in Python, and you can see 
-  which exception is thrown in the error message.
-  
-  Example : ValueError
-  
-  x = int(input("Enter a number: "))
-  x += 20
-  print(x)
-  
-  Program Run:
-  
-  Enter a number: ten
-  ValueError: invalid literal for int() with base 10: 'ten'
-  
-  Note: Although our code is syntactically correct, but we ran 
-        into an exception because a string spelling out
-		ten is not a valid argument for the int function.
-
-  Example : NameError 		
-  
-  print(non_existent_variable)
-  
-  Program Run:
-  
-  NameError: name 'non_existent_variable' is not defined
-  
-+ Common Exceptions and their Descriptions:
-
-  Built-In exception                   Description
-  
-  ValueError						   An object of the correct
-									   type but inappropriate value
-									   is passed as an input
-									   to a built-in operation
-									   or function.
-									   
-  AssertionError					   An asset statement fails.
-
-  IndexError						   A sequence substring is 
-                                       out of range.
-									   
-  KeyError							   A key cannot be found 
-                                       in dictionary.
-									   
-  TypeError							   An object of an unsupported 
-									   type is passed as input to an
-									   operation or function.
-									   
-									   
+		ValueError						 An object of the correct
+										 type but inappropriate value
+										 is passed as an input
+										 to a built-in operation
+										 or function.
+											
+		AssertionError					 An asset statement fails.
+		
+		IndexError						 A sequence substring is 
+										 out of range.
+											
+		KeyError						 A key cannot be found 
+										 in dictionary.
+											
+		TypeError						 An object of an unsupported 
+										 type is passed as input to an
+										 operation or function.
+		```								   
 + Handling Exceptions
   
   TRY-EXCEPT-FINALLY blocks to handle exceptions
