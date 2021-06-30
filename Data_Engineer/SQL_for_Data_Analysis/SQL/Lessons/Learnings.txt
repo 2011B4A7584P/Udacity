@@ -1,0 +1,136 @@
+Basic SQL
+---------
+The LIMIT command is always the very last part of a query.
+
+BETWEEN is inclusive for upper and lower limits.
+
+ERD diagram is a standard way to represent relational databases.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+JOINS
+-----
+INNER JOIN is always between a PK of one table with FOREIGN KEY of another table.
+
+Data normalization has three primary objectives :
+
+to ensure there are logical groupings of data in a database so as to reduce redundancy or duplicacy in multiple places
+
+to ensure insert, update, delete and modify operations are fast and efficient and minimal in number at the same time
+
+to ensure querying/searching the data for information retrieval is efficient and productive
+
+Data normalization ensures sound database design as well as it can be used to test existing database for efficiency, accuracy, consistency, integrity checks.
+
+modification operations happen in real time and for that we require a highly efficient database design that keeps database modification 
+Data normalization is especially important for Transactional and Online Transactional Processing (OLTP) databases as large number of 
+operations minimal.
+
+Database normalisation is done normally in 3 steps :
+
+1NF - Ensuring choice of unique identifier for each of the tables in the database
+2NF - Ensuring that non-PK attributes of each table are fully functionally dependent on the PK attribute of that table in the database
+3NF - Ensuring that transitive dependencies between non-PK attributes on other non-PK attributes within the same table are absent
+
+Ensuring all of the above normal forms greatly improves the database design.
+
+Always try to think of joins in terms of venn diagram
+
+An inner join is always on the basis of PK-FK match between two tables and is always between tables that are either in one-to-one or one-to-many relationship.
+Inner join returns rows that are ACTUALLY PRESENT in BOTH the tables.
+
+A left outer join gives rows that are present in BOTH the tables as well as rows that are only exclusive to the table in the FROM clause.
+Think of it in terms of accounts:orderss (1:M) relationship, wherein one still needs accounts that might not have placed any orders and likewise
+the right outer join.
+
+Full outer join gives you complete data of two tables but the use cases are very rare.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+AGGREGATES AND NULL
+-------------------
+
+SUM, AVG, COUNT are aggregate functions.
+
+NULL is not a value in SQL, it is a property of the data. So equating operator doesn't work with NULL. Hence, we use IS NULL and IS NOT NULL.
+
+COUNT always gives the number of non-null rows in a table, and if applied to column, gives us number of non-null values in that column.
+
+NULL values are not used during the computation of AVG or any aggregate function like SUM, COUNT.
+
+CASE statement always goes in a SELECT clause.
+
+While using aggregate functions TO FIND HIGHEST FREQUENCY USING ORDER BY AND LIMIT, ALWAYS LIMIT TO MORE THAN 1 TO SEE IF THERE ARE NO TIES.
+
+Use HAVING clause instead of WHERE clause works with conditional logic on aggregate output like sum and average.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUBQUERIES AND COMMON TABLE EXPRESSIONS
+---------------------------------------
+
+Both subqueries and table expressions are methods for being able to write a query that creates a table, and then write a query that interacts with this newly 
+created table. Sometimes the question you are trying to answer doesn't have an answer when working directly with existing tables in database.
+
+Maintain a healthy habit of indentation while writing inner and outer queries for better readability.
+
+Note that you should not include an alias when you write a subquery in a conditional statement. 
+This is because the subquery is treated as an individual value (or set of values in the IN case) rather than as a table.
+Also, notice the query here compared a single value. If we returned an entire column IN would need to be used to perform a logical argument. 
+If we are returning an entire table, then we must use an ALIAS for the table, and perform additional logic on the entire table.
+
+Practice with subqueries. SQL can be a deceptively simple language.
+
+The WITH statement is often called a Common Table Expression or CTE.
+
+Consider thinking about scenarios where you have a long running inner query or sub query and you have to make changes in outer query to test something.
+Now you cannot keep on executing the full query as inner query will needlessly consume hours and hours. Therefore, we store the output of inner query in a 
+common table expression or CTE using WITH statement.
+
+We can have multiple common table expressions or CTEs using only one WITH clause. No semicolons in WITH clause. Multiple CTEs are separated by comma.
+
+Example :
+WITH table1 AS (
+          SELECT *
+          FROM web_events),
+
+     table2 AS (
+          SELECT *
+          FROM accounts)
+		  
+SELECT *
+FROM table1
+JOIN table2
+ON table1.account_id = table2.id;
+
+For every outer query, inner query using WITH has to be defined separately. You cannot use CTE of one outer query in some other outer query.
+--------------------------------------------------------------------------------------------------------------------------------------------
+DATA CLEANSING
+--------------
+Using LEFT (starts string operation from left-end of string), RIGHT(starts string operation from right-end of string), and LENGTH (returns length of string)
+are handy string handling functions for extraction of meaningful information for example extracting area code from a phone number.
+
+POSITION, STRPOS give you an ability to separate meaningful data from accumulated string information fields like city from address, area code from 
+phone number etc.
+
+CONCAT can be used to combine two or more strings. CONCAT is same as using || operator.Example - using first name and last name to make a full name.
+
+REPLACE can be used to replace blank characters or delimiters in numerical figures or for any kind of replacement.
+
+DATE_TRUNC and DATE_PART are date specific functions, they change with type of SQL DB used for querying.
+
+CAST, :: both enable us to change the data type of one column to another db type.CAST (date_in_string AS date) is widely used.
+
+use COALESCE to work with NULL values.
+
+A few functions to deal with NULL values in various SQL DB languages : 
+
+DB language	-	Function - Usage
+
+MySQL		-	IFNULL() 	- IFNULL(UnitsOnOrder, 0)  
+SQL Server	-	ISNULL() 	- ISNULL(UnitsOnOrder, 0) 
+MySQL		-	COALESCE() 	- COALESCE(UnitsOnOrder, 0)
+MSAccess	-   IsNull()	- IIF(IsNull(UnitsOnOrder), 0, UnitsOnOrder)-The MS Access IsNull() function returns TRUE (-1) if the expression is a null value, 
+otherwise FALSE (0):
+Oracle		-	NVL() 		- NVL(UnitsOnOrder, 0)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+WINDOW FUNCTIONS
+----------------
+
+
+/*PENDING*/

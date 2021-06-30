@@ -1,0 +1,69 @@
+Possible Causes :
+
+1. Latest product features might not have received a positive response from the users - 
+   possible causes can be poor user experience, deprecation of available features, possible end of support for particular feature which users were
+   predominantly using previously
+
+2. August may be a holiday month for majority of companies, may be holiday month for specific geographical areas.
+
+3. Was August a month of layoffs, may be for a lot of Yammer's corporate clients ?
+
+4. Was there an engagement drop for a users having a particular language preference ?
+
+5. Was there a license expiration for certain user segments ? Quiet a wierd one.
+
+6. Did some of the corporte client intentionally opted for something other than Yammer ? Priority shift.
+
+7. Did anyting similar to Yammer hit the market in Aug or late July ?
+
+Search Order Criteria :
+
+Search Order :
+
+Ways to test hypothesis :
+
+Search on Entity Level :
+
+tutorial.yammer_users
+---------------------
+Quick observations :
+--No need to search on pending state users as our focus is on weekly active users.
+--Lots of companies use Yammer (100+).
+--In total there are 12 languages involved in user interaction.
+
+tutorial.yammer_events
+----------------------
+different types of events related to engagement :
+
+home_page, like_message,login,search_autocomplete,search_click_result_1,search_click_result_10,search_click_result_2,search_click_result_3,
+search_click_result_4,search_click_result_5,search_click_result_6,search_click_result_7,search_click_result_8,search_click_result_9,
+search_run,send_message,view_inbox
+
+find number of monthly active users per month : dropped in Aug month significantly
+
+find number of monthly active users by language : every language category has experienced a drop in user engagement. 
+But major focus can be on french, german, indian and korean users as the drop in user engagement wrt to previous month was the most across these languages.
+
+find number of monthly active users by companies : there are lots of companies that did not have a drop in user engagement. We can safely say that
+the drop in user engagement behaviour was not an all encompassing outcome as far as company categories are concerned. 
+
+There are companies which specifically even showed growth in user engagement wrt to previous month. We can use this to narrow down our analysis 
+on specifically those companies that did experience the drop. In total there are 474 companies that did not experience the drop wrt to previous month.
+624 companies did experience the drop.
+
+There 30 companies which have the same numbers wrt to the previous month, looking deeper though, the active user counts are not that huge
+for these companies. We can infer that this is merely chance. 
+
+find number of monthly active users by locations : There are 32 locations out of the 47 locations that experienced a drop in user interaction.
+These can be specifically looked into on case-by-case basis.
+
+find number of monthly active users by device type used for access : After classifying the device types into mainly 4 types namely - 
+desktop, laptop, smartphone and tablet, we deduce that all have experienced a drop in user interaction but smartphone
+and tablet cases standout means we need to target those users better.
+
+
+tutorial.yammer_emails
+----------------------
+Except sent_reengagement_email action, rest of all the email actions experienced drop in user engagement.
+As far as emails received by the users are concerned, only weekly_digest experienced a major drop in engagement. Perhaps this can
+be an area of investigation as to what all went in this.

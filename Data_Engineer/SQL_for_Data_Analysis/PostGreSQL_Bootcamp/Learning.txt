@@ -1,0 +1,9 @@
+LIKE, NOT LIKE are used in pattern matching using wild card characters.
+
+Construct a pattern by combining string with wildcard characters and using LIKE / NOT LIKE operators to find pattern matches :
+(Percent)% - for matching any sequence of characters
+(Underscore)_ - for matching any single character
+
+One disadvantage of LIKE operator is that it uses the exact match of the pattern and therefore is case-sensitive.
+
+The ILIKE operator is not case-sensitive. Useful when text formatting varies within the column. Used just as the LIKE operator.

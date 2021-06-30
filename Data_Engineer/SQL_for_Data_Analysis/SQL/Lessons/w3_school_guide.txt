@@ -1,0 +1,44 @@
+NOT operator can be used to perform negation as well NOT IN search from list of possible values. For example :
+SELECT * FROM Customers WHERE NOT CITY  = 'BERLIN';
+
+HAVING and WHERE clauses cannot be used interchangeably. HAVING is used whenever there is table column along with some aggregate function
+in the SELECT clause and HAVING can only be applied to columns and aggregates in present query, it can not use any conditional logic on other columns of the
+table being queried if they are not present in the SELECT clause. WHERE is general way of providing table filter conditions.
+
+The difference between the HAVING and WHERE clause in SQL is that the WHERE clause cannot be used with aggregates, 
+but the HAVING clause can. The WHERE clause works on row's data, not on aggregated data.
+
+use WHERE prior to GROUP BY and HAVING after GROUP BY. 
+The WHERE clause acts as a pre filter where as HAVING as a post filter.
+
+A WHERE clause is used to filter records from a result.  The filter occurs before any groupings are made. WHERE cannot be used with aggregates.
+A HAVING clause is used to filter values from a group.
+
+When SQL statements have both a WHERE clause and HAVING clause, keep in mind the WHERE clause is applied first, then the results grouped, 
+and finally, the groups filtered according to the HAVING clause.
+
+SELECT   SalesOrderID,
+         SUM(UnitPrice * OrderQty) AS TotalPrice
+FROM     Sales.SalesOrderDetail
+GROUP BY SalesOrderID
+HAVING   SUM(UnitPrice * OrderQty) > 10000 AND LineTotal > 10
+
+Actually that query generates an error.  The column LineTotal is not part of the group by field list nor the result of an aggregate total.
+To be valid the having clause can only compare results of aggregated functions or column part of the group by.
+
+To be valid the query has to be rewritten as
+SELECT   SalesOrderID,
+         SUM(UnitPrice * OrderQty) AS TotalPrice
+FROM     Sales.SalesOrderDetail
+WHERE    LineTotal > 100
+GROUP BY SalesOrderID
+HAVING   SUM(UnitPrice * OrderQty) > 10000
+
+To summarize the difference between WHERE and HAVING:
+
+WHERE is used to filter records before any groupings take place.
+HAVING is used to filter values after they have been groups.  Only columns or expressions in the group can be included in the HAVING clause’s conditions…
+
+--Select all records where the second letter of the City is an "a"
+SELECT * FROM customers WHERE city LIKE '_a%';
+

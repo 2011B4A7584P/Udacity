@@ -1,0 +1,17 @@
+Note that window functions are performed on the result set after all JOIN, WHERE, GROUP BY, and HAVING clauses 
+and before the ORDER BY, LIMIT and SELECT DISTINCT.
+
+The general syntax of calling a window function is as follows:
+
+window_function_name(expression) OVER ( 
+   [partition_defintion]
+   [order_definition]
+   [frame_definition]
+)
+
+
+The opening and closing parentheses after the OVER clause are mandatory, even with no expression, for example:
+
+window_function_name(expression) OVER()
+
+Note: You can't use window functions and standard aggregations in the same query. More specifically, you can't include window functions in a GROUP BY clause.
