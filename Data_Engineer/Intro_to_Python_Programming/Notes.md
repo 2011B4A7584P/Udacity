@@ -1184,17 +1184,86 @@ LAMBDA EXPRESSIONS:
 	* 	This is a lot like an expression you might see as a return statement in a function 
 	* 	**With this structure, lambda expressions aren’t ideal for complex functions, but can be very useful for short, simple functions**
 
-MAP() and FILTER()
-----------------
+MAP() and FILTER():
+------------------
 
-* map() is a higher-order, built-in function that takes a function and 
-  iterable as inputs, and returns an iterator that applies the function 
-  to each element of the iterable
-  
-* filter() is a higher-order built-in function that takes a function and 
-  iterable as inputs and returns an iterator with the elements from the 
-  iterable for which the function returns True   
-  
++	map() is a higher-order, built-in function that takes a function and 
+	iterable as inputs, and returns an iterator that applies the function 
+	to each element of the iterable
+	+	Example:
+		```
+			# Return double of n
+			def addition(n):
+				return n + n
+
+			# We double all numbers using map()
+			numbers = (1, 2, 3, 4)
+			result = map(addition, numbers)
+			print(list(result))
+		```
+	+	Output:
+		```
+			[2, 4, 6, 8]
+		```			
+
+	+	Example:
+		```
+			# Double all numbers using map and lambda
+
+			numbers = (1, 2, 3, 4)
+			result = map(lambda x: x + x, numbers)
+			print(list(result))
+
+		```
+	+	Output:
+		```
+			[2, 4, 6, 8]
+		```
+	+	Example:
+		```
+			# Add two lists using map and lambda
+
+			numbers1 = [1, 2, 3]
+			numbers2 = [4, 5, 6]
+			
+			result = map(lambda x, y: x + y, numbers1, numbers2)
+			print(list(result))
+		```
+	+	Output:
+		```
+			[5, 7, 9]
+		```
+	+	Example:
+		```
+			# List of strings
+			l = ['sat', 'bat', 'cat', 'mat']
+
+			# map() can listify the list of strings individually
+			test = list(map(list, l))
+			print(test)
+		```
+	+	Output:
+		```
+			[['s', 'a', 't'], ['b', 'a', 't'], ['c', 'a', 't'], ['m', 'a', 't']]
+		```		
+	
+*	filter() is a higher-order built-in function that takes a function and 
+	iterable as inputs and returns an iterator with the elements from the 
+	iterable for which the function returns True  
+	
+	```
+	syntax:
+
+		filter(function, sequence)
+		Parameters:
+			function: function that tests if each element of a sequence returns true or not
+			sequence: sequence which needs to be filtered, it can be sets, lists, tuples, or containers of any iterators
+		Returns:
+			returns an iterator that is already filtered
+	```
+	
+
+	
 SCRIPTING
 ---------
 
