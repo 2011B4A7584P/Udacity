@@ -1860,7 +1860,7 @@ order of reliability.
 	excellent. The blog of an unknown author might be excellent, 
 	or it might be rubbish.  
 	
-5.  [StackOverflow] (https://stackoverflow.com/)
+5.  [StackOverflow](https://stackoverflow.com/)
 
 	This question and answer site has a good amount of traffic, so 
 	it's likely that someone has asked (and someone has answered) 
