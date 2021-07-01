@@ -1541,7 +1541,7 @@ READING AND WRITING FILES:
 		and automatically close it. Now, we don’t have to call 
 		f.close()! You can only access the file object, f, within the indented block.
  
-+	[Python docs](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
++	[Python docs for read/write files](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files)
 
 + 	Importing Local, Standard, and Third-Party Modules
 
