@@ -1690,168 +1690,160 @@ TECHNIQUES FOR IMPORTING MODULES:
 MODULES, PACKAGES, AND NAMES:
 ----------------------------
 		
-		1. In order to manage the code better, modules in the Python 
-		   Standard Library are split down into sub-modules that are 
-		   contained within a package. 
-		   
-		2. A package is simply a module that contains sub-modules. 
-		
-		3. A sub-module is specified with the usual dot notation.
++	In order to manage the code better, modules in the Python 
+    Standard Library are split down into sub-modules that are 
+    contained within a package. 
+   
++	A package is simply a module that contains sub-modules. 
 
-		4. Modules that are submodules are specified by the 
-		   package name and then the submodule name separated 
-		   by a dot. You can import the submodule like this.
++	A sub-module is specified with the usual dot notation.
 
-		   import package_name.submodule_name
-		   
++	Modules that are submodules are specified by the 
+    package name and then the submodule name separated 
+    by a dot. You can import the submodule like this.
+	
+	```
+    import package_name.submodule_name
+	```	   
 
 THIRD PARTY LIBRARIES:
 ---------------------		   
 
-		1. Can be installed using package managers like pip, anaconda
-		2. pip is the standard package manager for python
-		3. Anaconda is designed specifically for data science
-		4. pip install package_name
-		5. conda install package_name
-		6. Using a requirements.txt file
-		7. Larger Python programs might depend on dozens of 
-		   third party packages. To make it easier to share 
-		   these programs, programmers often list a project's 
-		   dependencies in a file called requirements.txt. 
-		   This is an example of a requirements.txt file.
++	Can be installed using package managers like pip, anaconda
++	pip is the standard package manager for python
++	Anaconda is designed specifically for data science
++	pip install package_name
++	conda install package_name
++	Using a requirements.txt file
++	**Larger Python programs might depend on dozens of 
+	third party packages. To make it easier to share 
+	these programs, programmers often list a project's 
+	dependencies in a file called requirements.txt. 
+	This is an example of a requirements.txt file.**
+	
+	```
+	beautifulsoup4==4.5.1
+	bs4==0.0.1
+	pytz==2016.7
+	requests==2.11.1
+	```
+	+	Each line of the file includes the name of a package 
+		and its version number. The version number is optional, 
+		but it usually should be included. 
+	
+	+	Libraries can change subtly, or dramatically, 
+		between versions, so it's important to use the 
+		same library versions that the program's author 
+		used when they wrote the program.
+		
+	+	You can use pip to install all of a project's dependencies 
+		at once by typing pip install -r requirements.txt in your 
+		command line.
 
-			beautifulsoup4==4.5.1
-			bs4==0.0.1
-			pytz==2016.7
-			requests==2.11.1
-
-		   Each line of the file includes the name of a package 
-		   and its version number. The version number is optional, 
-		   but it usually should be included. 
-		   
-		   Libraries can change subtly, or dramatically, 
-		   between versions, so it's important to use the 
-		   same library versions that the program's author 
-		   used when they wrote the program.
-
+```
 LIBRARY :  USAGE		   
 -------    -----
 
 IPython :  A better interactive Python interpreter
 
-requests : Provides easy to use methods to make web requests 
-           Useful for accessing web APIs
+requests : Provides easy to use methods to make web requests. Useful for accessing web APIs.
 
-Flask :    a lightweight framework for making web 
-           applications and APIs
+Flask :    a lightweight framework for making web applications and APIs
 		   
-Django :   A more featureful framework for making web applications. 
-           Django is particularly good for designing complex, 
-		   content heavy, web applications.
+Django :   A more featureful framework for making web applications. Django is particularly good for designing complex, content heavy, web applications.
 
-Beautiful Soup : Used to parse HTML and extract information from it. 
-				 Great for web scraping.
+Beautiful Soup : Used to parse HTML and extract information from it. Great for web scraping.
 				 
 pytest : extends Python's builtin assertions and unittest module.
 
 PyYAML : For reading and writing YAML files.
 
-NumPy : The fundamental package for scientific computing with Python. 
-        It contains among other things a powerful N-dimensional array 
-		object and useful linear algebra capabilities.
+NumPy : The fundamental package for scientific computing with Python. It contains among other things a powerful N-dimensional array object and useful linear algebra capabilities.
 
-pandas : A library containing high-performance, data structures and 
-         data analysis tools. In particular, pandas provides dataframes!
+pandas : A library containing high-performance, data structures and data analysis tools. In particular, pandas provides dataframes!
 
-matplotlib : a 2D plotting library which produces publication quality 
-             figures in a variety of hardcopy formats and interactive 
-			 environments.
-ggplot : Another 2D plotting library, based on R's ggplot2 library.
+matplotlib : a 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments
 
-Pillow : The Python Imaging Library adds image processing capabilities 
-         to your Python interpreter.
+ggplot : Another 2D plotting library, based on R's ggplot2 library
 
-pyglet : A cross-platform application framework intended for game 
-         development.
-Pygame : A set of Python modules designed for writing games.
+pillow : The Python Imaging Library adds image processing capabilities to your Python interpreter
+
+pyglet : A cross-platform application framework intended for game development
+
+pygame : A set of Python modules designed for writing games
 
 pytz : World Timezone Definitions for Python
+```
 
-You can use pip to install all of a project's dependencies at once by 
-typing pip install -r requirements.txt in your command line.
-
-
-+ Experimenting with an Interpreter
-
-IPython
-
+EXPERIMENTING WITH AN INTERPRETER:
+---------------------------------
+```
 There is actually an awesome alternative to the default Python 
-interactive interpreter. 
+interactive interpreter - IPython
 
-IPython, which comes with many additional features.
+IPython, which comes with many additional features:
 
-* tab completion
-* ? for details about an object
-* ! to execute system shell commands
-* syntax highlighting!
+tab completion
+? for details about an object
+! to execute system shell commands
+syntax highlighting!
+```
 
+ONLINE RESOURCES:
+----------------
+```  
+How to Search
 
-+ Online Resources :
-  ----------------
-  
-  How to Search
+Here are some techniques for effective web searching:
 
-  Here are some techniques for effective web searching:
+Try using "Python" or the name of the library you're using as the 
+first word of your query. This tells the search engine to prioritize 
+results that are explicitly related to the tools you're using.
 
-  Try using "Python" or the name of the library you're using as the 
-  first word of your query. This tells the search engine to prioritize 
-  results that are explicitly related to the tools you're using.
-  
-  Writing a good search query can take multiple attempts. If you 
-  don't find helpful results on your first attempt, try again.
+Writing a good search query can take multiple attempts. If you 
+don't find helpful results on your first attempt, try again.
 
-  Try using keywords found on the pages you found in your initial 
-  search to direct the search engine to better resources in the 
-  subsequent search.
+Try using keywords found on the pages you found in your initial 
+search to direct the search engine to better resources in the 
+subsequent search.
 
-  Copy and paste error messages to use as search terms. This will lead 
-  you to explanations of the error and potential causes. An error 
-  message might include references to specific line numbers of code 
-  that you wrote. Only include the part of the error message that 
-  comes before this in your search.
+Copy and paste error messages to use as search terms. This will lead 
+you to explanations of the error and potential causes. An error 
+message might include references to specific line numbers of code 
+that you wrote. Only include the part of the error message that 
+comes before this in your search.
 
-  If you can't find an answer to your question, ask it yourself! 
-  Communities like StackOverflow have etiquette rules you must 
-  learn if you want to participate, but don't let this stop you 
-  from using these resources.  
-  
-+ Hierarchy of Online Resources
-
+If you can't find an answer to your question, ask it yourself! 
+Communities like StackOverflow have etiquette rules you must 
+learn if you want to participate, but don't let this stop you 
+from using these resources.  
+```  
+HIERARCHY OF ONLINE RESOURCES
+-----------------------------
+```
 While there are many online resources about programming, not all of 
 the them are created equal. This list of resources is in approximate 
 order of reliability.
-
-1.	The Python Tutorial 
-	(https://docs.python.org/3/tutorial/)
-	
+```
+1.	[The Python Tutorial ](https://docs.python.org/3/tutorial/)
+	```
 	This section of the official documentation surveys Python's syntax 
 	and standard library. It uses examples, and is written using less 
 	technical language than the main documentation. Make sure you're 
 	reading the Python 3 version of the docs!
-
-2.  The Python Language and Library References
-    (https://docs.python.org/3/index.html)
-	
+	```
+2.  [The Python Language and Library References](https://docs.python.org/3/index.html)
+	```
 	The Language Reference and Library Reference are more technical 
 	than the tutorial, but they are the definitive sources of truth. 
 	As you become increasingly acquainted with Python you should use 
 	these resources more and more.
-
+	```
 3.  Third-Party Library Documentation
     
 	Third-party libraries publish their documentation on their own 
-	websites, and often times at https://readthedocs.org/. You can 
-	judge the quality of a third-party library by the quality of its 
+	websites, and often times at [third-party docs](https://readthedocs.org/). 
+	You can judge the quality of a third-party library by the quality of its 
 	documentation. If the developers haven't found time to write good 
 	docs, they probably haven't found the time to polish their library 
 	either.
@@ -1863,12 +1855,12 @@ order of reliability.
 	documented. Primary sources are the most reliable. Secondary 
 	sources are also extremely valuable. The difficulty with secondary 
 	sources is determining the credibility of the source. The websites 
-	of authors like Doug Hellmann (https://doughellmann.com//) and 
-	developers like Eli Bendersky (https://eli.thegreenplace.net/) are 
+	of authors like [Doug Hellmann](https://doughellmann.com//) and 
+	developers like [Eli Bendersky](https://eli.thegreenplace.net/) are 
 	excellent. The blog of an unknown author might be excellent, 
 	or it might be rubbish.  
 	
-5.  StackOverflow (https://stackoverflow.com/)
+5.  [StackOverflow] (https://stackoverflow.com/)
 
 	This question and answer site has a good amount of traffic, so 
 	it's likely that someone has asked (and someone has answered) 
@@ -1878,77 +1870,81 @@ order of reliability.
 	any explanation are dubious. This is a good place to find out 
 	more about your question or discover alternative search terms.	
 
-+   ITERATORS AND GENERATORS (GENERATOR FUNCTIONS):
+**ITERATORS AND GENERATORS (GENERATOR FUNCTIONS)**:
+----------------------------------------------
 
- 1. Iterables are objects that can return one of their elements 
-	at a time, such as a list.
++	**Iterables are objects that can return one of their elements at a time, such as a list**
 	
- 2. Many of the built-in functions we’ve used so far, like 'enumerate,' 
-    return an iterator.	
++	Many of the built-in functions we’ve used so far, like *enumerate*, *items* return an iterator
 
- 3. An iterator is an object that represents a stream of data. This 
-    is different from a list, which is also an iterable, but is not 
-	an iterator because it is not a stream of data.
++	**An iterator is an object that represents a stream of data. This 
+    is different from a list, which is an *iterable*, but *is not 
+	an iterator* because it is not a stream of data.**
 
- 4. Generators are a simple way to create iterators using functions. 
-    
++	Generators are a simple way to create iterators using functions. 
+    ```
+	'''
 	Here is an example of a generator function called my_range(x), 
 	which produces an iterator that is a stream of numbers from 0 
 	to (x - 1).
-
+	'''
+	
 	def my_range(x):
 		i = 0
 		while i < x:
 			yield i
 			i += 1
-			
-	Notice that instead of using the return keyword, it uses yield. 
-	This allows the function to return values one at a time, and 
-	start where it left off each time it’s called. This yield keyword 
-	is what differentiates a generator from a typical function.
-
-    Remember, since this returns an iterator, we can convert it to a 
-	list or iterate through it in a loop to view its contents. For 
-	example, this code:
+	```
 	
++	**Notice that instead of using the return keyword, it uses yield.**
++	This allows the function to return values one at a time, and 
+	start where it left off each time it’s called. 
++	**This yield keyword is what differentiates a generator from a typical function.**
+
++   **Remember, since this returns an iterator, we can convert it to a 
+	list or iterate through it in a loop to view its contents.** For 
+	example, this code:
+	```
 	for x in my_range(5):
 		print(x)
     
+	'''
 	outputs:
-
+	'''
 	0
 	1
 	2
 	3
 	4		
+	```
++	Why Generators?
+    +	Why we'd use generators over lists ?
+		+	Generators are a lazy way to build iterables. They are useful when 
+			the fully realized list would not fit in memory, or when the cost 
+			to calculate each list element is high and you want to do it as 
+			late as possible. But they can only be iterated over once.
 	
-	Why Generators?
-    You may be wondering why we'd use generators over lists. 
+		+	If you have an iterable that is too large to fit in memory in full 
+			(e.g., when dealing with large files), being able to take and use 
+			chunks of it at a time can be very valuable.
 	
-	Generators are a lazy way to build iterables. They are useful when 
-	the fully realized list would not fit in memory, or when the cost 
-	to calculate each list element is high and you want to do it as 
-	late as possible. But they can only be iterated over once.
-	
-	If you have an iterable that is too large to fit in memory in full 
-	(e.g., when dealing with large files), being able to take and use 
-	chunks of it at a time can be very valuable.
-	
- 5.	You can also define iterators using classes, which you can read 
-	more about at 
-	(https://docs.python.org/3/tutorial/classes.html#iterators).
++	You can also define iterators using classes, which you can read 
+	more about at [Iterators](https://docs.python.org/3/tutorial/classes.html#iterators)
 	
 GENERATOR EXPRESSIONS:
 ---------------------
+```
+'''
+Here's a cool concept that combines generators and list comprehensions!
+You can actually create a generator in the same way you'd normally write 
+a list comprehension, except with parentheses instead of square brackets. 
 
-	Here's a cool concept that combines generators and list comprehensions!
-	You can actually create a generator in the same way you'd normally write 
-	a list comprehension, except with parentheses instead of square brackets. 
-	
-	For example:	
-	
-	# this produces a list of squares
-	sq_list = [x**2 for x in range(10)]  
+For example:	
+'''
 
-	# this produces an iterator of squares
-	sq_iterator = (x**2 for x in range(10))  
+# this produces a list of squares
+sq_list = [x**2 for x in range(10)]  
+
+# this produces an iterator of squares
+sq_iterator = (x**2 for x in range(10))  
+```
