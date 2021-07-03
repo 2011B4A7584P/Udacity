@@ -15,5 +15,5 @@ DESIGN PATTERNS:
 	To find out which pattern to use, you just have to try to understand the design patterns and their purposes. 
 	Only by doing that, you will be able to pick the right one. 
 +	Goal: Understand the purpose and usage of each design pattern in order to pick and implement the correct pattern as needed
-+	Must Read Links:
++	Must Read Link(s):
 	+	[Design Patterns in Python](https://refactoring.guru/design-patterns/python)

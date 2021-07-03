@@ -4,6 +4,6 @@ Factory Method:
 	for creating objects in a superclass, but allows subclasses to alter the
 	type of objects that will be created
 +	Helps in decoupling the client code from the concrete product classes
-+	Must Read Links:
++	Must Read Link(s):
 	+	[Factory Method](https://refactoring.guru/design-patterns/factory-method)
 	
